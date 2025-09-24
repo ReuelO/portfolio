@@ -1,0 +1,92 @@
+/* Custom Fonts Integration */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #343a40; /* Bootstrap's default dark text color */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Merriweather', serif;
+}
+
+/* Custom Styles for Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('https://images.unsplash.com/photo-1517409241512-d9612046894c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+      no-repeat center center/cover;
+  height: 100vh; /* Full viewport height */
+  padding-top: 58px; /* Offset for fixed navbar */
+}
+
+/* Specific styling for product images to ensure consistency */
+.product-img {
+  height: 220px; /* Fixed height for product images */
+  object-fit: cover; /* Cover the area, crop if necessary */
+  width: 100%;
+}
+
+/* Process Steps Styling */
+.process-step {
+  border-top: 5px solid #28a745; /* Green top border */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Larger shadow on hover */
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Testimonial Card Styling */
+.testimonial-card {
+  max-width: 700px;
+  margin: 0 auto;
+  border-left: 5px solid #28a745; /* Green left border */
+}
+
+/* CTA Section specific background */
+.cta-section {
+  background: linear-gradient(rgba(40, 167, 69, 0.8), rgba(40, 167, 69, 0.8)),
+    url('https://images.unsplash.com/photo-1542823871-2b0e6878909e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+      no-repeat center center/cover;
+}
+
+/* Map Placeholder Styling */
+.map-placeholder iframe {
+  border-radius: 0.25rem;
+}
+
+/* Social Icons in Footer */
+.social-icons a {
+  transition: color 0.3s ease-in-out;
+}
+.social-icons a:hover {
+  color: #ffc107 !important; /* Change to Bootstrap's warning yellow on hover */
+}
+
+/* Custom Scrollspy active link styling (overrides Bootstrap's default if needed) */
+.navbar-nav .nav-link.active {
+  color: #ffc107 !important; /* Bootstrap warning yellow */
+  font-weight: 600;
+  border-bottom: 2px solid #ffc107;
+}
+
+/* Add a subtle animation library if desired (e.g., Animate.css) */
+/*
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+*/

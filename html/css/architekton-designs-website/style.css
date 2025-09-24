@@ -1,0 +1,149 @@
+/* Custom Colors */
+:root {
+  --primary-dark: #1a2e4b; /* Deep Blue/Navy */
+  --primary-accent: #2e8b85; /* Cadet Blue / Dark Cyan */
+  --neutral-light: #f8f9fa; /* Light background */
+  --neutral-dark: #34495e; /* Dark text/background */
+  --gray-text: #5a6268; /* Mid-tone grey for body text */
+  --light-gray: #f2f4f8; /* A slightly darker light gray for sections */
+}
+
+/* Custom Utilities based on Bootstrap's variables */
+.text-primary-dark {
+  color: var(--primary-dark) !important;
+}
+.text-primary-accent {
+  color: var(--primary-accent) !important;
+}
+.text-neutral-dark {
+  color: var(--neutral-dark) !important;
+}
+.text-gray-text {
+  color: var(--gray-text) !important;
+}
+.bg-primary-dark {
+  background-color: var(--primary-dark) !important;
+}
+.bg-neutral-dark {
+  background-color: var(--neutral-dark) !important;
+}
+.bg-light-gray {
+  background-color: var(--light-gray) !important;
+}
+
+/* Custom Button Styles */
+.btn-primary-dark {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+}
+.btn-primary-dark:hover {
+  background-color: var(--neutral-dark);
+  border-color: var(--neutral-dark);
+  color: #fff;
+}
+
+.btn-primary-accent {
+  background-color: var(--primary-accent);
+  border-color: var(--primary-accent);
+  color: #fff;
+}
+.btn-primary-accent:hover {
+  background-color: var(--primary-dark); /* Darken on hover */
+  border-color: var(--primary-dark);
+  color: #fff;
+}
+
+.btn-outline-primary-dark {
+  border-color: var(--primary-dark);
+  color: var(--primary-dark);
+}
+.btn-outline-primary-dark:hover {
+  background-color: var(--primary-dark);
+  color: #fff;
+}
+
+/* Custom Typography */
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Global Body Font */
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--gray-text);
+}
+
+/* Navbar hover effect for links */
+.navbar-nav .nav-link.hover-primary-accent:hover {
+  color: var(
+    --primary-accent
+  ) !important; /* Override Bootstrap's default hover color */
+}
+
+/* Hero Section Specifics */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.unsplash.com/photo-1510255191244-f86053f317b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+      no-repeat center center / cover;
+  min-height: 600px; /* Adjust height as needed */
+  padding: 100px 0;
+}
+
+.hero-section .display-3 {
+  font-size: calc(1.7rem + 2.5vw); /* Responsive font size */
+}
+
+/* Drop shadow for hero text */
+.drop-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Card hover effect */
+.transform-hover {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.transform-hover:hover {
+  transform: translateY(-5px); /* Lifts the card slightly */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Stronger shadow */
+}
+
+/* Portfolio Image aspect ratio and overlay */
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 250px; /* Fixed height for portfolio images */
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-img {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Social icons hover effect in footer and team section */
+.social-icons a:hover,
+.team .card-body a:hover {
+  color: var(--primary-accent) !important;
+}
+
+/* Optional: Custom bouncy animation for CTA button */
+@keyframes bounce-custom {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.animate-bounce-custom {
+  animation: bounce-custom 2s infinite ease-in-out;
+}

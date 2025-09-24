@@ -1,0 +1,69 @@
+/* Custom CSS for Google Fonts */
+/* These are also directly linked in index.html <style> block for Tailwind compatibility */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* Define custom keyframe animations if not using external libraries like Animate.css */
+/* These are manually defined for the hero section, similar to the Bootstrap example */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply animations using Tailwind's arbitrary values or via custom classes */
+/* In this example, we directly add them to the HTML classes */
+.animate-fade-in-down {
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 1s ease-out forwards;
+}
+
+/* Delay classes */
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* Ensure smooth scrolling when clicking anchor links */
+html {
+  scroll-behavior: smooth;
+  /* This overrides the scroll-smooth utility on <html> if you want to use it directly */
+  /* Tailwind's scroll-smooth utility applies scroll-behavior: smooth; directly to the <html> tag. */
+  /* No need to add it here unless you're making other global CSS changes. */
+}

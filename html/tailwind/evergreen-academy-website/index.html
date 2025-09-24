@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evergreen Academy - Nurturing Future Leaders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCXd/XP=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              primary: '#1a73e8' /* A strong blue */,
+              secondary: '#34a853' /* A vibrant green */,
+              accent: '#fbbc05' /* A warm yellow */,
+              darkblue: '#2c3e50' /* Darker blue-gray */,
+              lightgray: '#f8f9fa',
+              mediumgray: '#e9ecef',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Basic scroll-behavior for smooth scrolling on anchor links */
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Custom styles for mobile menu overlay, etc., not directly possible with utility classes */
+      .overflow-hidden-when-nav-active {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-700 bg-white leading-relaxed">
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <h1 class="text-3xl font-serif font-extrabold text-darkblue">
+          <a href="#" class="flex items-center">
+            <img
+              src="https://via.placeholder.com/40x40/1a73e8/ffffff?text=EA"
+              alt="Evergreen Academy Logo"
+              class="mr-3 rounded-full"
+            />
+            Evergreen Academy
+          </a>
+        </h1>
+        <nav class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+          <a
+            href="#home"
+            class="text-lg font-medium text-gray-800 hover:text-primary transition duration-300"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-lg font-medium text-gray-800 hover:text-primary transition duration-300"
+            >About Us</a
+          >
+          <a
+            href="#academics"
+            class="text-lg font-medium text-gray-800 hover:text-primary transition duration-300"
+            >Academics</a
+          >
+          <a
+            href="#admissions"
+            class="text-lg font-medium text-gray-800 hover:text-primary transition duration-300"
+            >Admissions</a
+          >
+          <a
+            href="#testimonials"
+            class="text-lg font-medium text-gray-800 hover:text-primary transition duration-300"
+            >Testimonials</a
+          >
+          <a
+            href="#contact"
+            class="text-lg font-medium text-gray-800 hover:text-primary transition duration-300"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
+            >Apply Now</a
+          >
+        </nav>
+        <div class="md:hidden">
+          <button
+            id="menu-toggle"
+            class="text-gray-800 hover:text-primary focus:outline-none focus:text-primary"
+          >
+            <i class="fas fa-bars text-3xl"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden fixed inset-0 bg-darkblue bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6 transform translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <button
+        id="close-menu"
+        class="absolute top-6 right-6 text-white text-4xl focus:outline-none"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+      <nav class="flex flex-col items-center space-y-6">
+        <a
+          href="#home"
+          class="text-2xl text-white hover:text-secondary transition duration-300 block py-2"
+          data-close-menu
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="text-2xl text-white hover:text-secondary transition duration-300 block py-2"
+          data-close-menu
+          >About Us</a
+        >
+        <a
+          href="#academics"
+          class="text-2xl text-white hover:text-secondary transition duration-300 block py-2"
+          data-close-menu
+          >Academics</a
+        >
+        <a
+          href="#admissions"
+          class="text-2xl text-white hover:text-secondary transition duration-300 block py-2"
+          data-close-menu
+          >Admissions</a
+        >
+        <a
+          href="#testimonials"
+          class="text-2xl text-white hover:text-secondary transition duration-300 block py-2"
+          data-close-menu
+          >Testimonials</a
+        >
+        <a
+          href="#contact"
+          class="text-2xl text-white hover:text-secondary transition duration-300 block py-2"
+          data-close-menu
+          >Contact</a
+        >
+        <a
+          href="#"
+          class="bg-secondary hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 mt-6"
+          data-close-menu
+          >Apply Now</a
+        >
+      </nav>
+    </div>
+
+    <main>
+      <section
+        id="home"
+        class="relative bg-cover bg-center h-screen flex items-center justify-center text-center p-4"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1546410531-bb448655e82a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        "
+      >
+        <div class="absolute inset-0 bg-darkblue bg-opacity-70"></div>
+        <div class="relative z-10 text-white max-w-4xl mx-auto">
+          <h2
+            class="text-5xl md:text-6xl lg:text-7xl font-serif font-extrabold mb-6 animate-fade-in-down"
+          >
+            Nurturing Minds, Building Futures
+          </h2>
+          <p class="text-lg md:text-xl lg:text-2xl mb-10 animate-fade-in-up">
+            Evergreen Academy is committed to academic excellence, character
+            development, and fostering a lifelong love of learning.
+          </p>
+          <div
+            class="space-y-4 md:space-y-0 md:space-x-6 flex flex-col md:flex-row justify-center animate-scale-in"
+          >
+            <a
+              href="#academics"
+              class="bg-primary hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
+              >Explore Academics</a
+            >
+            <a
+              href="#admissions"
+              class="bg-transparent hover:bg-white text-white hover:text-primary border-2 border-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
+              >Admissions Process</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-16 md:py-24 bg-lightgray">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-4xl font-serif font-bold text-darkblue text-center mb-12 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary"
+          >
+            About Evergreen Academy
+          </h2>
+          <div class="flex flex-col md:flex-row items-center md:space-x-12">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+              <img
+                src="https://images.unsplash.com/photo-1546410531-bb448655e82a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Students in Classroom"
+                class="rounded-lg shadow-lg"
+              />
+            </div>
+            <div class="md:w-1/2 text-lg leading-relaxed">
+              <h3 class="text-3xl font-serif font-bold text-darkblue mb-6">
+                Our Vision for Education
+              </h3>
+              <p class="mb-4">
+                Evergreen Academy provides a nurturing and challenging
+                environment where students thrive academically, socially, and
+                emotionally. Our dedicated faculty, innovative curriculum, and
+                robust extracurricular programs ensure a well-rounded education
+                for every child.
+              </p>
+              <p class="mb-6">
+                We believe in fostering critical thinking, creativity, and a
+                sense of responsibility. Our small class sizes allow for
+                personalized attention, enabling each student to reach their
+                full potential and prepare for future success.
+              </p>
+              <ul class="list-none space-y-3 text-gray-800">
+                <li class="flex items-center">
+                  <i
+                    class="fas fa-check-circle text-secondary mr-3 text-xl"
+                  ></i>
+                  Personalized Learning Paths
+                </li>
+                <li class="flex items-center">
+                  <i
+                    class="fas fa-check-circle text-secondary mr-3 text-xl"
+                  ></i>
+                  Innovative STEM Programs
+                </li>
+                <li class="flex items-center">
+                  <i
+                    class="fas fa-check-circle text-secondary mr-3 text-xl"
+                  ></i>
+                  Rich Arts & Sports Curricula
+                </li>
+                <li class="flex items-center">
+                  <i
+                    class="fas fa-check-circle text-secondary mr-3 text-xl"
+                  ></i>
+                  Strong Community Engagement
+                </li>
+              </ul>
+              <a
+                href="#admissions"
+                class="mt-8 inline-block bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition duration-300"
+                >Learn More About Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="academics" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-4xl font-serif font-bold text-darkblue text-center mb-12 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary"
+          >
+            Academics & Programs
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div
+              class="bg-lightgray p-8 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300"
+            >
+              <div class="text-center mb-6">
+                <i class="fas fa-book-open text-6xl text-primary mb-4"></i>
+                <h3 class="text-2xl font-serif font-semibold text-darkblue">
+                  Comprehensive Curriculum
+                </h3>
+              </div>
+              <p class="text-gray-700 leading-relaxed mb-6">
+                Our challenging curriculum nurtures intellectual curiosity,
+                critical thinking, and a deep understanding across all subjects.
+              </p>
+              <a
+                href="#"
+                class="text-primary hover:text-blue-700 font-semibold flex items-center justify-center"
+                >Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i
+              ></a>
+            </div>
+            <div
+              class="bg-lightgray p-8 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300"
+            >
+              <div class="text-center mb-6">
+                <i class="fas fa-palette text-6xl text-secondary mb-4"></i>
+                <h3 class="text-2xl font-serif font-semibold text-darkblue">
+                  Vibrant Arts Programs
+                </h3>
+              </div>
+              <p class="text-gray-700 leading-relaxed mb-6">
+                From visual arts to performing arts, students explore their
+                creative potential through diverse and engaging programs.
+              </p>
+              <a
+                href="#"
+                class="text-secondary hover:text-green-700 font-semibold flex items-center justify-center"
+                >Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i
+              ></a>
+            </div>
+            <div
+              class="bg-lightgray p-8 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300"
+            >
+              <div class="text-center mb-6">
+                <i class="fas fa-basketball-ball text-6xl text-accent mb-4"></i>
+                <h3 class="text-2xl font-serif font-semibold text-darkblue">
+                  Athletic Excellence
+                </h3>
+              </div>
+              <p class="text-gray-700 leading-relaxed mb-6">
+                Promoting teamwork, discipline, and healthy competition across a
+                wide range of sports and athletic activities.
+              </p>
+              <a
+                href="#"
+                class="text-accent hover:text-yellow-700 font-semibold flex items-center justify-center"
+                >Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="admissions" class="py-16 md:py-24 bg-darkblue text-white">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-4xl font-serif font-bold text-white mb-6">
+            Embark on Your Journey with Evergreen
+          </h2>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10">
+            We invite you to learn more about our admissions process and
+            discover how Evergreen Academy can be the perfect fit for your
+            child's educational journey.
+          </p>
+          <div
+            class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6"
+          >
+            <a
+              href="#"
+              class="bg-secondary hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
+              >Apply Online Today</a
+            >
+            <a
+              href="#"
+              class="bg-transparent hover:bg-white text-white hover:text-darkblue border-2 border-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
+              >Request Information Packet</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-4xl font-serif font-bold text-darkblue text-center mb-12 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary"
+          >
+            What Our Community Says
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="bg-lightgray p-8 rounded-lg shadow-md">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Parent Emily C."
+                class="w-20 h-20 rounded-full mx-auto mb-6 border-4 border-primary shadow-md"
+              />
+              <p class="text-lg italic text-gray-800 mb-6 leading-relaxed">
+                "Evergreen Academy has exceeded our expectations. Our daughter
+                is thriving academically and has found wonderful opportunities
+                in the arts. The teachers are truly exceptional."
+              </p>
+              <p class="font-semibold text-darkblue">
+                - Emily C., Proud Parent
+              </p>
+            </div>
+            <div class="bg-lightgray p-8 rounded-lg shadow-md">
+              <img
+                src="https://randomuser.me/api/portraits/men/82.jpg"
+                alt="Student Michael S."
+                class="w-20 h-20 rounded-full mx-auto mb-6 border-4 border-secondary shadow-md"
+              />
+              <p class="text-lg italic text-gray-800 mb-6 leading-relaxed">
+                "I love the supportive environment at Evergreen. The STEM
+                program is incredible, and I feel really prepared for college.
+                My friends here are like family."
+              </p>
+              <p class="font-semibold text-darkblue">
+                - Michael S., Grade 11 Student
+              </p>
+            </div>
+            <div class="bg-lightgray p-8 rounded-lg shadow-md">
+              <img
+                src="https://randomuser.me/api/portraits/women/75.jpg"
+                alt="Alumna Sarah P."
+                class="w-20 h-20 rounded-full mx-auto mb-6 border-4 border-accent shadow-md"
+              />
+              <p class="text-lg italic text-gray-800 mb-6 leading-relaxed">
+                "My time at Evergreen Academy provided me with a strong
+                foundation, not just academically, but also in developing
+                leadership skills and a passion for learning. Forever grateful!"
+              </p>
+              <p class="font-semibold text-darkblue">
+                - Sarah P., Alumna (Class of '18)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="facilities" class="py-16 md:py-24 bg-mediumgray">
+        <div class="container mx-auto px-4 text-center">
+          <h2
+            class="text-4xl font-serif font-bold text-darkblue mb-12 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary"
+          >
+            Our Campus & Facilities
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="group relative overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1533271714417-644791d09e53?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Library"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-darkblue bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <p class="text-white text-xl font-bold">Modern Library</p>
+              </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1628178875501-c91717088b90?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Science Lab"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-darkblue bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <p class="text-white text-xl font-bold">
+                  Advanced Science Labs
+                </p>
+              </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1517435136894-3a9d592a5491?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Sports Field"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-darkblue bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <p class="text-white text-xl font-bold">
+                  Expansive Sports Fields
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-4xl font-serif font-bold text-darkblue text-center mb-12 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary"
+          >
+            Get in Touch
+          </h2>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <div
+              class="bg-lightgray p-8 rounded-lg shadow-md text-lg leading-relaxed"
+            >
+              <h3 class="text-3xl font-serif font-bold text-darkblue mb-6">
+                Contact Information
+              </h3>
+              <p class="mb-4 flex items-start">
+                <i
+                  class="fas fa-map-marker-alt text-primary text-2xl mr-4 mt-1"
+                ></i>
+                123 School Lane, Education City, ST 98765
+              </p>
+              <p class="mb-4 flex items-center">
+                <i class="fas fa-phone-alt text-primary text-2xl mr-4"></i>
+                <a href="tel:+1-555-123-4567" class="hover:underline"
+                  >+1 (555) 123-4567</a
+                >
+              </p>
+              <p class="mb-4 flex items-center">
+                <i class="fas fa-envelope text-primary text-2xl mr-4"></i>
+                <a
+                  href="mailto:info@evergreenacademy.com"
+                  class="hover:underline"
+                  >info@evergreenacademy.com</a
+                >
+              </p>
+              <p class="mb-6 flex items-center">
+                <i class="fas fa-clock text-primary text-2xl mr-4"></i> Mon -
+                Fri: 8:00 AM - 4:00 PM
+              </p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.170457632616!2d36.70889267498705!3d-1.3090885986877843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b40285a2f5f%3A0xc3b8a3e7e45300f8!2sKaren%20Square!5e0!3m2!1sen!2ske!4v1716757650383!5m2!1sen!2ske"
+                width="100%"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-lg shadow-md mt-6"
+              ></iframe>
+            </div>
+
+            <div class="bg-lightgray p-8 rounded-lg shadow-md">
+              <h3 class="text-3xl font-serif font-bold text-darkblue mb-6">
+                Send Us a Message
+              </h3>
+              <form action="#" method="POST" class="space-y-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-gray-800 text-lg font-medium mb-2"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-gray-800 text-lg font-medium mb-2"
+                    >Your Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="subject"
+                    class="block text-gray-800 text-lg font-medium mb-2"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-gray-800 text-lg font-medium mb-2"
+                    >Your Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary resize-y"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 w-full md:w-auto"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-darkblue text-white py-12">
+      <div
+        class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10"
+      >
+        <div>
+          <h3 class="text-xl font-serif font-bold text-secondary mb-4">
+            Evergreen Academy
+          </h3>
+          <p class="text-gray-300 leading-relaxed text-sm">
+            Dedicated to inspiring a lifelong love of learning and preparing
+            students for a successful future.
+          </p>
+          <div class="flex space-x-4 mt-6">
+            <a
+              href="#"
+              class="text-gray-300 hover:text-primary transition duration-300"
+              ><i class="fab fa-facebook-f text-2xl"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-primary transition duration-300"
+              ><i class="fab fa-twitter text-2xl"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-primary transition duration-300"
+              ><i class="fab fa-instagram text-2xl"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-primary transition duration-300"
+              ><i class="fab fa-linkedin-in text-2xl"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-serif font-bold text-secondary mb-4">
+            Quick Links
+          </h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a
+                href="#home"
+                class="text-gray-300 hover:text-primary transition duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="text-gray-300 hover:text-primary transition duration-300"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#academics"
+                class="text-gray-300 hover:text-primary transition duration-300"
+                >Academics</a
+              >
+            </li>
+            <li>
+              <a
+                href="#admissions"
+                class="text-gray-300 hover:text-primary transition duration-300"
+                >Admissions</a
+              >
+            </li>
+            <li>
+              <a
+                href="#facilities"
+                class="text-gray-300 hover:text-primary transition duration-300"
+                >Facilities</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-serif font-bold text-secondary mb-4">
+            Our Programs
+          </h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-primary transition duration-300"
+                >Early Years</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-primary transition duration-300"
+                >Elementary School</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-primary transition duration-300"
+                >Middle School</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-primary transition duration-300"
+                >High School</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-serif font-bold text-secondary mb-4">
+            Contact Us
+          </h3>
+          <p class="text-gray-300 mb-2 text-sm">
+            <i class="fas fa-map-marker-alt text-primary mr-3"></i> 123 School
+            Lane, Education City
+          </p>
+          <p class="text-gray-300 mb-2 text-sm">
+            <i class="fas fa-phone-alt text-primary mr-3"></i> +1 (555) 123-4567
+          </p>
+          <p class="text-gray-300 mb-2 text-sm">
+            <i class="fas fa-envelope text-primary mr-3"></i>
+            info@evergreenacademy.com
+          </p>
+        </div>
+      </div>
+      <div
+        class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500 text-sm"
+      >
+        <p>
+          &copy; <span id="current-year"></span> Evergreen Academy. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Set current year in footer
+      document.getElementById('current-year').textContent =
+        new Date().getFullYear()
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menu-toggle')
+      const mobileMenu = document.getElementById('mobile-menu')
+      const closeMenu = document.getElementById('close-menu')
+      const mobileNavLinks = document.querySelectorAll(
+        '#mobile-menu [data-close-menu]'
+      )
+
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden')
+        mobileMenu.classList.add('translate-x-0')
+        document.body.classList.add('overflow-hidden-when-nav-active') // Custom class for no-scroll
+      })
+
+      const hideMobileMenu = () => {
+        mobileMenu.classList.add('hidden')
+        mobileMenu.classList.remove('translate-x-0')
+        document.body.classList.remove('overflow-hidden-when-nav-active')
+      }
+
+      closeMenu.addEventListener('click', hideMobileMenu)
+
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener('click', hideMobileMenu)
+      })
+    </script>
+  </body>
+</html>

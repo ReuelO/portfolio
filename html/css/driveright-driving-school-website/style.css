@@ -1,0 +1,128 @@
+/* Custom Fonts */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.btn {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Custom Hero Section Styling */
+.hero-section {
+  position: relative;
+  height: 90vh; /* Adjust as needed */
+  background-image: url('https://images.unsplash.com/photo-1579717618334-a160d704c7ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your desired driving school image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+  color: white; /* Ensure text is visible on dark overlay */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+}
+
+/* Custom Hover Effects for Cards */
+.transform-on-hover {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.transform-on-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Smooth scroll offset for fixed navbar */
+html {
+  scroll-padding-top: 58px; /* Adjust this value to match your fixed navbar height */
+}
+
+/* Minor text color adjustments for footer links on hover */
+.hover-primary:hover {
+  color: var(--bs-primary) !important;
+}
+
+/* Simple animations (Bootstrap 5 does not include Animate.css by default) */
+/* You would need to add Animate.css CDN or define these manually if you want them */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate__fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animate__zoomIn {
+  animation-name: zoomIn;
+}
+
+.animate__delay-0-5s {
+  animation-delay: 0.5s;
+}
+
+.animate__delay-1s {
+  animation-delay: 1s;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 767.98px) {
+  .hero-section {
+    height: 80vh; /* Shorter on mobile */
+  }
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,68 @@
+/* Custom CSS for Building Material Supplier - style.css */
+
+/* Add some subtle scroll-reveal animations (optional, requires a JS library or custom JS) */
+/* For a quick demo, we'll use a simple CSS animation with a JavaScript trigger */
+
+/* Initial hidden state for animated elements */
+.animate__animated {
+  opacity: 0;
+  transform: translateY(20px); /* Or translateX for left/right */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Specific animations when 'is-visible' class is added by JS */
+.animate__animated.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate__animated.animate__fadeInLeft.is-visible {
+  transform: translateX(0);
+}
+
+.animate__animated.animate__fadeInRight.is-visible {
+  transform: translateX(0);
+}
+
+.animate__animated.animate__fadeInDown.is-visible {
+  transform: translateY(0);
+}
+
+/* Optional: Add delays */
+.animate__delay-1s.is-visible {
+  transition-delay: 0.2s;
+}
+.animate__delay-2s.is-visible {
+  transition-delay: 0.4s;
+}
+.animate__delay-3s.is-visible {
+  transition-delay: 0.6s;
+}
+.animate__delay-4s.is-visible {
+  transition-delay: 0.8s;
+}
+.animate__delay-5s.is-visible {
+  transition-delay: 1s;
+}
+
+/* Adjust padding-top for fixed navbar to prevent content from being hidden */
+body {
+  padding-top: 58px; /* Height of your fixed navbar */
+}
+
+/* Enhance active nav link for better visibility */
+.navbar-nav .nav-link.active {
+  color: #ffc107 !important; /* Bootstrap warning color */
+  border-bottom: 2px solid #ffc107;
+  padding-bottom: 3px;
+}
+
+/* Small adjustments for image overlays if needed */
+.hero-section .container,
+.cta-section .container {
+  position: relative;
+  z-index: 1; /* Ensure text is above background */
+}
+
+/* Custom background for the hero section, defined in <style> block in HTML for convenience */
+/* Custom background for the CTA section, defined in <style> block in HTML for convenience */

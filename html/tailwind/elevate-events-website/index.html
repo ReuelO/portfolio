@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elevate Events - Crafting Unforgettable Experiences</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary-purple':
+                '#6B21A8' /* A deep purple, more vibrant than default */,
+              'accent-orange': '#F59E0B' /* Tailwind's amber-500 */,
+              'bg-gray-light': '#F9FAFB' /* Tailwind's gray-50 */,
+              'text-dark': '#1F2937' /* Tailwind's gray-800 */,
+            },
+            fontFamily: {
+              sans: ['Open Sans', 'sans-serif'],
+              heading: ['Poppins', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <style type="text/tailwindcss">
+      /* You can add custom CSS here if absolutely necessary, but try to use Tailwind utilities */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-text-dark bg-gray-50">
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+      <div
+        class="container mx-auto flex justify-between items-center px-4 md:px-6"
+      >
+        <a href="#" class="text-3xl font-bold font-heading text-primary-purple"
+          >Elevate Events</a
+        >
+
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+          <svg
+            class="w-8 h-8 text-primary-purple"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-4 6h4"
+            ></path>
+          </svg>
+        </button>
+
+        <nav
+          id="main-nav"
+          class="hidden md:flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none py-4 md:py-0 transition-all duration-300 ease-in-out"
+        >
+          <ul
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center md:items-start text-lg md:text-base"
+          >
+            <li>
+              <a
+                href="#hero"
+                class="text-gray-700 hover:text-accent-orange font-medium transition duration-200"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="text-gray-700 hover:text-accent-orange font-medium transition duration-200"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#portfolio"
+                class="text-gray-700 hover:text-accent-orange font-medium transition duration-200"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="text-gray-700 hover:text-accent-orange font-medium transition duration-200"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-gray-700 hover:text-accent-orange font-medium transition duration-200"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="hero"
+        class="relative bg-cover bg-center h-[600px] flex items-center justify-center text-center px-4"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1506102604084-2a623769c8e8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        "
+      >
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative z-10 text-white max-w-3xl mx-auto">
+          <h1
+            class="text-5xl md:text-6xl font-extrabold font-heading mb-6 leading-tight drop-shadow-lg"
+          >
+            Crafting Unforgettable Experiences.
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 drop-shadow-md">
+            From intimate gatherings to grand celebrations, we bring your vision
+            to life with precision and passion.
+          </p>
+          <a
+            href="#contact"
+            class="inline-block bg-accent-orange text-white text-lg font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-orange-600 transition duration-300 ease-in-out transform hover:scale-105"
+            >Plan Your Event Today!</a
+          >
+        </div>
+      </section>
+
+      <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+          <h2 class="text-4xl font-bold font-heading mb-4 text-primary-purple">
+            Our Event Solutions
+          </h2>
+          <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            We offer a full spectrum of event management services tailored to
+            your unique needs.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2"
+            >
+              <div class="text-primary-purple text-5xl mb-6">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <h3
+                class="text-2xl font-semibold font-heading mb-3 text-gray-800"
+              >
+                Corporate Events
+              </h3>
+              <p class="text-gray-700">
+                Conferences, product launches, gala dinners, team building –
+                flawlessly executed events for your business.
+              </p>
+            </div>
+            <div
+              class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2"
+            >
+              <div class="text-primary-purple text-5xl mb-6">
+                <i class="fas fa-ring"></i>
+              </div>
+              <h3
+                class="text-2xl font-semibold font-heading mb-3 text-gray-800"
+              >
+                Weddings & Anniversaries
+              </h3>
+              <p class="text-gray-700">
+                Creating magical and personalized wedding experiences that
+                reflect your unique love story.
+              </p>
+            </div>
+            <div
+              class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2"
+            >
+              <div class="text-primary-purple text-5xl mb-6">
+                <i class="fas fa-champagne-glasses"></i>
+              </div>
+              <h3
+                class="text-2xl font-semibold font-heading mb-3 text-gray-800"
+              >
+                Social Gatherings
+              </h3>
+              <p class="text-gray-700">
+                Birthdays, anniversaries, graduations, or any special occasion –
+                we handle every detail.
+              </p>
+            </div>
+            <div
+              class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2"
+            >
+              <div class="text-primary-purple text-5xl mb-6">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3
+                class="text-2xl font-semibold font-heading mb-3 text-gray-800"
+              >
+                Venue Sourcing & Logistics
+              </h3>
+              <p class="text-gray-700">
+                Finding the perfect location and managing all logistical aspects
+                for a seamless event.
+              </p>
+            </div>
+            <div
+              class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2"
+            >
+              <div class="text-primary-purple text-5xl mb-6">
+                <i class="fas fa-users-gear"></i>
+              </div>
+              <h3
+                class="text-2xl font-semibold font-heading mb-3 text-gray-800"
+              >
+                Vendor Management
+              </h3>
+              <p class="text-gray-700">
+                Connecting you with top-tier vendors for catering,
+                entertainment, decor, and more.
+              </p>
+            </div>
+            <div
+              class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2"
+            >
+              <div class="text-primary-purple text-5xl mb-6">
+                <i class="fas fa-ticket-alt"></i>
+              </div>
+              <h3
+                class="text-2xl font-semibold font-heading mb-3 text-gray-800"
+              >
+                Ticketing & Registration
+              </h3>
+              <p class="text-gray-700">
+                Streamlined attendee management and secure ticketing solutions
+                for events of any size.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-we-work" class="py-16 bg-bg-gray-light">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+          <h2 class="text-4xl font-bold font-heading mb-4 text-primary-purple">
+            Our Seamless Planning Process
+          </h2>
+          <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            We follow a meticulous approach to ensure every event is a
+            resounding success.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="relative p-6 bg-white rounded-lg shadow-md text-left border-t-4 border-accent-orange"
+            >
+              <div
+                class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-primary-purple text-white w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold shadow-md"
+              >
+                1
+              </div>
+              <h3
+                class="text-xl font-semibold font-heading mt-6 mb-3 text-primary-purple"
+              >
+                Consultation & Concept
+              </h3>
+              <p class="text-gray-700">
+                We listen to your vision, understand your goals, and brainstorm
+                creative concepts.
+              </p>
+            </div>
+            <div
+              class="relative p-6 bg-white rounded-lg shadow-md text-left border-t-4 border-primary-purple"
+            >
+              <div
+                class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-accent-orange text-white w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold shadow-md"
+              >
+                2
+              </div>
+              <h3
+                class="text-xl font-semibold font-heading mt-6 mb-3 text-primary-purple"
+              >
+                Planning & Design
+              </h3>
+              <p class="text-gray-700">
+                Detailed planning, budget management, vendor selection, and
+                aesthetic design.
+              </p>
+            </div>
+            <div
+              class="relative p-6 bg-white rounded-lg shadow-md text-left border-t-4 border-accent-orange"
+            >
+              <div
+                class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-primary-purple text-white w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold shadow-md"
+              >
+                3
+              </div>
+              <h3
+                class="text-xl font-semibold font-heading mt-6 mb-3 text-primary-purple"
+              >
+                Execution & Management
+              </h3>
+              <p class="text-gray-700">
+                Seamless coordination on event day, ensuring everything runs
+                perfectly.
+              </p>
+            </div>
+            <div
+              class="relative p-6 bg-white rounded-lg shadow-md text-left border-t-4 border-primary-purple"
+            >
+              <div
+                class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-accent-orange text-white w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold shadow-md"
+              >
+                4
+              </div>
+              <h3
+                class="text-xl font-semibold font-heading mt-6 mb-3 text-primary-purple"
+              >
+                Post-Event Review
+              </h3>
+              <p class="text-gray-700">
+                Feedback collection, analysis, and follow-up to ensure complete
+                satisfaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+          <h2 class="text-4xl font-bold font-heading mb-4 text-primary-purple">
+            Our Recent Event Portfolio
+          </h2>
+          <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            See how we've brought diverse events to life with creativity and
+            precision.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+              <img
+                src="https://images.unsplash.com/photo-1540575467063-ce32dc4b2da5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Corporate Conference"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-primary-purple bg-opacity-80 flex flex-col items-center justify-center p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <h3 class="text-2xl font-heading font-semibold mb-2">
+                  Tech Summit 2024
+                </h3>
+                <p class="text-md text-center mb-4">
+                  A groundbreaking corporate conference for 500+ attendees.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block border border-white text-white text-sm px-4 py-2 rounded-full hover:bg-white hover:text-primary-purple transition duration-200"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+              <img
+                src="https://images.unsplash.com/photo-1509099897539-756184d0b1d3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Wedding Celebration"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-primary-purple bg-opacity-80 flex flex-col items-center justify-center p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <h3 class="text-2xl font-heading font-semibold mb-2">
+                  Elegant Garden Wedding
+                </h3>
+                <p class="text-md text-center mb-4">
+                  A beautifully orchestrated outdoor wedding ceremony and
+                  reception.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block border border-white text-white text-sm px-4 py-2 rounded-full hover:bg-white hover:text-primary-purple transition duration-200"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+              <img
+                src="https://images.unsplash.com/photo-1517457210-bf26f40778c2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Charity Gala"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-primary-purple bg-opacity-80 flex flex-col items-center justify-center p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <h3 class="text-2xl font-heading font-semibold mb-2">
+                  Annual Charity Gala
+                </h3>
+                <p class="text-md text-center mb-4">
+                  A successful fundraising gala for a non-profit organization.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block border border-white text-white text-sm px-4 py-2 rounded-full hover:bg-white hover:text-primary-purple transition duration-200"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <a
+            href="#contact"
+            class="mt-12 inline-block bg-primary-purple text-white text-lg font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-purple-800 transition duration-300 ease-in-out transform hover:scale-105"
+            >Explore More Events</a
+          >
+        </div>
+      </section>
+
+      <section id="testimonials" class="py-16 bg-bg-gray-light">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+          <h2 class="text-4xl font-bold font-heading mb-4 text-primary-purple">
+            What Our Clients Say
+          </h2>
+          <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            Hear from those who have experienced the Elevate Events difference.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-lg relative pb-12">
+              <i
+                class="fas fa-quote-left text-primary-purple text-3xl absolute top-4 left-4 opacity-20"
+              ></i>
+              <p class="italic text-gray-700 text-lg mb-6">
+                "Elevate Events made our annual corporate retreat truly
+                unforgettable. Every detail was handled with precision and
+                creativity!"
+              </p>
+              <div class="absolute bottom-4 right-4">
+                <p class="font-semibold text-primary-purple">
+                  - Jane Wanjiku, CEO, Tech Solutions Ltd.
+                </p>
+              </div>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg relative pb-12">
+              <i
+                class="fas fa-quote-left text-primary-purple text-3xl absolute top-4 left-4 opacity-20"
+              ></i>
+              <p class="italic text-gray-700 text-lg mb-6">
+                "Our wedding was a dream come true, thanks to Elevate Events.
+                They took all the stress away and delivered beyond our
+                expectations."
+              </p>
+              <div class="absolute bottom-4 right-4">
+                <p class="font-semibold text-primary-purple">
+                  - David & Mary Mwangi
+                </p>
+              </div>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg relative pb-12">
+              <i
+                class="fas fa-quote-left text-primary-purple text-3xl absolute top-4 left-4 opacity-20"
+              ></i>
+              <p class="italic text-gray-700 text-lg mb-6">
+                "Professional, organized, and truly imaginative. Elevate Events
+                is our go-to partner for all our major product launch events."
+              </p>
+              <div class="absolute bottom-4 right-4">
+                <p class="font-semibold text-primary-purple">
+                  - Sarah Kimani, Marketing Head, Global Brands
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="flex flex-col md:flex-row items-center md:space-x-12">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e2726f1c48c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Event Planning Team"
+                class="rounded-lg shadow-xl w-full h-auto"
+              />
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+              <h2
+                class="text-4xl font-bold font-heading mb-4 text-primary-purple"
+              >
+                About Elevate Events
+              </h2>
+              <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Established in 2018, Elevate Events is a premier event
+                management company dedicated to transforming ideas into
+                spectacular realities. Our passionate team of experienced
+                planners, designers, and coordinators works tirelessly to
+                deliver seamless, memorable, and impactful events of all scales.
+              </p>
+              <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                We believe that every event is an opportunity to create unique
+                experiences. Our commitment to creativity, meticulous planning,
+                and flawless execution ensures that your event not only meets
+                but exceeds expectations. From corporate functions to intimate
+                celebrations, your vision is our blueprint for success.
+              </p>
+              <a
+                href="#contact"
+                class="inline-block bg-primary-purple text-white text-lg font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-purple-800 transition duration-300 ease-in-out transform hover:scale-105"
+                >Meet Our Team</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 bg-primary-purple text-white text-center">
+        <div class="container mx-auto px-4 md:px-6">
+          <h2
+            class="text-4xl md:text-5xl font-bold font-heading mb-6 drop-shadow-lg"
+          >
+            Ready to Create Your Perfect Event?
+          </h2>
+          <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90">
+            Let's discuss your vision and turn it into a captivating experience.
+            We're here to make it happen.
+          </p>
+          <a
+            href="#contact"
+            class="inline-block bg-accent-orange text-white text-xl font-semibold py-4 px-10 rounded-full shadow-xl hover:bg-orange-600 transition duration-300 ease-in-out transform hover:scale-110"
+            >Get Your Free Quote!</a
+          >
+        </div>
+      </section>
+
+      <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+          <h2 class="text-4xl font-bold font-heading mb-4 text-primary-purple">
+            Connect With Us
+          </h2>
+          <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            Have questions or ready to start planning? Reach out to our team
+            today.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div class="bg-gray-50 p-8 rounded-lg shadow-lg text-left">
+              <h3 class="text-2xl font-bold font-heading mb-6 text-gray-800">
+                Send Us a Message
+              </h3>
+              <form>
+                <div class="mb-5">
+                  <label
+                    for="name"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-purple focus:border-transparent transition duration-200"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div class="mb-5">
+                  <label
+                    for="email"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-purple focus:border-transparent transition duration-200"
+                    placeholder="your@example.com"
+                  />
+                </div>
+                <div class="mb-5">
+                  <label
+                    for="subject"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-purple focus:border-transparent transition duration-200"
+                    placeholder="Event Inquiry, Partnership, etc."
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Your Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-purple focus:border-transparent transition duration-200"
+                    placeholder="Tell us about your event needs..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-primary-purple text-white font-bold py-3 px-4 rounded-lg hover:bg-purple-800 focus:outline-none focus:shadow-outline transition duration-300 transform hover:scale-105"
+                >
+                  Submit Message
+                </button>
+              </form>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-lg shadow-lg text-left">
+              <h3 class="text-2xl font-bold font-heading mb-6 text-gray-800">
+                Our Details & Location
+              </h3>
+              <div class="space-y-4 text-gray-700 text-lg">
+                <p>
+                  <i class="fas fa-map-marker-alt text-accent-orange mr-3"></i>
+                  Elevate House, 7th Floor, Riverside Drive, Nairobi, Kenya
+                </p>
+                <p>
+                  <i class="fas fa-phone-alt text-accent-orange mr-3"></i> +254
+                  7XX XXX XXX
+                </p>
+                <p>
+                  <i class="fas fa-envelope text-accent-orange mr-3"></i>
+                  info@elevateevents.co.ke
+                </p>
+                <p>
+                  <i class="fas fa-clock text-accent-orange mr-3"></i> Mon -
+                  Fri: 9:00 AM - 5:00 PM
+                </p>
+              </div>
+              <div class="mt-8 rounded-lg overflow-hidden shadow-md">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.170457632616!2d36.70889267498705!3d-1.3090885986877843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b40285a2f5f%3A0xc3b8a3e7e45300f8!2sKaren%20Square!5e0!3m2!1sen!2ske!4v1716757650383!5m2!1sen!2ske"
+                  width="100%"
+                  height="300"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-primary-purple text-white py-8">
+      <div class="container mx-auto px-4 md:px-6 text-center">
+        <p class="mb-4 text-lg">
+          &copy; 2025 Elevate Events. All rights reserved.
+        </p>
+        <div class="flex justify-center space-x-6 mb-4">
+          <a
+            href="#"
+            class="text-gray-300 hover:text-accent-orange transition duration-200"
+            ><i class="fab fa-facebook-f text-2xl"></i
+          ></a>
+          <a
+            href="#"
+            class="text-gray-300 hover:text-accent-orange transition duration-200"
+            ><i class="fab fa-twitter text-2xl"></i
+          ></a>
+          <a
+            href="#"
+            class="text-gray-300 hover:text-accent-orange transition duration-200"
+            ><i class="fab fa-instagram text-2xl"></i
+          ></a>
+          <a
+            href="#"
+            class="text-gray-300 hover:text-accent-orange transition duration-200"
+            ><i class="fab fa-linkedin-in text-2xl"></i
+          ></a>
+        </div>
+        <ul
+          class="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-8 text-gray-400"
+        >
+          <li>
+            <a href="#" class="hover:text-accent-orange transition duration-200"
+              >Privacy Policy</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-accent-orange transition duration-200"
+              >Terms of Service</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-accent-orange transition duration-200"
+              >Site Map</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menu-toggle')
+        const mainNav = document.getElementById('main-nav')
+        const navLinks = mainNav.querySelectorAll('a')
+
+        menuToggle.addEventListener('click', () => {
+          mainNav.classList.toggle('hidden')
+          mainNav.classList.toggle('flex')
+          // Adjust position for mobile menu to slide down from header
+          mainNav.classList.toggle('top-[calc(100%+1rem)]') // Adjusts to be below the header with some spacing
+        })
+
+        // Close nav when clicking a link (on mobile)
+        navLinks.forEach((link) => {
+          link.addEventListener('click', () => {
+            if (!mainNav.classList.contains('hidden')) {
+              mainNav.classList.add('hidden')
+              mainNav.classList.remove('flex')
+              mainNav.classList.remove('top-[calc(100%+1rem)]')
+            }
+          })
+        })
+
+        // Close nav if window is resized above md breakpoint while menu is open
+        window.addEventListener('resize', () => {
+          if (
+            window.innerWidth >= 768 &&
+            !mainNav.classList.contains('hidden')
+          ) {
+            mainNav.classList.add('hidden')
+            mainNav.classList.remove('flex')
+            mainNav.classList.remove('top-[calc(100%+1rem)]')
+          }
+        })
+      })
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCXd/XP=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </body>
+</html>

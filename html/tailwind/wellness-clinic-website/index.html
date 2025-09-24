@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellness Clinic - Your Health Partner</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCXd/XP=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Custom styles to integrate Google Fonts and specific backgrounds */
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        background-color: #f8f9fa; /* Light background for overall page */
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Montserrat', sans-serif;
+        color: #212529; /* Darker text for headings */
+      }
+
+      .hero-section {
+        background: url('https://images.unsplash.com/photo-1576091160550-217355c25e16?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+          no-repeat center center;
+        background-size: cover;
+        min-height: 80vh; /* Adjust height as needed */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 77, 128, 0.6); /* Darker blue overlay */
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        padding: 20px;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        color: #004d80; /* A strong blue for titles */
+        position: relative;
+      }
+      .section-title::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        width: 80px;
+        height: 4px;
+        background-color: #007bff; /* Bootstrap primary blue */
+        border-radius: 2px;
+      }
+
+      .service-card .card-body,
+      .team-card .card-body,
+      .testimonial-card .card-body {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .service-card:hover .card-body,
+      .team-card:hover .card-body,
+      .testimonial-card:hover .card-body {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+
+      .icon-square {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        border-radius: 0.75rem;
+        background-color: #007bff; /* Bootstrap primary blue */
+        color: white;
+        margin-bottom: 1rem;
+      }
+
+      .team-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #007bff;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial-img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #007bff;
+        margin-right: 15px;
+      }
+
+      .testimonial-card {
+        background-color: #e9f5ff; /* Lighter blue for testimonials */
+        border: none;
+        border-left: 5px solid #007bff;
+      }
+
+      .map-iframe {
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="58">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow"
+      id="mainNavbar"
+    >
+      <div class="container">
+        <a class="navbar-brand fs-4 fw-bold" href="#">
+          <i class="fas fa-heartbeat me-2"></i>Wellness Clinic
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-warning rounded-pill px-4" href="#appointment">
+                <i class="fas fa-calendar-alt me-2"></i>Book Appointment
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1
+            class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown"
+          >
+            Your Health, Our Priority
+          </h1>
+          <p class="lead mb-5 animate__animated animate__fadeInUp">
+            Providing compassionate and comprehensive healthcare solutions for
+            your family's well-being.
+          </p>
+          <a
+            href="#appointment"
+            class="btn btn-warning btn-lg rounded-pill px-5 py-3 shadow-lg animate__animated animate__zoomIn"
+          >
+            Make An Appointment <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </section>
+
+      <section id="services" class="py-5 py-md-5">
+        <div class="container">
+          <h2 class="section-title text-center mb-5">Our Medical Services</h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+              <div class="card h-100 shadow-sm service-card border-0 rounded-4">
+                <div class="card-body text-center p-4">
+                  <div class="icon-square mx-auto mb-3">
+                    <i class="fas fa-stethoscope"></i>
+                  </div>
+                  <h3 class="card-title h5 mb-3">General Check-ups</h3>
+                  <p class="card-text text-muted">
+                    Routine examinations and health assessments to keep you in
+                    optimal health.
+                  </p>
+                  <a
+                    href="#appointment"
+                    class="btn btn-outline-primary btn-sm rounded-pill mt-3"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm service-card border-0 rounded-4">
+                <div class="card-body text-center p-4">
+                  <div class="icon-square mx-auto mb-3">
+                    <i class="fas fa-syringe"></i>
+                  </div>
+                  <h3 class="card-title h5 mb-3">Vaccinations</h3>
+                  <p class="card-text text-muted">
+                    Comprehensive immunization programs for all age groups.
+                  </p>
+                  <a
+                    href="#appointment"
+                    class="btn btn-outline-primary btn-sm rounded-pill mt-3"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm service-card border-0 rounded-4">
+                <div class="card-body text-center p-4">
+                  <div class="icon-square mx-auto mb-3">
+                    <i class="fas fa-child"></i>
+                  </div>
+                  <h3 class="card-title h5 mb-3">Pediatrics</h3>
+                  <p class="card-text text-muted">
+                    Dedicated care for infants, children, and adolescents.
+                  </p>
+                  <a
+                    href="#appointment"
+                    class="btn btn-outline-primary btn-sm rounded-pill mt-3"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm service-card border-0 rounded-4">
+                <div class="card-body text-center p-4">
+                  <div class="icon-square mx-auto mb-3">
+                    <i class="fas fa-x-ray"></i>
+                  </div>
+                  <h3 class="card-title h5 mb-3">Diagnostic Imaging</h3>
+                  <p class="card-text text-muted">
+                    Advanced imaging services for accurate diagnoses.
+                  </p>
+                  <a
+                    href="#appointment"
+                    class="btn btn-outline-primary btn-sm rounded-pill mt-3"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm service-card border-0 rounded-4">
+                <div class="card-body text-center p-4">
+                  <div class="icon-square mx-auto mb-3">
+                    <i class="fas fa-tooth"></i>
+                  </div>
+                  <h3 class="card-title h5 mb-3">Dental Health</h3>
+                  <p class="card-text text-muted">
+                    Comprehensive dental care for healthy smiles.
+                  </p>
+                  <a
+                    href="#appointment"
+                    class="btn btn-outline-primary btn-sm rounded-pill mt-3"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm service-card border-0 rounded-4">
+                <div class="card-body text-center p-4">
+                  <div class="icon-square mx-auto mb-3">
+                    <i class="fas fa-notes-medical"></i>
+                  </div>
+                  <h3 class="card-title h5 mb-3">Specialist Consultations</h3>
+                  <p class="card-text text-muted">
+                    Access to a network of specialized medical professionals.
+                  </p>
+                  <a
+                    href="#appointment"
+                    class="btn btn-outline-primary btn-sm rounded-pill mt-3"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-5 py-md-5 bg-white">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <img
+                src="https://images.unsplash.com/photo-1584982751601-c67b797966d5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="img-fluid rounded-4 shadow-lg"
+                alt="Clinic interior"
+              />
+            </div>
+            <div class="col-lg-6">
+              <h2 class="section-title text-center text-lg-start mb-4">
+                About Wellness Clinic
+              </h2>
+              <p class="lead text-muted mb-4">
+                At Wellness Clinic, we are dedicated to providing exceptional
+                healthcare with a patient-centered approach. Our mission is to
+                promote the health and well-being of our community through
+                compassionate care, advanced medical practices, and continuous
+                innovation.
+              </p>
+              <p class="text-muted mb-4">
+                Established in 20XX, our clinic has grown to become a trusted
+                healthcare provider, known for its experienced team,
+                state-of-the-art facilities, and a warm, welcoming environment.
+                We believe in building lasting relationships with our patients
+                based on trust and mutual respect.
+              </p>
+              <ul class="list-unstyled text-muted mb-4">
+                <li>
+                  <i class="fas fa-check-circle text-primary me-2"></i>
+                  Experienced & Compassionate Team
+                </li>
+                <li>
+                  <i class="fas fa-check-circle text-primary me-2"></i>
+                  State-of-the-Art Facilities
+                </li>
+                <li>
+                  <i class="fas fa-check-circle text-primary me-2"></i>
+                  Patient-Centered Approach
+                </li>
+                <li>
+                  <i class="fas fa-check-circle text-primary me-2"></i>
+                  Comprehensive Healthcare Services
+                </li>
+              </ul>
+              <a href="#contact" class="btn btn-primary rounded-pill px-4 py-2"
+                >Contact Us Today</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="py-5 py-md-5">
+        <div class="container">
+          <h2 class="section-title text-center mb-5">
+            Meet Our Dedicated Team
+          </h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+              <div
+                class="card h-100 text-center shadow-sm border-0 rounded-4 team-card"
+              >
+                <div class="card-body p-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Dr. John Doe"
+                    class="team-img mb-3"
+                  />
+                  <h4 class="h5 mb-1">Dr. John Doe</h4>
+                  <p class="text-muted small">General Practitioner</p>
+                  <div class="social-icons mt-3">
+                    <a href="#" class="text-primary me-2"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a href="#" class="text-primary"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card h-100 text-center shadow-sm border-0 rounded-4 team-card"
+              >
+                <div class="card-body p-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="Dr. Jane Smith"
+                    class="team-img mb-3"
+                  />
+                  <h4 class="h5 mb-1">Dr. Jane Smith</h4>
+                  <p class="text-muted small">Pediatrician</p>
+                  <div class="social-icons mt-3">
+                    <a href="#" class="text-primary me-2"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a href="#" class="text-primary"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card h-100 text-center shadow-sm border-0 rounded-4 team-card"
+              >
+                <div class="card-body p-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/7.jpg"
+                    alt="Dr. David Lee"
+                    class="team-img mb-3"
+                  />
+                  <h4 class="h5 mb-1">Dr. David Lee</h4>
+                  <p class="text-muted small">Cardiologist</p>
+                  <div class="social-icons mt-3">
+                    <a href="#" class="text-primary me-2"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a href="#" class="text-primary"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card h-100 text-center shadow-sm border-0 rounded-4 team-card"
+              >
+                <div class="card-body p-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/62.jpg"
+                    alt="Nurse Emily White"
+                    class="team-img mb-3"
+                  />
+                  <h4 class="h5 mb-1">Nurse Emily White</h4>
+                  <p class="text-muted small">Head Nurse</p>
+                  <div class="social-icons mt-3">
+                    <a href="#" class="text-primary me-2"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a href="#" class="text-primary"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="py-5 py-md-5 bg-white">
+        <div class="container">
+          <h2 class="section-title text-center mb-5">What Our Patients Say</h2>
+          <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+            <div class="col-lg-5">
+              <div
+                class="card h-100 shadow-sm border-0 rounded-4 testimonial-card"
+              >
+                <div class="card-body p-4 d-flex align-items-start">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/11.jpg"
+                    alt="Patient Sarah M."
+                    class="testimonial-img"
+                  />
+                  <div>
+                    <p class="mb-3 fst-italic text-dark">
+                      "I've been coming to Wellness Clinic for years, and I
+                      always receive top-notch care. The doctors are incredibly
+                      knowledgeable and the staff is so friendly."
+                    </p>
+                    <h6 class="mb-0 fw-bold text-primary">Sarah M.</h6>
+                    <p class="small text-muted">Nairobi Resident</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div
+                class="card h-100 shadow-sm border-0 rounded-4 testimonial-card"
+              >
+                <div class="card-body p-4 d-flex align-items-start">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/22.jpg"
+                    alt="Patient David K."
+                    class="testimonial-img"
+                  />
+                  <div>
+                    <p class="mb-3 fst-italic text-dark">
+                      "Booking an appointment was easy, and I was seen right on
+                      time. Dr. Doe was thorough and answered all my questions.
+                      Highly recommended!"
+                    </p>
+                    <h6 class="mb-0 fw-bold text-primary">David K.</h6>
+                    <p class="small text-muted">Local Business Owner</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-5 py-md-5 bg-light">
+        <div class="container">
+          <h2 class="section-title text-center mb-5">
+            Book Your Appointment or Contact Us
+          </h2>
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <h3 class="mb-4 text-primary">Make an Appointment</h3>
+              <form id="appointment" class="needs-validation" novalidate>
+                <div class="mb-3">
+                  <label for="fullName" class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fullName"
+                    placeholder="Your Full Name"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter your full name.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="name@example.com"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    placeholder="+254 7XX XXX XXX"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="serviceSelect" class="form-label"
+                    >Select Service</label
+                  >
+                  <select class="form-select" id="serviceSelect" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>General Check-up</option>
+                    <option>Vaccination</option>
+                    <option>Pediatric Consultation</option>
+                    <option>Dental Check</option>
+                    <option>Specialist Referral</option>
+                    <option>Other Inquiry</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a service.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="preferredDate" class="form-label"
+                    >Preferred Date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="preferredDate"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please choose a preferred date.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label"
+                    >Your Message (Optional)</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="3"
+                    placeholder="Any specific concerns or questions?"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg rounded-pill px-4 mt-3"
+                >
+                  Submit Appointment
+                </button>
+              </form>
+            </div>
+
+            <div class="col-lg-6">
+              <h3 class="mb-4 text-primary">Our Location & Info</h3>
+              <p class="lead">
+                We are conveniently located and ready to assist you.
+              </p>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2">
+                  <i class="fas fa-map-marker-alt text-primary me-3"></i> 123
+                  Wellness Avenue, Nairobi, Kenya
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-phone-alt text-primary me-3"></i>
+                  <a
+                    href="tel:+2547XXYYYZZZ"
+                    class="text-decoration-none text-dark"
+                    >+254 7XX XXX XXX</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-envelope text-primary me-3"></i>
+                  <a
+                    href="mailto:info@wellnessclinic.co.ke"
+                    class="text-decoration-none text-dark"
+                    >info@wellnessclinic.co.ke</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-clock text-primary me-3"></i> Mon - Fri: 8:00
+                  AM - 5:00 PM
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-clock text-primary me-3"></i> Saturday: 9:00
+                  AM - 1:00 PM
+                </li>
+                <li>
+                  <i class="fas fa-times-circle text-primary me-3"></i> Sunday:
+                  Closed
+                </li>
+              </ul>
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.170457632616!2d36.70889267498705!3d-1.3090885986877843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b40285a2f5f%3A0xc3b8a3e7e45300f8!2sKaren%20Square!5e0!3m2!1sen!2ske!4v1716757650383!5m2!1sen!2ske"
+                width="100%"
+                height="350"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="map-iframe"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p class="mb-2">&copy; 2025 Wellness Clinic. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eEGFN7ZPFn0KAB"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Enable Bootstrap's form validation
+      ;(function () {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            'submit',
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+              form.classList.add('was-validated')
+            },
+            false
+          )
+        })
+      })()
+    </script>
+  </body>
+</html>

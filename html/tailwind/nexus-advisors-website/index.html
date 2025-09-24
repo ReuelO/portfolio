@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Advisors - Expert Accounting & Audit Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary-blue': '#1a2e4b' /* Darker blue for primary elements */,
+              'secondary-green': '#2ecc71' /* Accent green */,
+              'neutral-light': '#f8f9fa' /* Light background */,
+              'neutral-dark': '#34495e' /* Dark text/background */,
+              'gray-text': '#5a6268' /* Mid-tone grey for body text */,
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Optional: Basic body font, mostly handled by Tailwind 'font-sans' */
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      /* Custom scroll-behavior for smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-text bg-neutral-light">
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+      <nav class="container mx-auto flex justify-between items-center px-4">
+        <a href="#" class="text-2xl font-serif font-bold text-primary-blue"
+          >Nexus Advisors</a
+        >
+
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#hero"
+            class="text-neutral-dark hover:text-primary-blue font-medium transition duration-300"
+            >Home</a
+          >
+          <a
+            href="#services"
+            class="text-neutral-dark hover:text-primary-blue font-medium transition duration-300"
+            >Services</a
+          >
+          <a
+            href="#about"
+            class="text-neutral-dark hover:text-primary-blue font-medium transition duration-300"
+            >About Us</a
+          >
+          <a
+            href="#team"
+            class="text-neutral-dark hover:text-primary-blue font-medium transition duration-300"
+            >Our Team</a
+          >
+          <a
+            href="#insights"
+            class="text-neutral-dark hover:text-primary-blue font-medium transition duration-300"
+            >Insights</a
+          >
+          <a
+            href="#contact"
+            class="text-neutral-dark hover:text-primary-blue font-medium transition duration-300"
+            >Contact</a
+          >
+        </div>
+
+        <button
+          id="mobile-menu-button"
+          class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-blue"
+        >
+          <svg
+            class="w-7 h-7 text-neutral-dark"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+
+      <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-lg">
+        <a
+          href="#hero"
+          class="block px-4 py-2 text-neutral-dark hover:bg-neutral-light"
+          >Home</a
+        >
+        <a
+          href="#services"
+          class="block px-4 py-2 text-neutral-dark hover:bg-neutral-light"
+          >Services</a
+        >
+        <a
+          href="#about"
+          class="block px-4 py-2 text-neutral-dark hover:bg-neutral-light"
+          >About Us</a
+        >
+        <a
+          href="#team"
+          class="block px-4 py-2 text-neutral-dark hover:bg-neutral-light"
+          >Our Team</a
+        >
+        <a
+          href="#insights"
+          class="block px-4 py-2 text-neutral-dark hover:bg-neutral-light"
+          >Insights</a
+        >
+        <a
+          href="#contact"
+          class="block px-4 py-2 text-neutral-dark hover:bg-neutral-light"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="hero"
+        class="relative bg-primary-blue text-white py-24 md:py-32 flex items-center justify-center overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 bg-cover bg-center opacity-30"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1579621979563-712f5a6b7e0d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+          "
+        ></div>
+        <div class="container mx-auto text-center relative z-10 px-4">
+          <h1
+            class="text-4xl md:text-6xl font-serif font-bold leading-tight mb-4"
+          >
+            Clarity in Numbers, Growth in Business
+          </h1>
+          <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+            Providing precise accounting, comprehensive audit, and strategic
+            advisory services to fuel your success.
+          </p>
+          <a
+            href="#contact"
+            class="bg-secondary-green text-white hover:bg-neutral-dark font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg"
+            >Get a Consultation</a
+          >
+        </div>
+      </section>
+
+      <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 text-center">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-primary-blue mb-12"
+          >
+            Our Core Services
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-neutral-light rounded-lg shadow-md p-6 flex flex-col items-center transform transition-transform hover:scale-105"
+            >
+              <svg
+                class="w-16 h-16 text-primary-blue mb-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-bold text-neutral-dark mb-2">
+                Accounting & Bookkeeping
+              </h3>
+              <p class="text-gray-text text-center">
+                Comprehensive bookkeeping, payroll, and financial statement
+                preparation for businesses of all sizes.
+              </p>
+            </div>
+            <div
+              class="bg-neutral-light rounded-lg shadow-md p-6 flex flex-col items-center transform transition-transform hover:scale-105"
+            >
+              <svg
+                class="w-16 h-16 text-primary-blue mb-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.944 12c.045 4.676 3.048 8.049 7.85 10.02A11.95 11.95 0 0012 21c4.686 0 7.424-3.413 7.85-9.02A12.001 12.001 0 0021.056 12a11.955 11.955 0 01-3.04-8.618z"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-bold text-neutral-dark mb-2">
+                Audit & Assurance
+              </h3>
+              <p class="text-gray-text text-center">
+                Independent and objective audits to ensure financial
+                transparency and regulatory compliance.
+              </p>
+            </div>
+            <div
+              class="bg-neutral-light rounded-lg shadow-md p-6 flex flex-col items-center transform transition-transform hover:scale-105"
+            >
+              <svg
+                class="w-16 h-16 text-primary-blue mb-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-bold text-neutral-dark mb-2">
+                Tax Planning & Compliance
+              </h3>
+              <p class="text-gray-text text-center">
+                Strategic tax advice and efficient preparation to minimize
+                liabilities and ensure compliance.
+              </p>
+            </div>
+            <div
+              class="bg-neutral-light rounded-lg shadow-md p-6 flex flex-col items-center transform transition-transform hover:scale-105"
+            >
+              <svg
+                class="w-16 h-16 text-primary-blue mb-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-bold text-neutral-dark mb-2">
+                Business Advisory
+              </h3>
+              <p class="text-gray-text text-center">
+                Strategic planning, financial forecasting, and operational
+                efficiency consulting.
+              </p>
+            </div>
+            <div
+              class="bg-neutral-light rounded-lg shadow-md p-6 flex flex-col items-center transform transition-transform hover:scale-105"
+            >
+              <svg
+                class="w-16 h-16 text-primary-blue mb-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 11l3-3m0 0l3 3m-3-3v8m0-13A9 9 0 110 12a9 9 0 0118 0z"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-bold text-neutral-dark mb-2">
+                Forensic Accounting
+              </h3>
+              <p class="text-gray-text text-center">
+                Investigating financial discrepancies and providing expert
+                witness services.
+              </p>
+            </div>
+            <div
+              class="bg-neutral-light rounded-lg shadow-md p-6 flex flex-col items-center transform transition-transform hover:scale-105"
+            >
+              <svg
+                class="w-16 h-16 text-primary-blue mb-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V3m0 9v3m0 3.01V21M21 12h-3.01M3 12H6m1.01 4.99L5 19m4.99-9.99L7 6m10 4.99L19 19m-3.99-9.99L17 6"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-bold text-neutral-dark mb-2">
+                Startup Financial Guidance
+              </h3>
+              <p class="text-gray-text text-center">
+                Helping new businesses establish strong financial foundations
+                and growth strategies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-16 md:py-24 bg-neutral-light">
+        <div
+          class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        >
+          <div class="lg:order-2">
+            <img
+              src="https://images.unsplash.com/photo-1554224155-8d04cb21ad2d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Business meeting"
+              class="rounded-lg shadow-xl w-full h-auto object-cover max-h-[450px]"
+            />
+          </div>
+          <div class="lg:order-1 text-center lg:text-left">
+            <h2
+              class="text-3xl md:text-4xl font-serif font-bold text-primary-blue mb-6"
+            >
+              Why Choose Nexus Advisors?
+            </h2>
+            <p class="text-gray-text mb-4 leading-relaxed">
+              At Nexus Advisors, we go beyond mere compliance. We are your
+              proactive partners, dedicated to understanding your unique
+              financial landscape and driving tangible results.
+            </p>
+            <ul class="space-y-4 text-left mx-auto lg:mx-0 max-w-md">
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-secondary-green mr-3 mt-1 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <div>
+                  <h3 class="font-bold text-neutral-dark">
+                    Unmatched Expertise
+                  </h3>
+                  <p class="text-gray-text text-sm">
+                    Our team comprises highly qualified and experienced
+                    professionals with deep industry knowledge.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-secondary-green mr-3 mt-1 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+                <div>
+                  <h3 class="font-bold text-neutral-dark">
+                    Client-Centric Approach
+                  </h3>
+                  <p class="text-gray-text text-sm">
+                    We tailor our solutions to your specific needs, providing
+                    personalized attention and strategic advice.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-secondary-green mr-3 mt-1 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <div>
+                  <h3 class="font-bold text-neutral-dark">Integrity & Trust</h3>
+                  <p class="text-gray-text text-sm">
+                    We operate with the highest ethical standards, ensuring
+                    transparent and reliable services.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 text-center">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-primary-blue mb-12"
+          >
+            Meet Our Leadership
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-neutral-light rounded-lg shadow-md p-6 flex flex-col items-center"
+            >
+              <img
+                src="https://via.placeholder.com/180x180?text=John+Doe"
+                alt="John Doe"
+                class="w-36 h-36 object-cover rounded-full mb-4 ring-4 ring-primary-blue"
+              />
+              <h3 class="text-xl font-bold text-neutral-dark mb-1">
+                John Doe, CPA
+              </h3>
+              <p class="text-secondary-green font-medium mb-3">
+                Managing Partner, Audit & Assurance
+              </p>
+              <p class="text-gray-text text-sm">
+                John brings over 25 years of experience in auditing and
+                financial advisory, leading our audit practice with a focus on
+                precision and compliance.
+              </p>
+            </div>
+            <div
+              class="bg-neutral-light rounded-lg shadow-md p-6 flex flex-col items-center"
+            >
+              <img
+                src="https://via.placeholder.com/180x180?text=Jane+Smith"
+                alt="Jane Smith"
+                class="w-36 h-36 object-cover rounded-full mb-4 ring-4 ring-primary-blue"
+              />
+              <h3 class="text-xl font-bold text-neutral-dark mb-1">
+                Jane Smith
+              </h3>
+              <p class="text-secondary-green font-medium mb-3">
+                Partner, Tax & Advisory Services
+              </p>
+              <p class="text-gray-text text-sm">
+                Jane specializes in complex tax planning and business advisory,
+                helping clients optimize their financial strategies for growth.
+              </p>
+            </div>
+            <div
+              class="bg-neutral-light rounded-lg shadow-md p-6 flex flex-col items-center"
+            >
+              <img
+                src="https://via.placeholder.com/180x180?text=David+Kimani"
+                alt="David Kimani"
+                class="w-36 h-36 object-cover rounded-full mb-4 ring-4 ring-primary-blue"
+              />
+              <h3 class="text-xl font-bold text-neutral-dark mb-1">
+                David Kimani
+              </h3>
+              <p class="text-secondary-green font-medium mb-3">
+                Head of Accounting Services
+              </p>
+              <p class="text-gray-text text-sm">
+                David ensures all our accounting and bookkeeping services are
+                efficient, accurate, and tailored to client needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="insights" class="py-16 md:py-24 bg-neutral-light">
+        <div class="container mx-auto px-4 text-center">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-primary-blue mb-12"
+          >
+            Latest Insights & News
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white rounded-lg shadow-md p-6 text-left transform transition-transform hover:scale-105"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1542744095-291d8e6c70c6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Financial Report"
+                class="w-full h-48 object-cover rounded-md mb-4"
+              />
+              <h3 class="text-xl font-bold text-neutral-dark mb-2">
+                New Tax Regulations for SMEs in Kenya
+              </h3>
+              <p class="text-gray-text text-sm mb-3">
+                Understanding the latest changes in KRA tax laws and how they
+                impact small and medium enterprises.
+              </p>
+              <a
+                href="#"
+                class="text-primary-blue hover:text-secondary-green font-medium"
+                >Read More &rarr;</a
+              >
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-md p-6 text-left transform transition-transform hover:scale-105"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1628126788225-b40b15e9a4f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Audit Process"
+                class="w-full h-48 object-cover rounded-md mb-4"
+              />
+              <h3 class="text-xl font-bold text-neutral-dark mb-2">
+                The Importance of Independent Audit for NGOs
+              </h3>
+              <p class="text-gray-text text-sm mb-3">
+                Why non-profit organizations benefit from robust and transparent
+                financial audits.
+              </p>
+              <a
+                href="#"
+                class="text-primary-blue hover:text-secondary-green font-medium"
+                >Read More &rarr;</a
+              >
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-md p-6 text-left transform transition-transform hover:scale-105"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1524108865615-ce1ffb152778?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Financial Planning"
+                class="w-full h-48 object-cover rounded-md mb-4"
+              />
+              <h3 class="text-xl font-bold text-neutral-dark mb-2">
+                Budgeting Strategies for Kenyan Startups
+              </h3>
+              <p class="text-gray-text text-sm mb-3">
+                Practical tips for startups to manage finances effectively and
+                scale sustainably.
+              </p>
+              <a
+                href="#"
+                class="text-primary-blue hover:text-secondary-green font-medium"
+                >Read More &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="testimonials"
+        class="py-16 md:py-24 bg-primary-blue text-white"
+      >
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold mb-12">
+            Client Success Stories
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="bg-neutral-dark rounded-lg p-6 shadow-xl">
+              <p class="italic text-lg mb-4">
+                "Nexus Advisors transformed our financial reporting. Their audit
+                process was thorough and insightful, providing real value to our
+                organization."
+              </p>
+              <p class="font-semibold text-secondary-green">
+                - CEO, Kenyan Manufacturing Co.
+              </p>
+            </div>
+            <div class="bg-neutral-dark rounded-lg p-6 shadow-xl">
+              <p class="italic text-lg mb-4">
+                "We've relied on Nexus for years for our tax compliance and
+                advisory. Their expertise has saved us significant time and
+                resources."
+              </p>
+              <p class="font-semibold text-secondary-green">
+                - Founder, Tech Solutions Startup
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-primary-blue mb-12"
+          >
+            Connect With Us
+          </h2>
+          <p class="text-gray-text mb-8 max-w-xl mx-auto">
+            Ready to elevate your financial management? Reach out to schedule a
+            discussion.
+          </p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-neutral-light rounded-lg shadow-md p-8 text-left">
+              <h3 class="text-2xl font-bold text-neutral-dark mb-6">
+                Send an Inquiry
+              </h3>
+              <form class="space-y-5">
+                <div>
+                  <label
+                    for="contact-name"
+                    class="block text-sm font-medium text-neutral-dark mb-1"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                    placeholder="Jane Doe"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="contact-email"
+                    class="block text-sm font-medium text-neutral-dark mb-1"
+                    >Your Email</label
+                  >
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                    placeholder="you@example.com"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="contact-subject"
+                    class="block text-sm font-medium text-neutral-dark mb-1"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="contact-subject"
+                    name="subject"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                    placeholder="Tax Consultation"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="contact-message"
+                    class="block text-sm font-medium text-neutral-dark mb-1"
+                    >Your Message</label
+                  >
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="6"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                    placeholder="Tell us how we can assist you..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="bg-primary-blue text-white hover:bg-neutral-dark font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-md"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            <div class="bg-neutral-light rounded-lg shadow-md p-8 text-left">
+              <h3 class="text-2xl font-bold text-neutral-dark mb-6">
+                Office Details
+              </h3>
+              <div class="space-y-4">
+                <p class="flex items-start text-lg">
+                  <svg
+                    class="w-6 h-6 text-secondary-green mr-3 flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                  </svg>
+                  <span class="block"
+                    >CBD Towers, 10th Floor, Nairobi, Kenya</span
+                  >
+                </p>
+                <p class="flex items-start text-lg">
+                  <svg
+                    class="w-6 h-6 text-secondary-green mr-3 flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    ></path>
+                  </svg>
+                  <span class="block">+254 7XX XXX XXX</span>
+                </p>
+                <p class="flex items-start text-lg">
+                  <svg
+                    class="w-6 h-6 text-secondary-green mr-3 flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7"
+                    ></path>
+                  </svg>
+                  <span class="block">info@nexusadvisors.co.ke</span>
+                </p>
+              </div>
+              <h3 class="text-2xl font-bold text-neutral-dark mt-8 mb-4">
+                Our Location
+              </h3>
+              <div
+                class="w-full h-64 bg-gray-200 rounded-md overflow-hidden shadow-inner"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.170457632616!2d36.70889267498705!3d-1.3090885986877843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b40285a2f5f%3A0xc3b8a3e7e45300f8!2sKaren%20Square!5e0!3m2!1sen!2ske!4v1716757650383!5m2!1sen!2ske"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-neutral-dark text-white py-8">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0"
+      >
+        <p>&copy; 2025 Nexus Advisors. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a
+            href="#"
+            class="text-white hover:text-secondary-green transition duration-300"
+            >Privacy Policy</a
+          >
+          <a
+            href="#"
+            class="text-white hover:text-secondary-green transition duration-300"
+            >Terms of Service</a
+          >
+        </div>
+        <div class="flex space-x-4">
+          <a
+            href="#"
+            aria-label="LinkedIn"
+            class="text-white hover:text-secondary-green transition duration-300"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.01h-2.5v16h2.5v-16zm7.256 0h-2.497v16h2.497v-8.399c0-4.677 6.002-4.27 6.002 0v8.399h2.501v-10.339c0-5.624-3.37-6.938-6.188-6.938-2.593 0-3.951 1.704-4.612 2.812v-2.486h-2.497z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            aria-label="Twitter"
+            class="text-white hover:text-secondary-green transition duration-300"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.468 0-6.278 2.793-6.278 6.236 0 .487.055.962.158 1.41-.525-.027-1.05-.084-1.573-.162-4.381-.663-7.794-3.48-10.25-8.243-.453.763-.718 1.637-.718 2.569 0 1.761.884 3.313 2.235 4.22-.82-.025-1.59-.25-2.264-.618v.081c0 3.012 2.15 5.513 5.006 6.07-.406.11-.83.17-1.26.17-.31 0-.61-.03-.91-.08.795 2.44 3.109 4.23 5.829 4.27-2.131 1.65-4.551 2.62-7.309 2.62-.476 0-.946-.026-1.406-.08.795 2.44 3.109 4.23 5.829 4.27-2.131 1.65-4.551 2.62-7.309 2.62-.476 0-.946-.026-1.406-.08C2.695 21.365 5.626 22 8.784 22 17.026 22 21.65 14.394 21.65 7.96c0-.202-.006-.405-.017-.607.962-.695 1.795-1.562 2.45-2.51z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuButton = document.getElementById('mobile-menu-button')
+        const mobileMenu = document.getElementById('mobile-menu')
+
+        mobileMenuButton.addEventListener('click', function () {
+          mobileMenu.classList.toggle('hidden')
+        })
+
+        // Smooth scrolling and close mobile menu after clicking a link
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault()
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth',
+            })
+
+            // Close mobile menu if it's open
+            if (!mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden')
+            }
+          })
+        })
+      })
+    </script>
+  </body>
+</html>

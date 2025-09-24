@@ -1,0 +1,173 @@
+/* Custom Colors */
+:root {
+  --primary-dark: #003366; /* Deep Navy Blue */
+  --primary-accent: #ff6600; /* Vibrant Orange */
+  --neutral-dark: #333333; /* Darker Gray for text */
+  --light-gray: #f0f2f5; /* Very Light Gray background */
+  --gray-text: #555555; /* Mid-tone grey for body text */
+}
+
+/* Custom Utility Classes based on Bootstrap's variables */
+.text-primary-dark {
+  color: var(--primary-dark) !important;
+}
+.text-primary-accent {
+  color: var(--primary-accent) !important;
+}
+.text-neutral-dark {
+  color: var(--neutral-dark) !important;
+}
+.text-gray-text {
+  color: var(--gray-text) !important;
+}
+.bg-primary-dark {
+  background-color: var(--primary-dark) !important;
+}
+.bg-primary-accent {
+  background-color: var(--primary-accent) !important;
+}
+.bg-neutral-dark {
+  background-color: var(--neutral-dark) !important;
+}
+.bg-light-gray {
+  background-color: var(--light-gray) !important;
+}
+
+/* Custom Button Styles */
+.btn-primary-dark {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.btn-primary-dark:hover {
+  background-color: var(--neutral-dark);
+  border-color: var(--neutral-dark);
+}
+
+.btn-primary-accent {
+  background-color: var(--primary-accent);
+  border-color: var(--primary-accent);
+  color: #fff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.btn-primary-accent:hover {
+  background-color: darken(
+    var(--primary-accent),
+    10%
+  ); /* Example: a slightly darker orange */
+  border-color: darken(var(--primary-accent), 10%);
+}
+
+.btn-outline-primary-dark {
+  border-color: var(--primary-dark);
+  color: var(--primary-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-outline-primary-dark:hover {
+  background-color: var(--primary-dark);
+  color: #fff;
+}
+
+/* Custom Typography */
+.font-oswald {
+  font-family: 'Oswald', sans-serif;
+}
+.font-open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Global Body Font */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--gray-text);
+}
+
+/* Navbar hover effect for links */
+.navbar-nav .nav-link.hover-primary-accent:hover {
+  color: var(
+    --primary-accent
+  ) !important; /* Override Bootstrap's default hover color */
+}
+
+/* Hero Section Specifics */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('https://images.unsplash.com/photo-1596752044810-e7f2257d0f98?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+      no-repeat center center / cover;
+  min-height: 650px; /* Adjust height as needed */
+  padding: 100px 0;
+}
+
+.hero-section .display-3 {
+  font-size: calc(1.8rem + 3vw); /* Responsive font size */
+}
+
+/* Drop shadow for hero text */
+.drop-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Custom animation for hero CTA button */
+@keyframes scale-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.animate-scale-pulse {
+  animation: scale-pulse 2s infinite ease-in-out;
+}
+
+/* Card hover effect */
+.transform-hover {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.transform-hover:hover {
+  transform: translateY(-5px); /* Lifts the card slightly */
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important; /* Stronger shadow */
+}
+
+/* Service Card icon hover effect */
+.service-card:hover .bi {
+  color: var(--primary-dark) !important; /* Change icon color on card hover */
+}
+
+/* Why Choose Us icon zoom effect on hover */
+.transform-hover-icon:hover .icon-zoom {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.icon-zoom {
+  transition: transform 0.3s ease-in-out; /* Add transition to icon itself */
+}
+
+/* Project Image aspect ratio and scale on hover */
+.project-img {
+  width: 100%;
+  height: 220px; /* Fixed height for project images */
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Testimonial Carousel indicators color */
+#testimonialCarousel .carousel-indicators [data-bs-target] {
+  background-color: var(--primary-accent);
+}
+#testimonialCarousel .carousel-indicators .active {
+  background-color: var(--primary-dark);
+}
+
+/* Social icons hover effect in footer */
+.social-icons a:hover {
+  color: var(--primary-accent) !important;
+}

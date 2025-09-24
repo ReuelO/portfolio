@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxe Living - Furniture & Interior Decor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCXd/XP=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <h1 class="logo"><a href="#home">Luxe Living</a></h1>
+        <nav class="main-nav" id="main-nav">
+          <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="nav-icons">
+            <a href="#" aria-label="Shopping Cart"
+              ><i class="fas fa-shopping-cart"></i
+              ><span class="cart-badge">0</span></a
+            >
+            <a href="#" aria-label="User Account"
+              ><i class="fas fa-user"></i
+            ></a>
+          </div>
+        </nav>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="hero-content container">
+          <h2>Elevate Your Space</h2>
+          <p>
+            Discover timeless furniture and exquisite decor that transforms
+            houses into homes.
+          </p>
+          <a href="#products" class="btn btn-primary">Shop Now</a>
+        </div>
+      </section>
+
+      <section id="categories" class="section-padding bg-light">
+        <div class="container text-center">
+          <h2 class="section-title">Explore Our Categories</h2>
+          <p class="section-subtitle">
+            Find the perfect pieces to complement your unique style.
+          </p>
+          <div class="category-grid">
+            <a href="#" class="category-card">
+              <img
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Sofas & Seating"
+              />
+              <h3>Sofas & Seating</h3>
+            </a>
+            <a href="#" class="category-card">
+              <img
+                src="https://images.unsplash.com/photo-1616486029423-ce87f2c5cde6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Dining Room"
+              />
+              <h3>Dining Room</h3>
+            </a>
+            <a href="#" class="category-card">
+              <img
+                src="https://images.unsplash.com/photo-1567016376481-9b63a033dfd2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Bedroom Furniture"
+              />
+              <h3>Bedroom Furniture</h3>
+            </a>
+            <a href="#" class="category-card">
+              <img
+                src="https://images.unsplash.com/photo-1541123356886-4892c906a5e1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Decor & Accessories"
+              />
+              <h3>Decor & Accessories</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="section-padding">
+        <div class="container text-center">
+          <h2 class="section-title">Our Signature Pieces</h2>
+          <p class="section-subtitle">
+            Hand-picked selections that define elegance and comfort.
+          </p>
+          <div class="product-grid">
+            <div class="product-card">
+              <img
+                src="https://images.unsplash.com/photo-1560759082-f38b2512f43d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Nordic Armchair"
+              />
+              <div class="product-info">
+                <h3>Nordic Armchair</h3>
+                <p class="price">$599.00</p>
+                <a href="#" class="btn btn-secondary">View Details</a>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://images.unsplash.com/photo-1582281861757-0402e6c518d6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Minimalist Coffee Table"
+              />
+              <div class="product-info">
+                <h3>Minimalist Coffee Table</h3>
+                <p class="price">$349.00</p>
+                <a href="#" class="btn btn-secondary">View Details</a>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://images.unsplash.com/photo-1540938475586-3532f146c243?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Velvet Accent Pillow"
+              />
+              <div class="product-info">
+                <h3>Velvet Accent Pillow</h3>
+                <p class="price">$49.00</p>
+                <a href="#" class="btn btn-secondary">View Details</a>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://images.unsplash.com/photo-1615873968270-e5473724c944?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Abstract Canvas Art"
+              />
+              <div class="product-info">
+                <h3>Abstract Canvas Art</h3>
+                <p class="price">$189.00</p>
+                <a href="#" class="btn btn-secondary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary mt-large">View All Products</a>
+        </div>
+      </section>
+
+      <section id="services" class="section-padding bg-light">
+        <div class="container text-center">
+          <h2 class="section-title">Our Interior Design Services</h2>
+          <p class="section-subtitle">
+            Transform your vision into reality with expert guidance.
+          </p>
+          <div class="service-grid">
+            <div class="service-card">
+              <i class="fas fa-drafting-compass service-icon"></i>
+              <h3>Consultation & Planning</h3>
+              <p>
+                Personalized sessions to understand your style and space needs.
+              </p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-lightbulb service-icon"></i>
+              <h3>Space Optimization</h3>
+              <p>
+                Clever layouts and furniture arrangements for maximum
+                functionality.
+              </p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-paint-roller service-icon"></i>
+              <h3>Material & Color Selection</h3>
+              <p>
+                Guidance on palettes, fabrics, and finishes to create harmony.
+              </p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-truck-moving service-icon"></i>
+              <h3>Installation & Styling</h3>
+              <p>
+                From delivery to the final touches, we ensure a seamless setup.
+              </p>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary mt-large"
+            >Schedule a Consultation</a
+          >
+        </div>
+      </section>
+
+      <section id="about" class="section-padding">
+        <div class="container">
+          <h2 class="section-title text-center">Our Philosophy</h2>
+          <div class="about-content">
+            <div class="about-image">
+              <img
+                src="https://images.unsplash.com/photo-1571597507119-952402175949?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="About Luxe Living"
+              />
+            </div>
+            <div class="about-text">
+              <p>
+                At Luxe Living, we believe that your home should be a reflection
+                of who you are. Our passion lies in curating exquisite furniture
+                and decor that not only enhances aesthetics but also brings
+                comfort and joy to your everyday life.
+              </p>
+              <p>
+                We source from skilled artisans and reputable manufacturers who
+                share our commitment to quality, sustainability, and timeless
+                design. Whether you're furnishing a new home or refreshing a
+                single room, we're here to inspire and assist you every step of
+                the way.
+              </p>
+              <p>Discover the art of living beautifully with Luxe Living.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding bg-light">
+        <div class="container text-center">
+          <h2 class="section-title">What Our Clients Say</h2>
+          <div class="testimonial-grid">
+            <div class="testimonial-card">
+              <p>
+                "Luxe Living transformed my apartment into a sanctuary! The
+                quality of furniture is exceptional, and their design advice was
+                invaluable."
+              </p>
+              <cite>- Sarah L., New York</cite>
+            </div>
+            <div class="testimonial-card">
+              <p>
+                "The team at Luxe Living made furnishing my new home effortless.
+                Every piece is stunning and truly elevates the space. Highly
+                recommend!"
+              </p>
+              <cite>- Mark T., California</cite>
+            </div>
+            <div class="testimonial-card">
+              <p>
+                "Their eye for detail and unique decor items helped me achieve
+                the perfect minimalist yet cozy look. Fantastic customer service
+                too!"
+              </p>
+              <cite>- Emily R., Texas</cite>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding newsletter-section">
+        <div class="container text-center">
+          <h2 class="section-title text-white">Join Our Newsletter</h2>
+          <p class="section-subtitle text-white">
+            Get exclusive updates, design tips, and special offers.
+          </p>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="contact" class="section-padding">
+        <div class="container">
+          <h2 class="section-title text-center">Get in Touch</h2>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h3>Visit Our Showroom</h3>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Decor Lane, Grand
+                City, DG 98765
+              </p>
+              <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+              </p>
+              <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@luxeliving.com">info@luxeliving.com</a>
+              </p>
+              <p><i class="fas fa-clock"></i> Mon-Sat: 10 AM - 6 PM</p>
+            </div>
+            <div class="contact-form-wrapper">
+              <h3>Send Us a Message</h3>
+              <form class="contact-form">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <input type="text" placeholder="Subject" />
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn-primary">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>Luxe Living</h3>
+            <p>
+              Curating exceptional furniture and decor for a life beautifully
+              lived.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#products">Shop</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">Our Story</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact-info">
+            <h3>Contact</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 123 Decor Lane, Grand City
+            </p>
+            <p><i class="fas fa-phone"></i> +1 (234) 567-890</p>
+            <p><i class="fas fa-envelope"></i> info@luxeliving.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; <span id="current-year"></span> Luxe Living. All rights
+          reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

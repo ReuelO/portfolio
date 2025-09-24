@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegance by Isabella - Fashion Designer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCXd/XP=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Custom styles to integrate Google Fonts with Tailwind */
+      .font-playfair {
+        font-family: 'Playfair Display', serif;
+      }
+      .font-poppins {
+        font-family: 'Poppins', sans-serif;
+      }
+      /* Specific hero background with overlay */
+      .hero-background {
+        background-image: url('https://images.unsplash.com/photo-1543728612-4ee0555694a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+      .hero-background::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+        z-index: 1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body class="font-poppins text-gray-800">
+    <header class="bg-white shadow-md py-4 fixed w-full z-50">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <a href="#" class="text-3xl font-playfair font-bold text-gray-900"
+          >Elegance by Isabella</a
+        >
+        <nav class="hidden md:flex space-x-6">
+          <a
+            href="#home"
+            class="text-gray-600 hover:text-gray-900 transition-colors duration-300"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-gray-600 hover:text-gray-900 transition-colors duration-300"
+            >About</a
+          >
+          <a
+            href="#portfolio"
+            class="text-gray-600 hover:text-gray-900 transition-colors duration-300"
+            >Portfolio</a
+          >
+          <a
+            href="#services"
+            class="text-gray-600 hover:text-gray-900 transition-colors duration-300"
+            >Services</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-600 hover:text-gray-900 transition-colors duration-300"
+            >Contact</a
+          >
+        </nav>
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none"
+        >
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden fixed inset-0 bg-white bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6"
+      >
+        <button
+          id="close-mobile-menu"
+          class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 focus:outline-none"
+        >
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+        <a
+          href="#home"
+          class="text-3xl font-playfair text-gray-800 hover:text-gray-900 transition-colors duration-300 py-2"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="text-3xl font-playfair text-gray-800 hover:text-gray-900 transition-colors duration-300 py-2"
+          >About</a
+        >
+        <a
+          href="#portfolio"
+          class="text-3xl font-playfair text-gray-800 hover:text-gray-900 transition-colors duration-300 py-2"
+          >Portfolio</a
+        >
+        <a
+          href="#services"
+          class="text-3xl font-playfair text-gray-800 hover:text-gray-900 transition-colors duration-300 py-2"
+          >Services</a
+        >
+        <a
+          href="#contact"
+          class="text-3xl font-playfair text-gray-800 hover:text-gray-900 transition-colors duration-300 py-2"
+          >Contact</a
+        >
+        <div class="flex space-x-6 pt-8">
+          <a href="#" class="text-gray-600 hover:text-gray-900 text-2xl"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 text-2xl"
+            ><i class="fab fa-pinterest"></i
+          ></a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 text-2xl"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="home"
+        class="hero-background h-screen flex items-center justify-center text-center text-white pt-16"
+      >
+        <div class="hero-content">
+          <h1
+            class="text-5xl md:text-7xl font-playfair font-bold leading-tight mb-4 animate-fade-in-down"
+          >
+            Isabella Rossi
+          </h1>
+          <p
+            class="text-xl md:text-2xl font-poppins mb-8 animate-fade-in-up animate-delay-200"
+          >
+            Crafting dreams into timeless designs. Where fabric meets artistry.
+          </p>
+          <a
+            href="#portfolio"
+            class="inline-block bg-white text-gray-900 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-200 transition-all duration-300 animate-zoom-in animate-delay-400"
+            >View Portfolio</a
+          >
+        </div>
+      </section>
+
+      <section id="about" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+          <h2
+            class="text-4xl font-playfair font-bold text-center text-gray-900 mb-8"
+          >
+            About Isabella
+          </h2>
+          <div class="flex flex-col md:flex-row items-center md:space-x-8">
+            <div class="md:w-1/3 mb-8 md:mb-0">
+              <img
+                src="https://images.unsplash.com/photo-1579297230528-c116d445585b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Isabella Rossi"
+                class="rounded-lg shadow-xl w-full h-auto object-cover"
+              />
+            </div>
+            <div class="md:w-2/3 text-lg text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                Isabella Rossi is a passionate fashion designer with over a
+                decade of experience in creating bespoke garments that blend
+                classic elegance with contemporary flair. Her journey began at
+                the prestigious Central Saint Martins, where she honed her
+                skills in couture and textile innovation.
+              </p>
+              <p class="mb-4">
+                With a keen eye for detail and a deep understanding of form and
+                movement, Isabella believes that clothing should not only look
+                beautiful but also make the wearer feel empowered and confident.
+                Her designs often feature intricate hand embroidery, luxurious
+                fabrics, and unique silhouettes that celebrate individuality.
+              </p>
+              <p>
+                Isabella's work has been featured in various fashion editorials
+                and showcased at exclusive events, earning her recognition for
+                her distinct aesthetic and commitment to craftsmanship.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-4xl font-playfair font-bold text-center text-gray-900 mb-12"
+          >
+            Our Latest Collections
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1621252192138-038c35017285?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Collection 1"
+                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <h3 class="text-white text-2xl font-playfair font-semibold">
+                  "Midnight Bloom"
+                </h3>
+              </div>
+            </div>
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1627993086963-2287c897f259?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Collection 2"
+                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <h3 class="text-white text-2xl font-playfair font-semibold">
+                  "Urban Serenity"
+                </h3>
+              </div>
+            </div>
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1542994191-c917b20464f8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Collection 3"
+                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <h3 class="text-white text-2xl font-playfair font-semibold">
+                  "Dream Weaver"
+                </h3>
+              </div>
+            </div>
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1558769132-cb188184ad2c?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Collection 4"
+                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <h3 class="text-white text-2xl font-playfair font-semibold">
+                  "Seasonal Whisper"
+                </h3>
+              </div>
+            </div>
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1596752003666-419b380693ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Collection 5"
+                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <h3 class="text-white text-2xl font-playfair font-semibold">
+                  "Modern Classic"
+                </h3>
+              </div>
+            </div>
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1621252192138-038c35017285?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Collection 6"
+                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <h3 class="text-white text-2xl font-playfair font-semibold">
+                  "Haute Couture"
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+          <h2
+            class="text-4xl font-playfair font-bold text-center text-gray-900 mb-12"
+          >
+            Our Services
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+            <div
+              class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <i class="fas fa-ruler-combined text-5xl text-gray-700 mb-4"></i>
+              <h3 class="text-2xl font-playfair font-bold text-gray-900 mb-3">
+                Custom Couture
+              </h3>
+              <p class="text-gray-700">
+                From initial concept to final fitting, we create unique,
+                handcrafted garments tailored to your exact measurements and
+                vision for special occasions.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <i class="fas fa-hat-wizard text-5xl text-gray-700 mb-4"></i>
+              <h3 class="text-2xl font-playfair font-bold text-gray-900 mb-3">
+                Bridal Design
+              </h3>
+              <p class="text-gray-700">
+                Design your dream wedding gown. We work closely with brides to
+                bring their fairytale vision to life with exquisite detail.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <i class="fas fa-brush text-5xl text-gray-700 mb-4"></i>
+              <h3 class="text-2xl font-playfair font-bold text-gray-900 mb-3">
+                Ready-to-Wear Collections
+              </h3>
+              <p class="text-gray-700">
+                Discover our seasonal collections of meticulously designed
+                ready-to-wear pieces, blending comfort with high fashion.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <i class="fas fa-comments text-5xl text-gray-700 mb-4"></i>
+              <h3 class="text-2xl font-playfair font-bold text-gray-900 mb-3">
+                Fashion Consultation
+              </h3>
+              <p class="text-gray-700">
+                Expert advice on styling, wardrobe curation, and personal
+                branding to elevate your unique fashion sense.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+          <h2
+            class="text-4xl font-playfair font-bold text-center text-gray-900 mb-12"
+          >
+            Get in Touch
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-3xl font-playfair font-bold text-gray-900 mb-6">
+                Send a Message
+              </h3>
+              <form class="space-y-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-300"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-300"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="subject"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-300"
+                    placeholder="Inquiry about custom design"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-300"
+                    placeholder="Tell us about your project or inquiry..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="bg-gray-900 text-white font-semibold px-8 py-3 rounded-full hover:bg-gray-700 transition-colors duration-300 shadow-md"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            <div
+              class="flex flex-col items-center md:items-start text-center md:text-left"
+            >
+              <h3 class="text-3xl font-playfair font-bold text-gray-900 mb-6">
+                Contact Details
+              </h3>
+              <div class="space-y-4 text-lg text-gray-700">
+                <p>
+                  <i class="fas fa-map-marker-alt text-gray-600 mr-3"></i> 123
+                  Atelier Lane, Fashion District, Cityville, 12345
+                </p>
+                <p>
+                  <i class="fas fa-phone-alt text-gray-600 mr-3"></i>
+                  <a
+                    href="tel:+1-555-DESIGNER"
+                    class="hover:text-gray-900 transition-colors duration-300"
+                    >+1 (555) DESIGNER</a
+                  >
+                </p>
+                <p>
+                  <i class="fas fa-envelope text-gray-600 mr-3"></i>
+                  <a
+                    href="mailto:isabella@elegance.com"
+                    class="hover:text-gray-900 transition-colors duration-300"
+                    >isabella@elegance.com</a
+                  >
+                </p>
+              </div>
+              <div class="mt-8">
+                <h4 class="text-2xl font-playfair font-bold text-gray-900 mb-4">
+                  Follow Us
+                </h4>
+                <div class="flex space-x-6 justify-center md:justify-start">
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-gray-900 text-3xl transition-colors duration-300"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-gray-900 text-3xl transition-colors duration-300"
+                    ><i class="fab fa-pinterest"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-gray-900 text-3xl transition-colors duration-300"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-gray-900 text-3xl transition-colors duration-300"
+                    ><i class="fab fa-behance"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto px-4 text-center">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-sm mb-4"
+        >
+          <p class="mb-2 md:mb-0">
+            &copy; <span id="current-year"></span> Elegance by Isabella. All
+            rights reserved.
+          </p>
+          <nav class="space-x-4">
+            <a
+              href="#about"
+              class="text-gray-400 hover:text-white transition-colors duration-300"
+              >Privacy Policy</a
+            >
+            <a
+              href="#services"
+              class="text-gray-400 hover:text-white transition-colors duration-300"
+              >Terms of Service</a
+            >
+          </nav>
+        </div>
+        <div class="text-gray-400 text-xs">
+          Built with <i class="fas fa-heart text-red-500 mx-1"></i> and Tailwind
+          CSS.
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

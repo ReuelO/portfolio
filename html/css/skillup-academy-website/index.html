@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillUp Academy - Your Future Starts Here</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCXd/XP==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <img src="https://via.placeholder.com/40x40/2B6CB0/ffffff?text=SA" alt="SkillUp Academy Logo">
+                    SkillUp Academy
+                </a>
+            </div>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="#instructors">Instructors</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="btn btn-primary">Enroll Now</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <button class="close-menu" id="close-menu"><i class="fas fa-times"></i></button>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#home" data-close-menu>Home</a></li>
+                <li><a href="#about" data-close-menu>About Us</a></li>
+                <li><a href="#programs" data-close-menu>Programs</a></li>
+                <li><a href="#why-choose-us" data-close-menu>Why Choose Us</a></li>
+                <li><a href="#instructors" data-close-menu>Instructors</a></li>
+                <li><a href="#testimonials" data-close-menu>Testimonials</a></li>
+                <li><a href="#contact" data-close-menu>Contact</a></li>
+                <li><a href="#" class="btn btn-primary" data-close-menu>Enroll Now</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <h1>Unlock Your Potential, Master New Skills</h1>
+                <p>SkillUp Academy offers expert-led training programs designed for career advancement and personal growth.</p>
+                <div class="hero-buttons">
+                    <a href="#programs" class="btn btn-primary">Explore Programs</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">About SkillUp Academy</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1510531704581-5b978261b7b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Students learning together">
+                    </div>
+                    <div class="about-text">
+                        <h3>Our Mission: Empowering Futures Through Knowledge</h3>
+                        <p>At SkillUp Academy, we believe in practical, hands-on learning that transforms careers. Our mission is to provide high-quality, relevant training that equips individuals with the skills demanded by today's rapidly evolving industries.</p>
+                        <p>We pride ourselves on our experienced instructors, modern facilities, and a curriculum designed to foster innovation and critical thinking. Join our community and take the next step towards achieving your professional goals.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Industry-recognized certifications</li>
+                            <li><i class="fas fa-check-circle"></i> Flexible learning options</li>
+                            <li><i class="fas fa-check-circle"></i> Career guidance and support</li>
+                            <li><i class="fas fa-check-circle"></i> Networking opportunities</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programs" class="programs-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Our Popular Training Programs</h2>
+                <div class="program-grid">
+                    <div class="program-card">
+                        <img src="https://images.unsplash.com/photo-1546410531-bb448655e82a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Digital Marketing">
+                        <div class="card-content">
+                            <h3>Digital Marketing Specialist</h3>
+                            <p>Master SEO, SEM, social media, and content marketing strategies for business growth.</p>
+                            <a href="#" class="btn btn-sm btn-primary">Details</a>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Data Science">
+                        <div class="card-content">
+                            <h3>Data Science & Analytics</h3>
+                            <p>Learn Python, R, machine learning, and data visualization to make data-driven decisions.</p>
+                            <a href="#" class="btn btn-sm btn-primary">Details</a>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://images.unsplash.com/photo-1542831371-d218204dbdc0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Web Development">
+                        <div class="card-content">
+                            <h3>Full-Stack Web Development</h3>
+                            <p>Build dynamic web applications from front-end design to back-end database integration.</p>
+                            <a href="#" class="btn btn-sm btn-primary">Details</a>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://images.unsplash.com/photo-1552581691-294b0d024b33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project Management">
+                        <div class="card-content">
+                            <h3>Certified Project Management</h3>
+                            <p>Gain the skills and certifications to lead successful projects from initiation to closure.</p>
+                            <a href="#" class="btn btn-sm btn-primary">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="#" class="btn btn-secondary">View All Programs</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="choose-us-section section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">Why Choose SkillUp Academy?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-users-line feature-icon"></i>
+                        <h3>Expert Instructors</h3>
+                        <p>Learn from industry veterans and certified professionals who bring real-world experience to the classroom.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-book-open feature-icon"></i>
+                        <h3>Practical Curriculum</h3>
+                        <p>Our programs are designed with a hands-on approach, focusing on practical skills and project-based learning.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-certificate feature-icon"></i>
+                        <h3>Industry Recognition</h3>
+                        <p>Earn certifications that are recognized and valued by employers across various industries.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-laptop-code feature-icon"></i>
+                        <h3>Modern Facilities</h3>
+                        <p>Train in state-of-the-art labs and classrooms equipped with the latest technology.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-handshake feature-icon"></i>
+                        <h3>Career Support</h3>
+                        <p>Benefit from resume workshops, interview coaching, and job placement assistance.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-calendar-alt feature-icon"></i>
+                        <h3>Flexible Learning</h3>
+                        <p>Choose from online, in-person, and blended learning options to fit your schedule.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="instructors" class="instructors-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Meet Our Expert Instructors</h2>
+                <div class="instructor-grid">
+                    <div class="instructor-card">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Instructor John Doe">
+                        <h3>John Doe</h3>
+                        <p class="instructor-title">Lead Web Development Trainer</p>
+                        <p class="instructor-bio">With over 10 years of experience, John specializes in MERN stack development.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="instructor-card">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Instructor Jane Smith">
+                        <h3>Jane Smith</h3>
+                        <p class="instructor-title">Data Science Lead</p>
+                        <p class="instructor-bio">Jane is a data analytics expert with a passion for teaching machine learning.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="instructor-card">
+                        <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Instructor David Lee">
+                        <h3>David Lee</h3>
+                        <p class="instructor-title">Digital Marketing Strategist</p>
+                        <p class="instructor-bio">David brings extensive experience in SEO, content marketing, and paid advertising.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">What Our Graduates Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Student Emily R.">
+                        <p class="quote">"SkillUp Academy truly transformed my career. The Web Development program was comprehensive, and the instructors were incredibly supportive. I landed a great job shortly after graduating!"</p>
+                        <p class="author">- Emily R., Web Developer</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/men/82.jpg" alt="Student Mark T.">
+                        <p class="quote">"The Data Science course was challenging but incredibly rewarding. The practical projects gave me the confidence to apply my skills in real-world scenarios. Highly recommend!"</p>
+                        <p class="author">- Mark T., Data Analyst</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/women/75.jpg" alt="Student Sarah P.">
+                        <p class="quote">"I never thought I could learn so much in such a short time. The Digital Marketing program provided me with the expertise I needed to start my own freelance business."</p>
+                        <p class="author">- Sarah P., Digital Marketing Consultant</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section bg-primary text-white">
+            <div class="container text-center">
+                <h2>Ready to Transform Your Career?</h2>
+                <p>Join SkillUp Academy and gain the skills you need to succeed in today's competitive job market.</p>
+                <a href="#contact" class="btn btn-accent-outline">Inquire Now</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> 789 Training Lane, Skill City, TRN 00100</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+1-555-111-2222">+1 (555) 111-2222</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@skillup.academy">info@skillup.academy</a></p>
+                        <p><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 5:00 PM</p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.083984852954!2d36.78652077983636!3d-1.282937549666014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf025ee229871f!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sde!4v1701389880199!5m2!1sen!2sde"
+                            width="100%"
+                            height="300"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="program">Interested Program (Optional)</label>
+                                <input type="text" id="program" name="program">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer bg-dark">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3>SkillUp Academy</h3>
+                    <p>Empowering individuals with practical skills and industry-recognized certifications for a successful future.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#why-choose-us">Why Choose Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Popular Programs</h3>
+                    <ul>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Project Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 789 Training Lane, Skill City</p>
+                    <p><i class="fas fa-phone-alt"></i> +1 (555) 111-2222</p>
+                    <p><i class="fas fa-envelope"></i> info@skillup.academy</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> SkillUp Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

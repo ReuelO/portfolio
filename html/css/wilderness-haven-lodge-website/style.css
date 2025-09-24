@@ -1,0 +1,211 @@
+/* Custom CSS for Lodge Theme */
+
+/* Define custom colors */
+:root {
+  --lodge-dark: #2c3e2d; /* Deep Forest Green for backgrounds, dark text */
+  --lodge-primary: #556b2f; /* Olive Green for primary buttons, accents */
+  --lodge-gold: #cd853f; /* Earthy Brown/Gold for accents and highlights */
+  --lodge-light: #f5f5dc; /* Creamy Beige for light backgrounds */
+  --text-muted-dark: #6c757d; /* Standard Bootstrap muted text */
+}
+
+/* Apply custom colors directly or override Bootstrap classes */
+.bg-lodge-dark {
+  background-color: var(--lodge-dark) !important;
+}
+
+.text-lodge-dark {
+  color: var(--lodge-dark) !important;
+}
+
+.text-lodge-gold {
+  color: var(--lodge-gold) !important;
+}
+
+.hover-lodge-gold:hover {
+  color: var(--lodge-gold) !important;
+}
+
+.bg-lodge-light {
+  background-color: var(--lodge-light) !important;
+}
+
+/* Custom button styles */
+.btn-lodge-primary {
+  background-color: var(--lodge-primary);
+  border-color: var(--lodge-primary);
+  color: white;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-lodge-primary:hover {
+  background-color: #4c5f2b; /* Slightly darker olive on hover */
+  border-color: #4c5f2b;
+}
+
+.btn-outline-lodge-primary {
+  color: var(--lodge-primary);
+  border-color: var(--lodge-primary);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-lodge-primary:hover {
+  background-color: var(--lodge-primary);
+  color: white;
+}
+
+/* Custom fonts */
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--text-muted-dark); /* Default body text color */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: 'Merriweather', serif;
+}
+
+/* Hero Carousel Customizations */
+.hero-carousel {
+  padding-top: 56px; /* Adjust for fixed navbar height */
+}
+
+.hero-img {
+  height: 70vh; /* Viewport height */
+  object-fit: cover;
+  filter: brightness(65%); /* Darken image for better text contrast */
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  left: 0;
+  right: 0;
+  padding: 0 10%; /* Adjust padding for narrower text block */
+}
+
+.carousel-caption h5 {
+  font-size: 3.5rem; /* Larger heading */
+  line-height: 1.2;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem; /* Larger paragraph */
+}
+
+/* Text shadow for better readability on images */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Section Spacing */
+section {
+  padding: 80px 0; /* Consistent padding for all sections */
+}
+
+/* Accommodation Cards */
+.card.h-100 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.h-100:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.accom-img {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Activity Icons */
+.icon-box {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-box:hover {
+  background-color: rgba(
+    var(--lodge-primary-rgb, 85, 107, 47),
+    0.1
+  ); /* Light hover background */
+  transform: translateY(-3px);
+}
+/* Define RGB values for lodge-primary for rgba usage */
+:root {
+  --lodge-primary-rgb: 85, 107, 47;
+}
+
+/* Gallery Images */
+.gallery-img {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  filter: brightness(85%);
+}
+
+/* Gallery Modal */
+.modal-content .img-fluid {
+  max-height: 80vh;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .hero-img {
+    height: 60vh;
+  }
+  .carousel-caption {
+    padding: 0 5%;
+  }
+  .carousel-caption h5 {
+    font-size: 2.5rem;
+  }
+  .carousel-caption p {
+    font-size: 1.1rem;
+  }
+  .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  section {
+    padding: 60px 0;
+  }
+  .display-5 {
+    font-size: 2.5rem;
+  }
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-img {
+    height: 50vh;
+  }
+  .carousel-caption h5 {
+    font-size: 2rem;
+  }
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+  .navbar-brand {
+    font-size: 1.8rem !important;
+  }
+  .icon-box i {
+    font-size: 2.5rem !important;
+  }
+}

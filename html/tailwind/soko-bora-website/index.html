@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soko Bora Supplies - Your Agricultural Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional: Add custom fonts or base styles here if needed */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <header class="bg-white shadow-sm py-4">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-2xl font-bold text-green-700">Soko Bora</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#hero" class="text-gray-600 hover:text-green-700">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-green-700">About Us</a>
+                <a href="#services" class="text-gray-600 hover:text-green-700">Products</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-green-700">Testimonials</a>
+                <a href="#contact" class="text-gray-600 hover:text-green-700">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-lg">
+            <a href="#hero" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About Us</a>
+            <a href="#services" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Products</a>
+            <a href="#testimonials" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Testimonials</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="relative bg-green-700 text-white py-20 md:py-32 flex items-center justify-center">
+            <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1579621979563-712f5a6b7e0d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="container mx-auto text-center relative z-10 px-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Empowering Farmers, Growing Futures</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Your trusted partner for high-quality agricultural supplies, designed to boost your yields and livelihood.</p>
+                <a href="#contact" class="bg-white text-green-700 hover:bg-gray-200 font-bold py-3 px-8 rounded-full text-lg transition duration-300">Get a Quote</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="md:order-2">
+                    <img src="https://images.unsplash.com/photo-1533221379435-0814bb65719e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Farmers working" class="rounded-lg shadow-xl w-full h-auto object-cover max-h-[400px]">
+                </div>
+                <div class="md:order-1">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About Soko Bora Supplies</h2>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        At Soko Bora Supplies, we are passionate about supporting the agricultural community across Kenya.
+                        Founded with the vision of providing accessible, high-quality farm inputs, we've grown to be a trusted name
+                        among small-scale and commercial farmers alike.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        We believe that a thriving agricultural sector is the backbone of our economy. That's why we meticulously
+                        source and supply a wide range of seeds, fertilizers, pesticides, and farming tools, ensuring every product
+                        meets rigorous quality standards. Our commitment extends beyond sales; we aim to be a resource for knowledge
+                        and sustainable farming practices.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Our Quality Products</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform hover:scale-105">
+                        <img src="https://images.unsplash.com/photo-1542456426-302353e4b0c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Quality Seeds" class="w-24 h-24 object-cover rounded-full mb-4 ring-4 ring-green-200">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">High-Yield Seeds</h3>
+                        <p class="text-gray-600 text-center">Premium seeds for various crops, ensuring robust growth and bountiful harvests.</p>
+                        <a href="#contact" class="mt-4 text-green-600 hover:text-green-800 font-semibold flex items-center">
+                            Learn More
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform hover:scale-105">
+                        <img src="https://images.unsplash.com/photo-1582216259068-12e09315d033?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Organic Fertilizers" class="w-24 h-24 object-cover rounded-full mb-4 ring-4 ring-green-200">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Eco-Friendly Fertilizers</h3>
+                        <p class="text-gray-600 text-center">Nourish your soil naturally with our range of organic and balanced fertilizers.</p>
+                        <a href="#contact" class="mt-4 text-green-600 hover:text-green-800 font-semibold flex items-center">
+                            Learn More
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform hover:scale-105">
+                        <img src="https://plus.unsplash.com/photos/image/62539130768c7437194f4803?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Farming Tools" class="w-24 h-24 object-cover rounded-full mb-4 ring-4 ring-green-200">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Modern Farming Tools</h3>
+                        <p class="text-gray-600 text-center">Durable and efficient tools to make your farming tasks easier and more productive.</p>
+                        <a href="#contact" class="mt-4 text-green-600 hover:text-green-800 font-semibold flex items-center">
+                            Learn More
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-16 md:py-24 bg-green-800 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">What Our Farmers Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-green-700 rounded-lg p-6 shadow-xl">
+                        <p class="italic text-lg mb-4">"Soko Bora supplies transformed my yields! Their seeds are top-notch and their team is always helpful. Highly recommend!"</p>
+                        <p class="font-semibold text-green-200">- Jane Wanjiku, Farmer from Nakuru</p>
+                    </div>
+                    <div class="bg-green-700 rounded-lg p-6 shadow-xl">
+                        <p class="italic text-lg mb-4">"The organic fertilizers I got here really made a difference. My crops are healthier than ever. Fantastic quality!"</p>
+                        <p class="font-semibold text-green-200">- Peter Otieno, Farmer from Kisumu</p>
+                    </div>
+                    <div class="bg-green-700 rounded-lg p-6 shadow-xl">
+                        <p class="italic text-lg mb-4">"Reliable products and excellent customer service. Soko Bora is my go-to for all farming needs."</p>
+                        <p class="font-semibold text-green-200">- Amina Juma, Farmer from Eldoret</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 text-center max-w-2xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Get in Touch</h2>
+                <p class="text-gray-700 mb-8">Have a question or need a custom quote? Fill out the form below and we'll get back to you shortly.</p>
+                <form class="space-y-6 text-left">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                        <input type="text" id="subject" name="subject" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="Inquiry about seeds">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                        <textarea id="message" name="message" rows="5" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="Tell us how we can help you..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-green-700 text-white hover:bg-green-800 font-bold py-3 px-8 rounded-full text-lg transition duration-300">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Soko Bora Supplies. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-300 hover:text-white">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu after clicking a link
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

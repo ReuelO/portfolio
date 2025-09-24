@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegance Boutique - Timeless Style for You</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCXd/XP=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="58">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top shadow-sm"
+      id="mainNavbar"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3 text-dark me-auto" href="#home"
+          >Elegance Boutique</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#new-arrivals">New Arrivals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#collections">Collections</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="nav-link" href="#"
+                ><i class="fas fa-shopping-bag me-1"></i> Cart
+                <span class="badge bg-primary rounded-pill">0</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fas fa-user"></i> Account</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="home" class="hero-carousel">
+        <div
+          id="heroSlider"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="5000"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#heroSlider"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroSlider"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroSlider"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div
+              class="carousel-item active hero-slide"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1542289632-44161b3690d5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+              "
+            >
+              <div class="hero-content text-white">
+                <h1
+                  class="display-3 fw-bold mb-3 animate__animated animate__fadeInDown"
+                >
+                  New Arrivals: Spring Collection
+                </h1>
+                <p
+                  class="lead mb-4 animate__animated animate__fadeInUp animate__delay-0-5s"
+                >
+                  Discover the latest trends and redefine your style.
+                </p>
+                <a
+                  href="#new-arrivals"
+                  class="btn btn-light btn-lg rounded-pill px-5 py-3 animate__animated animate__zoomIn animate__delay-1s"
+                  >Shop Now</a
+                >
+              </div>
+            </div>
+            <div
+              class="carousel-item hero-slide"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1596752003666-419b380693ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+              "
+            >
+              <div class="hero-content text-white">
+                <h1
+                  class="display-3 fw-bold mb-3 animate__animated animate__fadeInDown"
+                >
+                  Timeless Elegance, Modern Edge
+                </h1>
+                <p
+                  class="lead mb-4 animate__animated animate__fadeInUp animate__delay-0-5s"
+                >
+                  Curated pieces that blend classic sophistication with
+                  contemporary flair.
+                </p>
+                <a
+                  href="#collections"
+                  class="btn btn-light btn-lg rounded-pill px-5 py-3 animate__animated animate__zoomIn animate__delay-1s"
+                  >View Collections</a
+                >
+              </div>
+            </div>
+            <div
+              class="carousel-item hero-slide"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1582233481239-166c1f13b190?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+              "
+            >
+              <div class="hero-content text-white">
+                <h1
+                  class="display-3 fw-bold mb-3 animate__animated animate__fadeInDown"
+                >
+                  Sustainable Fashion Choices
+                </h1>
+                <p
+                  class="lead mb-4 animate__animated animate__fadeInUp animate__delay-0-5s"
+                >
+                  Look good, feel good, by choosing ethically sourced and
+                  eco-friendly garments.
+                </p>
+                <a
+                  href="#about"
+                  class="btn btn-light btn-lg rounded-pill px-5 py-3 animate__animated animate__zoomIn animate__delay-1s"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroSlider"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroSlider"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="new-arrivals" class="py-5 py-md-5 py-lg-6 bg-light">
+        <div class="container text-center">
+          <h2 class="display-5 fw-bold text-dark mb-4">
+            Discover Our New Arrivals
+          </h2>
+          <p class="lead text-secondary mb-5">
+            Be the first to explore the latest additions to our exquisite
+            collection.
+          </p>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+              <div class="card h-100 shadow-sm border-0 transform-on-hover">
+                <img
+                  src="https://images.unsplash.com/photo-1598554274534-117565983794?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top"
+                  alt="Product Image"
+                />
+                <div class="card-body d-flex flex-column p-3">
+                  <h5 class="card-title fw-bold text-dark mb-1">
+                    Silk Blend Dress
+                  </h5>
+                  <p class="card-text text-secondary mb-2 small">
+                    Women's Apparel
+                  </p>
+                  <p class="card-text fw-bold text-primary mb-3">$120.00</p>
+                  <div class="mt-auto d-flex justify-content-between">
+                    <button
+                      class="btn btn-outline-dark btn-sm rounded-pill flex-grow-1 me-2"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productQuickViewModal"
+                    >
+                      Quick View
+                    </button>
+                    <button
+                      class="btn btn-primary btn-sm rounded-pill flex-grow-1"
+                    >
+                      <i class="fas fa-shopping-bag me-1"></i> Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm border-0 transform-on-hover">
+                <img
+                  src="https://images.unsplash.com/photo-1603213569733-14909a393f6b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top"
+                  alt="Product Image"
+                />
+                <div class="card-body d-flex flex-column p-3">
+                  <h5 class="card-title fw-bold text-dark mb-1">
+                    Tailored Linen Blazer
+                  </h5>
+                  <p class="card-text text-secondary mb-2 small">
+                    Men's Outerwear
+                  </p>
+                  <p class="card-text fw-bold text-primary mb-3">$180.00</p>
+                  <div class="mt-auto d-flex justify-content-between">
+                    <button
+                      class="btn btn-outline-dark btn-sm rounded-pill flex-grow-1 me-2"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productQuickViewModal"
+                    >
+                      Quick View
+                    </button>
+                    <button
+                      class="btn btn-primary btn-sm rounded-pill flex-grow-1"
+                    >
+                      <i class="fas fa-shopping-bag me-1"></i> Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm border-0 transform-on-hover">
+                <img
+                  src="https://images.unsplash.com/photo-1542994191-c917b20464f8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top"
+                  alt="Product Image"
+                />
+                <div class="card-body d-flex flex-column p-3">
+                  <h5 class="card-title fw-bold text-dark mb-1">
+                    Embroidered Cotton Blouse
+                  </h5>
+                  <p class="card-text text-secondary mb-2 small">
+                    Women's Tops
+                  </p>
+                  <p class="card-text fw-bold text-primary mb-3">$75.00</p>
+                  <div class="mt-auto d-flex justify-content-between">
+                    <button
+                      class="btn btn-outline-dark btn-sm rounded-pill flex-grow-1 me-2"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productQuickViewModal"
+                    >
+                      Quick View
+                    </button>
+                    <button
+                      class="btn btn-primary btn-sm rounded-pill flex-grow-1"
+                    >
+                      <i class="fas fa-shopping-bag me-1"></i> Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm border-0 transform-on-hover">
+                <img
+                  src="https://images.unsplash.com/photo-1596752003666-419b380693ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top"
+                  alt="Product Image"
+                />
+                <div class="card-body d-flex flex-column p-3">
+                  <h5 class="card-title fw-bold text-dark mb-1">
+                    Classic Denim Jeans
+                  </h5>
+                  <p class="card-text text-secondary mb-2 small">
+                    Unisex Bottoms
+                  </p>
+                  <p class="card-text fw-bold text-primary mb-3">$95.00</p>
+                  <div class="mt-auto d-flex justify-content-between">
+                    <button
+                      class="btn btn-outline-dark btn-sm rounded-pill flex-grow-1 me-2"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productQuickViewModal"
+                    >
+                      Quick View
+                    </button>
+                    <button
+                      class="btn btn-primary btn-sm rounded-pill flex-grow-1"
+                    >
+                      <i class="fas fa-shopping-bag me-1"></i> Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-outline-dark rounded-pill px-5 py-3 mt-5"
+            >View All Products</a
+          >
+        </div>
+      </section>
+
+      <section id="collections" class="py-5 py-md-5 py-lg-6">
+        <div class="container text-center">
+          <h2 class="display-5 fw-bold text-dark mb-4">
+            Our Curated Collections
+          </h2>
+          <p class="lead text-secondary mb-5">
+            Explore our distinct lines, each crafted with a unique vision and
+            style.
+          </p>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div
+                class="collection-card position-relative overflow-hidden rounded shadow-sm transform-on-hover"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1520638539265-f483a9926868?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                "
+              >
+                <div
+                  class="collection-overlay d-flex flex-column justify-content-center align-items-center p-4"
+                >
+                  <h3 class="h2 fw-bold text-white mb-3">Urban Chic</h3>
+                  <p class="lead text-white-50 text-center mb-4">
+                    Effortless style for the modern city dweller.
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-light rounded-pill px-4 py-2"
+                    >Shop Collection</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="collection-card position-relative overflow-hidden rounded shadow-sm transform-on-hover"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1627993086963-2287c897f259?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                "
+              >
+                <div
+                  class="collection-overlay d-flex flex-column justify-content-center align-items-center p-4"
+                >
+                  <h3 class="h2 fw-bold text-white mb-3">Boho Spirit</h3>
+                  <p class="lead text-white-50 text-center mb-4">
+                    Flowy fabrics and intricate details for the free soul.
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-light rounded-pill px-4 py-2"
+                    >Shop Collection</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-5 py-md-5 py-lg-6 bg-light">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+              <img
+                src="https://images.unsplash.com/photo-1627993086963-2287c897f259?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="img-fluid rounded shadow-lg"
+                alt="Boutique Interior"
+              />
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <h2 class="display-5 fw-bold text-dark mb-4">
+                Our Story: Elegance Redefined
+              </h2>
+              <p class="lead text-secondary mb-4">
+                Elegance Boutique was founded on the principle that true style
+                is a reflection of individuality. We hand-pick every garment,
+                ensuring exceptional quality, unique design, and a touch of
+                effortless sophistication.
+              </p>
+              <p class="text-secondary mb-4">
+                From timeless classics to the latest runway-inspired pieces, our
+                collection is curated to empower you to express your unique
+                personality through fashion. We believe in sustainable practices
+                and supporting ethical designers who share our passion for
+                beauty and responsibility.
+              </p>
+              <a
+                href="#contact"
+                class="btn btn-outline-dark rounded-pill px-4 py-2 mt-3"
+                >Learn More About Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 py-md-5 py-lg-6 bg-dark text-white text-center">
+        <div class="container">
+          <h2 class="display-5 fw-bold mb-4">
+            Stay Stylish with Our Newsletter
+          </h2>
+          <p class="lead mb-4">
+            Get exclusive offers, new arrival alerts, and style tips delivered
+            straight to your inbox.
+          </p>
+          <form class="row justify-content-center gx-2 gy-2">
+            <div class="col-md-5">
+              <input
+                type="email"
+                class="form-control form-control-lg rounded-pill"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+            <div class="col-md-auto">
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg rounded-pill px-5 py-3"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="contact" class="py-5 py-md-5 py-lg-6 bg-light">
+        <div class="container">
+          <h2 class="display-5 fw-bold text-dark text-center mb-5">
+            Visit Our Boutique
+          </h2>
+          <div class="row g-4 justify-content-center">
+            <div class="col-lg-6">
+              <div class="p-4 rounded shadow-sm bg-white h-100">
+                <h3 class="h4 fw-bold text-dark mb-4">Store Information</h3>
+                <p class="text-secondary mb-3">
+                  <i class="fas fa-map-marker-alt text-primary me-3 fs-5"></i>
+                  789 Fashion Avenue, Style City, 10001
+                </p>
+                <p class="text-secondary mb-3">
+                  <i class="fas fa-phone-alt text-primary me-3 fs-5"></i>
+                  <a
+                    href="tel:+1-555-BOUTIQUE"
+                    class="text-decoration-none text-secondary hover-primary"
+                    >+1 (555) BOUTIQUE</a
+                  >
+                </p>
+                <p class="text-secondary mb-3">
+                  <i class="fas fa-envelope text-primary me-3 fs-5"></i>
+                  <a
+                    href="mailto:info@eleganceboutique.com"
+                    class="text-decoration-none text-secondary hover-primary"
+                    >info@eleganceboutique.com</a
+                  >
+                </p>
+                <p class="text-secondary mb-4">
+                  <i class="fas fa-clock text-primary me-3 fs-5"></i> Mon-Sat:
+                  10:00 AM - 7:00 PM | Sunday: 12:00 PM - 5:00 PM
+                </p>
+
+                <h3 class="h4 fw-bold text-dark mb-3 mt-5">Find Us on Map</h3>
+                <div
+                  class="embed-responsive embed-responsive-16by9 rounded shadow-sm"
+                  style="height: 300px"
+                >
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.083984852954!2d36.78652077983636!3d-1.282937549666014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf025ee229871f!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sde!4v1701389880199!5m2!1sen!2sde"
+                    width="100%"
+                    height="100%"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="rounded"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="p-4 rounded shadow-sm bg-white h-100">
+                <h3 class="h4 fw-bold text-dark mb-4">Send Us a Message</h3>
+                <form>
+                  <div class="mb-3">
+                    <label for="contactName" class="form-label text-dark"
+                      >Your Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="contactName"
+                      placeholder="Jane Doe"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="contactEmail" class="form-label text-dark"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="contactEmail"
+                      placeholder="name@example.com"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="contactSubject" class="form-label text-dark"
+                      >Subject</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="contactSubject"
+                      placeholder="Inquiry about an item"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="contactMessage" class="form-label text-dark"
+                      >Your Message</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="contactMessage"
+                      rows="5"
+                      placeholder="I'm interested in..."
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary rounded-pill px-4 py-2 mt-3"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="modal fade"
+      id="productQuickViewModal"
+      tabindex="-1"
+      aria-labelledby="productQuickViewModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0 pb-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4 pt-0">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <img
+                  src="https://images.unsplash.com/photo-1598554274534-117565983794?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="img-fluid rounded"
+                  alt="Product Quick View"
+                />
+              </div>
+              <div class="col-md-6">
+                <h3 class="fw-bold text-dark">Silk Blend Dress</h3>
+                <p class="text-secondary small mb-2">Women's Apparel</p>
+                <p class="fs-4 fw-bold text-primary mb-3">$120.00</p>
+                <p class="text-dark small">
+                  A luxurious silk blend dress perfect for any occasion.
+                  Features a flattering silhouette and delicate detailing.
+                  Available in multiple sizes and colors.
+                </p>
+                <div class="mb-3">
+                  <label
+                    for="sizeSelect"
+                    class="form-label small text-dark fw-bold mb-1"
+                    >Size:</label
+                  >
+                  <select class="form-select form-select-sm" id="sizeSelect">
+                    <option selected>Select Size</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                  </select>
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="quantityInput"
+                    class="form-label small text-dark fw-bold mb-1"
+                    >Quantity:</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control form-control-sm"
+                    id="quantityInput"
+                    value="1"
+                    min="1"
+                  />
+                </div>
+                <button class="btn btn-primary w-100 rounded-pill py-2">
+                  <i class="fas fa-shopping-bag me-2"></i> Add to Cart
+                </button>
+                <a
+                  href="#"
+                  class="btn btn-outline-dark w-100 rounded-pill py-2 mt-2"
+                  >View Full Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <div class="col">
+            <h5 class="fw-bold text-white mb-3">Elegance Boutique</h5>
+            <p class="text-secondary small">
+              Curating exceptional fashion pieces that inspire confidence and
+              celebrate individuality.
+            </p>
+            <div class="d-flex">
+              <a href="#" class="text-white me-3 fs-4"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="text-white me-3 fs-4"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-3 fs-4"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white fs-4"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col">
+            <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+            <ul class="list-unstyled text-secondary small">
+              <li>
+                <a
+                  href="#home"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#new-arrivals"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >New Arrivals</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#collections"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Collections</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5 class="fw-bold text-white mb-3">Shop</h5>
+            <ul class="list-unstyled text-secondary small">
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Women's Apparel</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Men's Outerwear</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Accessories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Sale Items</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5 class="fw-bold text-white mb-3">Customer Service</h5>
+            <ul class="list-unstyled text-secondary small">
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Shipping & Returns</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Size Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="border-secondary mt-4 mb-3" />
+        <p class="text-center text-secondary small mb-0">
+          © <span id="current-year"></span> Elegance Boutique. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

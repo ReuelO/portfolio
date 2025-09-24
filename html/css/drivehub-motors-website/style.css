@@ -1,0 +1,16 @@
+/* Custom CSS for Google Fonts */
+/* These are also directly linked in index.html <style> block for Tailwind compatibility */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@500;700&display=swap');
+
+/* Ensure smooth scrolling when clicking anchor links */
+html {
+  scroll-behavior: smooth;
+  /* Tailwind's scroll-smooth utility already applies this, but keeping here for clarity if needed. */
+}
+
+/* You can add any custom classes or @apply directives here if your design requires them */
+/* For example, if you had a very specific repeatable component style not covered by utilities:
+.custom-card-button {
+    @apply bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600;
+}
+*/

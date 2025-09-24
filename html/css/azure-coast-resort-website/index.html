@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azure Coast Resort - Your Tropical Paradise</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCXd/XP=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-resort-dark fixed-top shadow"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3 text-resort-accent" href="#"
+          >Azure Coast Resort</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#accommodations">Accommodations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dining">Dining</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#activities">Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#spa">Spa & Wellness</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-resort-accent text-white ms-lg-3 px-3 py-2 rounded-pill"
+                href="#contact"
+                >Book Your Stay!</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="home" class="hero-carousel">
+        <div id="resortCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#resortCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#resortCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#resortCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <img
+                src="https://images.unsplash.com/photo-1571773099951-8319f3909772?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="d-block w-100 hero-img"
+                alt="Luxury Beachfront Resort"
+              />
+              <div class="carousel-caption d-none d-md-block text-shadow">
+                <h5 class="display-3 fw-bold text-resort-accent">
+                  Discover Your Tropical Paradise
+                </h5>
+                <p class="fs-4">
+                  Azure Coast Resort: Where every moment is pure bliss.
+                </p>
+                <a
+                  href="#contact"
+                  class="btn btn-resort-primary btn-lg mt-3 rounded-pill px-4"
+                  >Book Your Escape</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img
+                src="https://images.unsplash.com/photo-1542744173-045050f55ed4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="d-block w-100 hero-img"
+                alt="Infinity Pool with Ocean View"
+              />
+              <div class="carousel-caption d-none d-md-block text-shadow">
+                <h5 class="display-3 fw-bold text-resort-accent">
+                  Relax by Our Stunning Infinity Pool
+                </h5>
+                <p class="fs-4">
+                  Soak up the sun and enjoy breathtaking ocean vistas.
+                </p>
+                <a
+                  href="#activities"
+                  class="btn btn-resort-primary btn-lg mt-3 rounded-pill px-4"
+                  >See Activities</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img
+                src="https://images.unsplash.com/photo-1596700147986-e88383a8b417?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="d-block w-100 hero-img"
+                alt="Luxurious Resort Room"
+              />
+              <div class="carousel-caption d-none d-md-block text-shadow">
+                <h5 class="display-3 fw-bold text-resort-accent">
+                  Unwind in Elegant Comfort
+                </h5>
+                <p class="fs-4">
+                  Luxurious rooms and suites designed for your utmost
+                  relaxation.
+                </p>
+                <a
+                  href="#accommodations"
+                  class="btn btn-resort-primary btn-lg mt-3 rounded-pill px-4"
+                  >View Rooms</a
+                >
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#resortCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#resortCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="about" class="py-5 bg-light-blue">
+        <div class="container my-5">
+          <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+              <img
+                src="https://images.unsplash.com/photo-1566073771259-d342fc265889?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Resort Lounge Area"
+                class="img-fluid rounded shadow"
+              />
+            </div>
+            <div class="col-md-6 text-center text-md-start">
+              <h2 class="display-5 fw-bold text-resort-dark mb-4">
+                Welcome to Azure Coast Resort
+              </h2>
+              <p class="lead text-muted">
+                Located on pristine white sands overlooking the glistening
+                turquoise waters, Azure Coast Resort is your ultimate escape to
+                tranquility and adventure. We promise an unforgettable vacation
+                experience for families, couples, and solo travelers alike.
+              </p>
+              <p class="text-muted">
+                Indulge in world-class amenities, exquisite dining, thrilling
+                water sports, and rejuvenating spa treatments. Our dedicated
+                team is committed to providing impeccable service and creating
+                cherished memories that will last a lifetime.
+              </p>
+              <a
+                href="#contact"
+                class="btn btn-outline-resort-primary btn-lg mt-3 rounded-pill px-4"
+                >Plan Your Getaway</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="accommodations" class="py-5">
+        <div class="container my-5">
+          <h2 class="display-5 fw-bold text-center text-resort-dark mb-5">
+            Luxurious Accommodations
+          </h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1560647895-341ef99b247f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top accom-img"
+                  alt="Deluxe Ocean View Room"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title text-resort-dark fw-bold">
+                    Deluxe Ocean View Room
+                  </h5>
+                  <p class="card-text text-muted">
+                    Wake up to stunning panoramic views of the ocean from your
+                    private balcony.
+                  </p>
+                  <ul class="list-unstyled text-muted small mb-3">
+                    <li>
+                      <i class="fas fa-bed me-2 text-resort-accent"></i>King
+                      Size Bed
+                    </li>
+                    <li>
+                      <i class="fas fa-water me-2 text-resort-accent"></i>Ocean
+                      View Balcony
+                    </li>
+                    <li>
+                      <i class="fas fa-wifi me-2 text-resort-accent"></i
+                      >Complimentary Wi-Fi
+                    </li>
+                  </ul>
+                  <div
+                    class="mt-auto d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fs-5 fw-bold text-resort-primary"
+                      >$350 <small class="text-muted">/ night</small></span
+                    >
+                    <a
+                      href="#contact"
+                      class="btn btn-resort-primary rounded-pill"
+                      >Book Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1542718136-1e64627b0b63?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top accom-img"
+                  alt="Beachfront Villa"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title text-resort-dark fw-bold">
+                    Beachfront Villa
+                  </h5>
+                  <p class="card-text text-muted">
+                    Exclusive villa with direct beach access and a private
+                    plunge pool.
+                  </p>
+                  <ul class="list-unstyled text-muted small mb-3">
+                    <li>
+                      <i
+                        class="fas fa-house-chimney-medical me-2 text-resort-accent"
+                      ></i
+                      >Private Villa
+                    </li>
+                    <li>
+                      <i
+                        class="fas fa-person-swimming me-2 text-resort-accent"
+                      ></i
+                      >Private Pool
+                    </li>
+                    <li>
+                      <i
+                        class="fas fa-umbrella-beach me-2 text-resort-accent"
+                      ></i
+                      >Direct Beach Access
+                    </li>
+                  </ul>
+                  <div
+                    class="mt-auto d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fs-5 fw-bold text-resort-primary"
+                      >$780 <small class="text-muted">/ night</small></span
+                    >
+                    <a
+                      href="#contact"
+                      class="btn btn-resort-primary rounded-pill"
+                      >Book Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1592398517523-261c47a3297a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top accom-img"
+                  alt="Family Suite"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title text-resort-dark fw-bold">
+                    Spacious Family Suite
+                  </h5>
+                  <p class="card-text text-muted">
+                    Designed for families, with separate sleeping areas and
+                    kid-friendly amenities.
+                  </p>
+                  <ul class="list-unstyled text-muted small mb-3">
+                    <li>
+                      <i class="fas fa-bed me-2 text-resort-accent"></i>Multiple
+                      Beds
+                    </li>
+                    <li>
+                      <i
+                        class="fas fa-child-reaching me-2 text-resort-accent"
+                      ></i
+                      >Kids' Amenities
+                    </li>
+                    <li>
+                      <i class="fas fa-person-booth me-2 text-resort-accent"></i
+                      >Separate Living Area
+                    </li>
+                  </ul>
+                  <div
+                    class="mt-auto d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fs-5 fw-bold text-resort-primary"
+                      >$520 <small class="text-muted">/ night</small></span
+                    >
+                    <a
+                      href="#contact"
+                      class="btn btn-resort-primary rounded-pill"
+                      >Book Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dining" class="py-5 bg-light-blue">
+        <div class="container my-5">
+          <h2 class="display-5 fw-bold text-center text-resort-dark mb-5">
+            Exquisite Dining Experiences
+          </h2>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1606431940173-b3c378e9b6cb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top dining-img"
+                  alt="Fine Dining Restaurant"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-resort-dark fw-bold">
+                    The Ocean's Table
+                  </h5>
+                  <p class="card-text text-muted">
+                    Savor gourmet international and local cuisine with
+                    breathtaking ocean views.
+                  </p>
+                  <span class="badge bg-resort-accent text-dark rounded-pill"
+                    >Fine Dining</span
+                  >
+                  <span class="badge bg-resort-accent text-dark rounded-pill"
+                    >Seafood</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1570197412177-de34252a129d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top dining-img"
+                  alt="Beach Bar"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-resort-dark fw-bold">
+                    Sunset Breeze Bar
+                  </h5>
+                  <p class="card-text text-muted">
+                    Enjoy refreshing cocktails and light bites while watching
+                    the sunset by the beach.
+                  </p>
+                  <span class="badge bg-resort-accent text-dark rounded-pill"
+                    >Cocktails</span
+                  >
+                  <span class="badge bg-resort-accent text-dark rounded-pill"
+                    >Snacks</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="activities" class="py-5">
+        <div class="container my-5">
+          <h2 class="display-5 fw-bold text-center text-resort-dark mb-5">
+            Endless Activities & Fun
+          </h2>
+          <div class="row text-center g-4">
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="icon-box p-3 rounded-pill shadow-sm">
+                <i
+                  class="fas fa-water-ladder fs-1 text-resort-primary mb-2"
+                ></i>
+                <p class="mb-0 text-muted small">Swimming Pools</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="icon-box p-3 rounded-pill shadow-sm">
+                <i class="fas fa-sailboat fs-1 text-resort-primary mb-2"></i>
+                <p class="mb-0 text-muted small">Water Sports</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="icon-box p-3 rounded-pill shadow-sm">
+                <i class="fas fa-child fs-1 text-resort-primary mb-2"></i>
+                <p class="mb-0 text-muted small">Kids' Club</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="icon-box p-3 rounded-pill shadow-sm">
+                <i
+                  class="fas fa-golf-ball-tee fs-1 text-resort-primary mb-2"
+                ></i>
+                <p class="mb-0 text-muted small">Golf Course</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="icon-box p-3 rounded-pill shadow-sm">
+                <i
+                  class="fas fa-volleyball-ball fs-1 text-resort-primary mb-2"
+                ></i>
+                <p class="mb-0 text-muted small">Beach Volleyball</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="icon-box p-3 rounded-pill shadow-sm">
+                <i class="fas fa-music fs-1 text-resort-primary mb-2"></i>
+                <p class="mb-0 text-muted small">Live Entertainment</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="spa" class="py-5 bg-light-blue">
+        <div class="container my-5">
+          <div class="row align-items-center flex-row-reverse">
+            <div class="col-md-6 mb-4 mb-md-0">
+              <img
+                src="https://images.unsplash.com/photo-1544161511-b054a32a678b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Spa Treatment Room"
+                class="img-fluid rounded shadow"
+              />
+            </div>
+            <div class="col-md-6 text-center text-md-start">
+              <h2 class="display-5 fw-bold text-resort-dark mb-4">
+                Rejuvenate at Our Serene Spa
+              </h2>
+              <p class="lead text-muted">
+                Escape to a world of profound relaxation and rejuvenation at our
+                luxurious Azure Spa. Our expert therapists offer a wide array of
+                treatments designed to soothe your mind, body, and soul.
+              </p>
+              <p class="text-muted">
+                From revitalizing massages to invigorating facials and body
+                wraps, each experience is tailored to your needs. Complement
+                your journey with our state-of-the-art fitness center and
+                peaceful yoga sessions.
+              </p>
+              <a
+                href="#contact"
+                class="btn btn-outline-resort-primary btn-lg mt-3 rounded-pill px-4"
+                >Book a Spa Treatment</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="py-5">
+        <div class="container my-5">
+          <h2 class="display-5 fw-bold text-center text-resort-dark mb-5">
+            Our Resort Gallery
+          </h2>
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <a
+                href="https://images.unsplash.com/photo-1582719508461-905c67377102?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                data-bs-toggle="modal"
+                data-bs-target="#galleryModal"
+                data-img-src="https://images.unsplash.com/photo-1582719508461-905c67377102?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1582719508461-905c67377102?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="img-fluid rounded shadow-sm gallery-img"
+                  alt="Resort Villa Interior"
+                />
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <a
+                href="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                data-bs-toggle="modal"
+                data-bs-target="#galleryModal"
+                data-img-src="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="img-fluid rounded shadow-sm gallery-img"
+                  alt="Resort Garden Pathway"
+                />
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <a
+                href="https://images.unsplash.com/photo-1621293674488-826d03d01867?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                data-bs-toggle="modal"
+                data-bs-target="#galleryModal"
+                data-img-src="https://images.unsplash.com/photo-1621293674488-826d03d01867?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1621293674488-826d03d01867?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="img-fluid rounded shadow-sm gallery-img"
+                  alt="Kids Club"
+                />
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <a
+                href="https://images.unsplash.com/photo-1588661601004-92d5351a9959?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                data-bs-toggle="modal"
+                data-bs-target="#galleryModal"
+                data-img-src="https://images.unsplash.com/photo-1588661601004-92d5351a9959?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1588661601004-92d5351a9959?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="img-fluid rounded shadow-sm gallery-img"
+                  alt="Beachfront Dinner Setup"
+                />
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <a
+                href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                data-bs-toggle="modal"
+                data-bs-target="#galleryModal"
+                data-img-src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="img-fluid rounded shadow-sm gallery-img"
+                  alt="Resort Pool area"
+                />
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <a
+                href="https://images.unsplash.com/photo-1551882547-ff40c634c442?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                data-bs-toggle="modal"
+                data-bs-target="#galleryModal"
+                data-img-src="https://images.unsplash.com/photo-1551882547-ff40c634c442?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1551882547-ff40c634c442?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="img-fluid rounded shadow-sm gallery-img"
+                  alt="Resort Aerial View"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="modal fade"
+        id="galleryModal"
+        tabindex="-1"
+        aria-labelledby="galleryModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0">
+              <img
+                src=""
+                class="img-fluid rounded"
+                id="modalImage"
+                alt="Gallery Image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="testimonials" class="py-5 bg-light-blue">
+        <div class="container my-5">
+          <h2 class="display-5 fw-bold text-center text-resort-dark mb-5">
+            What Our Guests Say
+          </h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+              <div class="card h-100 shadow-sm p-4 text-center">
+                <i class="fas fa-quote-left fs-3 text-resort-accent mb-3"></i>
+                <p class="card-text text-muted fst-italic">
+                  "Truly a slice of paradise! The staff were exceptional, the
+                  food was divine, and the beach was perfect. We had the most
+                  relaxing vacation ever."
+                </p>
+                <h6 class="mt-3 mb-0 text-resort-dark">- Sarah & Mark, USA</h6>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm p-4 text-center">
+                <i class="fas fa-quote-left fs-3 text-resort-accent mb-3"></i>
+                <p class="card-text text-muted fst-italic">
+                  "Azure Coast exceeded all our expectations. So many activities
+                  for the kids, and the adults loved the spa and fine dining.
+                  Can't wait to return!"
+                </p>
+                <h6 class="mt-3 mb-0 text-resort-dark">
+                  - The Patel Family, Kenya
+                </h6>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm p-4 text-center">
+                <i class="fas fa-quote-left fs-3 text-resort-accent mb-3"></i>
+                <p class="card-text text-muted fst-italic">
+                  "The beachfront villa was breathtaking. Every detail was
+                  perfect, and the service was outstanding. Highly recommend for
+                  a romantic getaway."
+                </p>
+                <h6 class="mt-3 mb-0 text-resort-dark">- Liam C., UK</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-5">
+        <div class="container my-5">
+          <h2 class="display-5 fw-bold text-center text-resort-dark mb-5">
+            Book Your Dream Vacation
+          </h2>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="card shadow p-4 p-md-5">
+                <div class="card-body">
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <h4 class="mb-4 text-resort-dark">Get in Touch</h4>
+                      <p class="text-muted">
+                        <i
+                          class="fas fa-map-marker-alt me-2 text-resort-accent"
+                        ></i>
+                        Azure Coast Resort, Coastal Highway, Mombasa, Kenya
+                      </p>
+                      <p class="text-muted">
+                        <i class="fas fa-phone-alt me-2 text-resort-accent"></i>
+                        +254 7XX XXX XXX
+                      </p>
+                      <p class="text-muted">
+                        <i class="fas fa-envelope me-2 text-resort-accent"></i>
+                        bookings@azurecoast.co.ke
+                      </p>
+                      <div
+                        class="embed-responsive embed-responsive-16by9 mt-4 rounded shadow-sm"
+                      >
+                        <iframe
+                          class="w-100 h-100 rounded"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.170457632616!2d36.70889267498705!3d-1.3090885986877843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b40285a2f5f%3A0xc3b8a3e7e45300f8!2sKaren%20Square!5e0!3m2!1sen!2ske!4v1716757650383!5m2!1sen!2ske"
+                          allowfullscreen=""
+                          loading="lazy"
+                        ></iframe>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <h4 class="mb-4 text-resort-dark">Send Us an Inquiry</h4>
+                      <form>
+                        <div class="mb-3">
+                          <label for="fullName" class="form-label"
+                            >Full Name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="fullName"
+                            placeholder="Your Name"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="emailAddress" class="form-label"
+                            >Email Address</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="emailAddress"
+                            placeholder="your@example.com"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="checkInDate" class="form-label"
+                            >Check-in Date</label
+                          >
+                          <input
+                            type="date"
+                            class="form-control"
+                            id="checkInDate"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="checkOutDate" class="form-label"
+                            >Check-out Date</label
+                          >
+                          <input
+                            type="date"
+                            class="form-control"
+                            id="checkOutDate"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="guests" class="form-label"
+                            >Number of Guests</label
+                          >
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="guests"
+                            min="1"
+                            value="1"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="message" class="form-label"
+                            >Message / Special Requests</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="message"
+                            rows="4"
+                            placeholder="Tell us about your vacation plans..."
+                          ></textarea>
+                        </div>
+                        <button
+                          type="submit"
+                          class="btn btn-resort-primary w-100 btn-lg mt-3 rounded-pill"
+                        >
+                          Submit Inquiry
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-resort-dark text-white py-4">
+      <div class="container text-center text-md-start">
+        <div class="row align-items-center">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <h5 class="text-resort-accent">Azure Coast Resort</h5>
+            <p class="small text-muted mb-0">Your ultimate tropical escape.</p>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0 text-center">
+            <ul
+              class="list-unstyled d-flex justify-content-center justify-content-md-start gap-3 mb-0"
+            >
+              <li>
+                <a
+                  href="#home"
+                  class="text-white text-decoration-none small hover-resort-accent"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#activities"
+                  class="text-white text-decoration-none small hover-resort-accent"
+                  >Activities</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-white text-decoration-none small hover-resort-accent"
+                  >Book Now</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 text-center text-md-end">
+            <a href="#" class="text-white me-3 fs-5 hover-resort-accent"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-white me-3 fs-5 hover-resort-accent"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-white fs-5 hover-resort-accent"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <hr class="my-3 border-secondary-subtle" />
+        <p class="text-center text-muted small mb-0">
+          © 2025 Azure Coast Resort. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const galleryModal = document.getElementById('galleryModal')
+        const modalImage = document.getElementById('modalImage')
+
+        // Handle gallery modal image loading
+        galleryModal.addEventListener('show.bs.modal', function (event) {
+          const triggerLink = event.relatedTarget // Anchor tag that triggered the modal
+          const imgSrc = triggerLink.getAttribute('data-img-src')
+          modalImage.src = imgSrc
+        })
+
+        // Smooth scrolling for internal links and close navbar on mobile
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault()
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth',
+            })
+            // Close navbar on mobile after clicking a link
+            if (
+              window.innerWidth < 992 &&
+              document.getElementById('navbarNav').classList.contains('show')
+            ) {
+              const navbarToggler = document.querySelector('.navbar-toggler')
+              const bsCollapse = new bootstrap.Collapse(
+                document.getElementById('navbarNav'),
+                {
+                  toggle: false,
+                }
+              )
+              bsCollapse.hide()
+            }
+          })
+        })
+      })
+    </script>
+  </body>
+</html>

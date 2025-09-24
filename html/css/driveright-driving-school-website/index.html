@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DriveRight Driving School - Learn to Drive Safely</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCXd/XP=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-light"
+    data-bs-spy="scroll"
+    data-bs-target="#mainNavbar"
+    data-bs-offset="58"
+  >
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm"
+      id="mainNavbar"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+          <img
+            src="https://via.placeholder.com/35x35/0d6efd/ffffff?text=DR"
+            alt="DriveRight Logo"
+            class="rounded-circle me-2"
+          />
+          <span class="fw-bold fs-4 text-white">DriveRight</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#packages">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#instructors">Instructors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-primary rounded-pill px-4" href="#contact"
+                >Book Now</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section
+        id="home"
+        class="hero-section text-white d-flex align-items-center justify-content-center text-center py-5"
+      >
+        <div class="hero-overlay"></div>
+        <div class="container position-relative z-1">
+          <h1
+            class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown"
+          >
+            Your Journey to Safe Driving Starts Here
+          </h1>
+          <p
+            class="lead mb-5 animate__animated animate__fadeInUp animate__delay-0-5s"
+          >
+            Expert driving lessons tailored for all skill levels, ensuring
+            confidence on the road.
+          </p>
+          <div
+            class="d-grid gap-3 d-sm-flex justify-content-sm-center animate__animated animate__zoomIn animate__delay-1s"
+          >
+            <a
+              href="#packages"
+              class="btn btn-primary btn-lg rounded-pill px-5 py-3 me-sm-3"
+              >View Packages</a
+            >
+            <a
+              href="#contact"
+              class="btn btn-outline-light btn-lg rounded-pill px-5 py-3"
+              >Get a Quote</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-5 py-md-5 py-lg-6">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <img
+                src="https://images.unsplash.com/photo-1579717618334-a160d704c7ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="img-fluid rounded shadow-lg"
+                alt="Driving instructor with student"
+              />
+            </div>
+            <div class="col-lg-6">
+              <h2 class="display-5 fw-bold text-primary mb-4">
+                About DriveRight Driving School
+              </h2>
+              <p class="lead mb-4">
+                At DriveRight, we are committed to building confident and
+                responsible drivers. With years of experience, our certified
+                instructors provide personalized training in a safe and
+                supportive environment.
+              </p>
+              <p class="text-secondary mb-4">
+                We believe that learning to drive should be a positive and
+                empowering experience. Our comprehensive curriculum covers
+                everything from basic car control to advanced defensive driving
+                techniques, ensuring you're fully prepared for your test and
+                beyond.
+              </p>
+              <ul class="list-unstyled text-secondary">
+                <li class="mb-2">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  Experienced & Certified Instructors
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check-circle text-success me-2"></i> Modern &
+                  Well-Maintained Vehicles
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check-circle text-success me-2"></i> High
+                  Pass Rate & Flexible Scheduling
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  Personalized Lessons & Road Test Preparation
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="btn btn-outline-primary rounded-pill px-4 py-2 mt-3"
+                >Why Choose Us?</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="packages" class="py-5 py-md-5 py-lg-6 bg-white">
+        <div class="container text-center">
+          <h2 class="display-5 fw-bold text-primary mb-5">
+            Our Driving Packages
+          </h2>
+          <p class="lead text-secondary mb-5">
+            Choose the perfect package that fits your learning needs and budget.
+          </p>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+              <div class="card h-100 shadow-sm border-0 transform-on-hover">
+                <div class="card-body p-4">
+                  <h3 class="card-title fw-bold text-primary mb-3">
+                    Beginner's Kickstart
+                  </h3>
+                  <p class="card-text text-secondary mb-3">
+                    Perfect for new drivers or those starting from scratch.
+                  </p>
+                  <h4 class="display-6 fw-bold text-success mb-4">
+                    $350 <span class="fs-5 text-secondary">/ package</span>
+                  </h4>
+                  <ul class="list-unstyled text-start mb-4">
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i> 10
+                      Hours Driving Lessons
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i> Basic
+                      Vehicle Control
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i> Parking
+                      Fundamentals
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i> Road
+                      Rules Overview
+                    </li>
+                    <li class="text-muted">
+                      <i class="fas fa-minus-circle me-2"></i> Road Test Prep
+                    </li>
+                  </ul>
+                  <a href="#contact" class="btn btn-primary rounded-pill w-100"
+                    >Enroll Now</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card h-100 shadow-lg border-primary border-3 transform-on-hover"
+              >
+                <div class="card-body p-4">
+                  <span
+                    class="badge bg-primary text-white position-absolute top-0 start-50 translate-middle py-2 px-3 rounded-pill fw-bold"
+                    >Popular</span
+                  >
+                  <h3 class="card-title fw-bold text-primary mb-3 mt-4 pt-2">
+                    Complete Driver
+                  </h3>
+                  <p class="card-text text-secondary mb-3">
+                    Comprehensive training to master driving and pass your test.
+                  </p>
+                  <h4 class="display-6 fw-bold text-success mb-4">
+                    $600 <span class="fs-5 text-secondary">/ package</span>
+                  </h4>
+                  <ul class="list-unstyled text-start mb-4">
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i> 20
+                      Hours Driving Lessons
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i>
+                      Advanced Maneuvers
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i>
+                      Defensive Driving Techniques
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i> **Road
+                      Test Preparation**
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i> Mock
+                      Driving Test
+                    </li>
+                  </ul>
+                  <a href="#contact" class="btn btn-primary rounded-pill w-100"
+                    >Enroll Now</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm border-0 transform-on-hover">
+                <div class="card-body p-4">
+                  <h3 class="card-title fw-bold text-primary mb-3">
+                    Refresher Course
+                  </h3>
+                  <p class="card-text text-secondary mb-3">
+                    For licensed drivers who want to sharpen their skills or
+                    regain confidence.
+                  </p>
+                  <h4 class="display-6 fw-bold text-success mb-4">
+                    $200 <span class="fs-5 text-secondary">/ package</span>
+                  </h4>
+                  <ul class="list-unstyled text-start mb-4">
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i> 5 Hours
+                      Driving Lessons
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i>
+                      Customized Focus Areas
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i> Current
+                      Traffic Laws Review
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-info me-2"></i>
+                      Defensive Driving Review
+                    </li>
+                    <li class="text-muted">
+                      <i class="fas fa-minus-circle me-2"></i> No Road Test Prep
+                    </li>
+                  </ul>
+                  <a href="#contact" class="btn btn-primary rounded-pill w-100"
+                    >Enroll Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="instructors" class="py-5 py-md-5 py-lg-6">
+        <div class="container text-center">
+          <h2 class="display-5 fw-bold text-primary mb-5">
+            Meet Our Expert Instructors
+          </h2>
+          <p class="lead text-secondary mb-5">
+            Our highly qualified and patient instructors are dedicated to your
+            success.
+          </p>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+              <div class="card h-100 shadow-sm border-0 transform-on-hover">
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  class="card-img-top mx-auto mt-4 rounded-circle border border-primary border-3"
+                  alt="Instructor Profile Picture"
+                  style="width: 150px; height: 150px; object-fit: cover"
+                />
+                <div class="card-body text-center p-4">
+                  <h3 class="card-title fw-bold text-dark mb-2">John Doe</h3>
+                  <p class="card-text text-primary fw-semibold mb-3">
+                    Chief Instructor
+                  </p>
+                  <p class="text-secondary small">
+                    John has over 15 years of experience and a passion for
+                    teaching defensive driving techniques.
+                  </p>
+                  <div class="d-flex justify-content-center mt-3">
+                    <a href="#" class="text-primary mx-2 fs-4"
+                      ><i class="fab fa-facebook"></i
+                    ></a>
+                    <a href="#" class="text-primary mx-2 fs-4"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="#" class="text-primary mx-2 fs-4"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm border-0 transform-on-hover">
+                <img
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  class="card-img-top mx-auto mt-4 rounded-circle border border-primary border-3"
+                  alt="Instructor Profile Picture"
+                  style="width: 150px; height: 150px; object-fit: cover"
+                />
+                <div class="card-body text-center p-4">
+                  <h3 class="card-title fw-bold text-dark mb-2">Jane Smith</h3>
+                  <p class="card-text text-primary fw-semibold mb-3">
+                    Advanced Driving Specialist
+                  </p>
+                  <p class="text-secondary small">
+                    Jane excels at helping nervous drivers build confidence and
+                    master complex maneuvers.
+                  </p>
+                  <div class="d-flex justify-content-center mt-3">
+                    <a href="#" class="text-primary mx-2 fs-4"
+                      ><i class="fab fa-facebook"></i
+                    ></a>
+                    <a href="#" class="text-primary mx-2 fs-4"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="#" class="text-primary mx-2 fs-4"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm border-0 transform-on-hover">
+                <img
+                  src="https://randomuser.me/api/portraits/men/50.jpg"
+                  class="card-img-top mx-auto mt-4 rounded-circle border border-primary border-3"
+                  alt="Instructor Profile Picture"
+                  style="width: 150px; height: 150px; object-fit: cover"
+                />
+                <div class="card-body text-center p-4">
+                  <h3 class="card-title fw-bold text-dark mb-2">David Lee</h3>
+                  <p class="card-text text-primary fw-semibold mb-3">
+                    Beginner's Coach
+                  </p>
+                  <p class="text-secondary small">
+                    David specializes in making the first driving experiences
+                    fun and stress-free for new learners.
+                  </p>
+                  <div class="d-flex justify-content-center mt-3">
+                    <a href="#" class="text-primary mx-2 fs-4"
+                      ><i class="fab fa-facebook"></i
+                    ></a>
+                    <a href="#" class="text-primary mx-2 fs-4"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="testimonials"
+        class="py-5 py-md-5 py-lg-6 bg-primary text-white"
+      >
+        <div class="container text-center">
+          <h2 class="display-5 fw-bold mb-5">What Our Students Say</h2>
+          <div
+            id="testimonialCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="5000"
+          >
+            <div class="carousel-inner pb-5">
+              <div class="carousel-item active">
+                <div class="d-flex flex-column align-items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/68.jpg"
+                    class="rounded-circle mb-3 border border-light border-3"
+                    alt="Student Emily R."
+                    style="width: 100px; height: 100px; object-fit: cover"
+                  />
+                  <p class="lead fst-italic mb-3 px-md-5">
+                    "DriveRight was amazing! My instructor was so patient and
+                    made learning to drive truly enjoyable. I passed my test on
+                    the first try thanks to them!"
+                  </p>
+                  <p class="fw-bold">- Emily R.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/82.jpg"
+                    class="rounded-circle mb-3 border border-light border-3"
+                    alt="Student Mark T."
+                    style="width: 100px; height: 100px; object-fit: cover"
+                  />
+                  <p class="lead fst-italic mb-3 px-md-5">
+                    "I was a very nervous driver, but DriveRight's calm approach
+                    helped me build confidence. I can now drive independently
+                    and safely!"
+                  </p>
+                  <p class="fw-bold">- Mark T.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/75.jpg"
+                    class="rounded-circle mb-3 border border-light border-3"
+                    alt="Student Sarah P."
+                    style="width: 100px; height: 100px; object-fit: cover"
+                  />
+                  <p class="lead fst-italic mb-3 px-md-5">
+                    "Their comprehensive package covered everything. From theory
+                    to practical, I felt fully prepared. Highly recommend
+                    DriveRight to everyone!"
+                  </p>
+                  <p class="fw-bold">- Sarah P.</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators position-static mt-4">
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="py-5 py-md-5 py-lg-6 bg-white">
+        <div class="container text-center">
+          <h2 class="display-5 fw-bold text-primary mb-5">
+            Frequently Asked Questions
+          </h2>
+          <div
+            class="accordion accordion-flush mx-auto"
+            id="faqAccordion"
+            style="max-width: 800px"
+          >
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button collapsed fw-bold text-dark"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  How long does it take to get a driver's license?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body text-secondary">
+                  The time it takes varies by individual and package chosen. Our
+                  "Complete Driver" package typically prepares students within
+                  4-6 weeks, depending on their availability for lessons.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed fw-bold text-dark"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  What are the requirements to start driving lessons?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body text-secondary">
+                  You must be at least 16 years old and possess a valid
+                  learner's permit. We recommend getting your permit before
+                  scheduling your first lesson.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed fw-bold text-dark"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Do you offer road test preparation?
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body text-secondary">
+                  Yes, our "Complete Driver" package includes dedicated road
+                  test preparation sessions and a mock driving test to ensure
+                  you are fully confident and ready for the official exam.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button collapsed fw-bold text-dark"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  Can I schedule lessons on weekends?
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body text-secondary">
+                  Absolutely! We offer flexible scheduling, including evenings
+                  and weekends, to accommodate your busy lifestyle. Please
+                  contact us to check instructor availability.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 py-md-5 py-lg-6 bg-dark text-white text-center">
+        <div class="container">
+          <h2 class="display-5 fw-bold mb-4">Ready to Get Your License?</h2>
+          <p class="lead mb-5">
+            Join hundreds of successful drivers who chose DriveRight for their
+            training. Book your first lesson today!
+          </p>
+          <a
+            href="#contact"
+            class="btn btn-success btn-lg rounded-pill px-5 py-3"
+            >Book Your First Lesson</a
+          >
+        </div>
+      </section>
+
+      <section id="contact" class="py-5 py-md-5 py-lg-6 bg-white">
+        <div class="container">
+          <h2 class="display-5 fw-bold text-primary text-center mb-5">
+            Contact Us
+          </h2>
+          <div class="row g-4 justify-content-center">
+            <div class="col-lg-6">
+              <div class="p-4 rounded shadow-sm h-100">
+                <h3 class="h4 fw-bold text-dark mb-4">Get in Touch</h3>
+                <p class="text-secondary mb-3">
+                  <i class="fas fa-map-marker-alt text-primary me-3 fs-5"></i>
+                  123 Driving School Lane, Safety City, 12345
+                </p>
+                <p class="text-secondary mb-3">
+                  <i class="fas fa-phone-alt text-primary me-3 fs-5"></i>
+                  <a
+                    href="tel:+1-555-DRIVE"
+                    class="text-decoration-none text-secondary hover-primary"
+                    >+1 (555) DRIVE</a
+                  >
+                </p>
+                <p class="text-secondary mb-3">
+                  <i class="fas fa-envelope text-primary me-3 fs-5"></i>
+                  <a
+                    href="mailto:info@driveright.com"
+                    class="text-decoration-none text-secondary hover-primary"
+                    >info@driveright.com</a
+                  >
+                </p>
+                <p class="text-secondary mb-4">
+                  <i class="fas fa-clock text-primary me-3 fs-5"></i> Mon-Fri:
+                  9:00 AM - 6:00 PM
+                </p>
+
+                <h3 class="h4 fw-bold text-dark mb-3 mt-5">Find Us on Map</h3>
+                <div
+                  class="embed-responsive embed-responsive-16by9 rounded shadow-sm"
+                  style="height: 300px"
+                >
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.083984852954!2d36.78652077983636!3d-1.282937549666014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf025ee229871f!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sde!4v1701389880199!5m2!1sen!2sde"
+                    width="100%"
+                    height="100%"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="rounded"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="p-4 rounded shadow-sm h-100">
+                <h3 class="h4 fw-bold text-dark mb-4">Send Us a Message</h3>
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label text-dark"
+                      >Your Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="John Doe"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label text-dark"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="name@example.com"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label text-dark"
+                      >Phone Number (Optional)</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      placeholder="(123) 456-7890"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label text-dark"
+                      >Your Message</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="5"
+                      placeholder="Tell us about your driving needs..."
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary rounded-pill px-4 py-2 mt-3"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <div class="col">
+            <h5 class="fw-bold text-white mb-3">DriveRight</h5>
+            <p class="text-secondary small">
+              Empowering new drivers with the skills and confidence for a
+              lifetime of safe driving.
+            </p>
+            <div class="d-flex">
+              <a href="#" class="text-white me-3 fs-4"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="text-white me-3 fs-4"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-3 fs-4"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white fs-4"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col">
+            <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+            <ul class="list-unstyled text-secondary small">
+              <li>
+                <a
+                  href="#home"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#packages"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Driving Packages</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#instructors"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Our Instructors</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Book a Lesson</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5 class="fw-bold text-white mb-3">Courses</h5>
+            <ul class="list-unstyled text-secondary small">
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Beginner's Kickstart</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Complete Driver</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Refresher Course</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white-50 hover-primary"
+                  >Road Test Prep</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5 class="fw-bold text-white mb-3">Contact Info</h5>
+            <p class="text-secondary small mb-2">
+              <i class="fas fa-map-marker-alt text-primary me-2"></i> 123
+              Driving School Lane, Safety City
+            </p>
+            <p class="text-secondary small mb-2">
+              <i class="fas fa-phone-alt text-primary me-2"></i> +1 (555) DRIVE
+            </p>
+            <p class="text-secondary small mb-2">
+              <i class="fas fa-envelope text-primary me-2"></i>
+              info@driveright.com
+            </p>
+          </div>
+        </div>
+        <hr class="border-secondary mt-4 mb-3" />
+        <p class="text-center text-secondary small mb-0">
+          &copy; <span id="current-year"></span> DriveRight Driving School. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

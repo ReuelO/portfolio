@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modern Layout</title>
+    <style>
+      /* Reset & base body styles */
+      /* Base Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Navbar Container */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #1e1e2f;
+        color: white;
+        padding: 1rem 2rem;
+        position: relative;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      /* Hamburger for small screens */
+      .hamburger {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+
+      /* Hide checkbox */
+      #menu-toggle {
+        display: none;
+      }
+
+      /* Mobile styles */
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+
+        .nav-links {
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: #1e1e2f;
+          display: none;
+        }
+
+        #menu-toggle:checked + .hamburger + .nav-links {
+          display: flex;
+        }
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9fafb;
+        color: #1f2937;
+        line-height: 1.6;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      main {
+        flex: 1;
+        padding: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      footer {
+        background-color: #e5e7eb;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+      }
+
+      /* Responsive nav */
+      @media (max-width: 600px) {
+        nav {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">MySite</div>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Welcome to My Modern Website</h2>
+      <p>
+        This is a clean layout styled using only HTML and CSS. It’s fully
+        responsive, minimal, and ready for content like blogs, portfolios, or
+        startup pages.
+      </p>
+      <p>
+        Customize the layout further to include cards, forms, buttons, or image
+        galleries as needed!
+      </p>
+    </main>
+
+    <footer>&copy; 2025 MySite. All rights reserved.</footer>
+  </body>
+</html>

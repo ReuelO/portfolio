@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adventure Trails - Your Journey Awaits</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCXd/XP=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Custom styles to integrate Google Fonts and slight overrides */
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Playfair Display', serif;
+      }
+      /* Further customization if needed with @layer or custom utility classes in local setup */
+      .hero-bg {
+        background-image: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1500&q=80');
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body class="text-gray-800 bg-gray-50 antialiased">
+    <header class="bg-white shadow-md fixed w-full z-50 top-8">
+      <!-- Top Contact Bar -->
+      <div
+        class="fixed top-0 left-0 w-full bg-orange-500 text-white text-sm py-2 px-4 flex justify-between items-center z-50"
+      >
+        <div>
+          <i class="fas fa-envelope mr-2"></i>
+          <a href="mailto:info@adventuretrails.co.ke" class="hover:underline"
+            >info@adventuretrails.co.ke</a
+          >
+          <span class="mx-3">|</span>
+          <i class="fas fa-phone-alt mr-2"></i>
+          <a href="tel:+2547XXXXXXX" class="hover:underline"
+            >+254 7XX XXX XXX</a
+          >
+        </div>
+        <div class="space-x-3 hidden md:inline">
+          <a href="#" class="hover:text-gray-200"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="hover:text-gray-200"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="hover:text-gray-200"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+      <!-- Main Navigation -->
+      <nav
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a
+          href="#"
+          class="text-2xl font-bold text-gray-800 hover:text-orange-600 transition duration-300"
+        >
+          Adventure <span class="text-orange-500">Trails</span>
+        </a>
+
+        <div class="hidden md:flex space-x-6 items-center">
+          <a
+            href="#home"
+            class="text-gray-600 hover:text-orange-500 transition duration-300 font-medium"
+            >Home</a
+          >
+          <a
+            href="#tours"
+            class="text-gray-600 hover:text-orange-500 transition duration-300 font-medium"
+            >Tours</a
+          >
+          <a
+            href="#destinations"
+            class="text-gray-600 hover:text-orange-500 transition duration-300 font-medium"
+            >Destinations</a
+          >
+          <a
+            href="#about"
+            class="text-gray-600 hover:text-orange-500 transition duration-300 font-medium"
+            >About Us</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-600 hover:text-orange-500 transition duration-300 font-medium"
+            >Contact</a
+          >
+          <a
+            href="#contact"
+            class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-full shadow-lg transition duration-300 font-semibold"
+            >Book Now</a
+          >
+        </div>
+
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-gray-800 focus:outline-none focus:text-orange-500"
+          aria-label="Open menu"
+        >
+          <svg
+            class="w-7 h-7"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden bg-white py-2 shadow-inner"
+        >
+          <a
+            href="#home"
+            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500"
+            >Home</a
+          >
+          <a
+            href="#tours"
+            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500"
+            >Tours</a
+          >
+          <a
+            href="#destinations"
+            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500"
+            >Destinations</a
+          >
+          <a
+            href="#about"
+            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500"
+            >About Us</a
+          >
+          <a
+            href="#contact"
+            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-500"
+            >Contact</a
+          >
+          <a
+            href="#contact"
+            class="block bg-orange-500 text-white text-center py-2 mx-4 mt-2 rounded-full hover:bg-orange-600 transition duration-300 font-semibold"
+            >Book Now</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="mt-20 md:mt-24">
+      <section
+        id="home"
+        class="hero-bg h-screen bg-cover bg-center flex items-center justify-center text-center text-white relative"
+      >
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="z-10 p-6 max-w-4xl">
+          <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight">
+            Your Ultimate Adventure Awaits
+          </h1>
+          <p class="text-xl md:text-2xl mb-8">
+            Explore breathtaking landscapes and create unforgettable memories
+            with Adventure Trails.
+          </p>
+          <a
+            href="#tours"
+            class="bg-orange-500 hover:bg-orange-600 text-white text-lg px-8 py-4 rounded-full shadow-xl transition duration-300 transform hover:scale-105 inline-block font-semibold"
+          >
+            Browse Tours <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="py-32 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+            Why Choose Adventure Trails?
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300"
+            >
+              <div class="text-orange-500 text-5xl mb-4">
+                <i class="fas fa-route"></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-3 text-gray-800">
+                Expertly Crafted Itineraries
+              </h3>
+              <p class="text-gray-600">
+                Our tours are meticulously designed by travel experts to offer
+                unique and enriching experiences.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300"
+            >
+              <div class="text-orange-500 text-5xl mb-4">
+                <i class="fas fa-users-line"></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-3 text-gray-800">
+                Experienced Local Guides
+              </h3>
+              <p class="text-gray-600">
+                Explore with knowledgeable local guides who bring each
+                destination to life.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300"
+            >
+              <div class="text-orange-500 text-5xl mb-4">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-3 text-gray-800">
+                Unmatched Customer Service
+              </h3>
+              <p class="text-gray-600">
+                From planning to departure, our team is dedicated to your
+                comfort and satisfaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tours" class="py-32 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+            Our Most Popular Tours
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                alt="Hiking in the Himalayas"
+                class="w-full h-56 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">
+                  Himalayan Trek Adventure
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  Experience the majestic beauty of the Himalayas on an
+                  unforgettable trekking journey.
+                </p>
+                <div class="flex justify-between items-center mb-4">
+                  <span class="text-lg font-bold text-orange-500">$1800</span>
+                  <span class="text-gray-500 text-sm"
+                    ><i class="fas fa-calendar-alt mr-1"></i> 10 Days</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full transition duration-300 font-semibold"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80"
+                alt="Safari in Serengeti"
+                class="w-full h-56 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">
+                  Serengeti Wildlife Safari
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  Witness the incredible wildlife of the Serengeti on an
+                  exhilarating safari adventure.
+                </p>
+                <div class="flex justify-between items-center mb-4">
+                  <span class="text-lg font-bold text-orange-500">$2500</span>
+                  <span class="text-gray-500 text-sm"
+                    ><i class="fas fa-calendar-alt mr-1"></i> 7 Days</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full transition duration-300 font-semibold"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800&q=80"
+                alt="European City Tour"
+                class="w-full h-56 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">
+                  Grand European City Tour
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  Discover the charm and history of Europe's most iconic cities.
+                </p>
+                <div class="flex justify-between items-center mb-4">
+                  <span class="text-lg font-bold text-orange-500">$1500</span>
+                  <span class="text-gray-500 text-sm"
+                    ><i class="fas fa-calendar-alt mr-1"></i> 8 Days</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-full transition duration-300 font-semibold"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="destinations" class="py-32 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+            Popular Destinations
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+              <img
+                src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80"
+                alt="Machu Picchu, Peru"
+                class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <span class="text-white text-2xl font-semibold"
+                  >Machu Picchu, Peru</span
+                >
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+              <img
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80"
+                alt="Swiss Alps"
+                class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <span class="text-white text-2xl font-semibold"
+                  >Swiss Alps</span
+                >
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
+                alt="Kyoto, Japan"
+                class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <span class="text-white text-2xl font-semibold"
+                  >Kyoto, Japan</span
+                >
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                alt="Great Barrier Reef, Australia"
+                class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <span class="text-white text-2xl font-semibold"
+                  >Great Barrier Reef</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-32 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+            What Our Travelers Say
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+              <p class="text-lg text-gray-700 italic mb-4">
+                "The trekking experience was beyond amazing! Professional guides
+                and stunning views. Highly recommend Adventure Trails!"
+              </p>
+              <p class="font-semibold text-gray-800">- Jane D., USA</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+              <p class="text-lg text-gray-700 italic mb-4">
+                "Our safari in Serengeti was a dream come true. Everything was
+                perfectly organized. Thank you for the trip of a lifetime!"
+              </p>
+              <p class="font-semibold text-gray-800">- David K., Kenya</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+              <p class="text-lg text-gray-700 italic mb-4">
+                "Exploring Europe with Adventure Trails was effortless and so
+                much fun. Great hotels and insightful tours. Will definitely
+                book again!"
+              </p>
+              <p class="font-semibold text-gray-800">- Emily R., UK</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-32 bg-orange-500 text-white text-center">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold mb-4">
+            Ready for Your Next Adventure?
+          </h2>
+          <p class="text-xl mb-8">
+            Contact us today to plan your personalized travel experience.
+          </p>
+          <a
+            href="#contact"
+            class="bg-white text-orange-500 hover:bg-gray-100 text-lg px-8 py-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block font-semibold"
+          >
+            Get a Free Quote <i class="fas fa-paper-plane ml-2"></i>
+          </a>
+        </div>
+      </section>
+
+      <section id="contact" class="py-32 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+            Contact Us
+          </h2>
+          <div
+            class="flex flex-col md:flex-row gap-8 items-center justify-center"
+          >
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg w-full md:w-1/2 lg:w-1/3"
+            >
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Reach Out
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Our team is here to help you plan your perfect trip.
+              </p>
+              <div class="space-y-4">
+                <p class="text-gray-700">
+                  <i class="fas fa-map-marker-alt text-orange-500 mr-3"></i> 123
+                  Adventure Lane, Nairobi, Kenya
+                </p>
+                <p class="text-gray-700">
+                  <i class="fas fa-phone-alt text-orange-500 mr-3"></i> +254 7XX
+                  XXX XXX
+                </p>
+                <p class="text-gray-700">
+                  <i class="fas fa-envelope text-orange-500 mr-3"></i>
+                  info@adventuretrails.co.ke
+                </p>
+              </div>
+              <div class="mt-8">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.083984852954!2d36.78652077983636!3d-1.282937549666014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf025ee229871f!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sde!4v1701389880199!5m2!1sen!2sde"
+                  width="100%"
+                  height="250"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="rounded-lg shadow-md"
+                ></iframe>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg w-full md:w-1/2 lg:w-2/5"
+            >
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Send Us a Message
+              </h3>
+              <form class="space-y-4">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="your@example.com"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="tour"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Interested Tour (Optional)</label
+                  >
+                  <input
+                    type="text"
+                    id="tour"
+                    class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="e.g., Himalayan Trek"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="5"
+                    class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="Your inquiry..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300 w-full"
+                >
+                  Send Message <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-10">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4 text-orange-500">
+            Adventure Trails
+          </h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Your trusted partner for unforgettable journeys around the world.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 text-xl transition duration-300"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 text-xl transition duration-300"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 text-xl transition duration-300"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 text-xl transition duration-300"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-white">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#home"
+                class="text-gray-400 hover:text-orange-500 transition duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#tours"
+                class="text-gray-400 hover:text-orange-500 transition duration-300"
+                >Tours</a
+              >
+            </li>
+            <li>
+              <a
+                href="#destinations"
+                class="text-gray-400 hover:text-orange-500 transition duration-300"
+                >Destinations</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="text-gray-400 hover:text-orange-500 transition duration-300"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-gray-400 hover:text-orange-500 transition duration-300"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-white">Contact Info</h3>
+          <p class="text-gray-400 mb-2">
+            <i class="fas fa-map-marker-alt text-orange-500 mr-2"></i> 123
+            Adventure Lane, Nairobi, Kenya
+          </p>
+          <p class="text-gray-400 mb-2">
+            <i class="fas fa-phone-alt text-orange-500 mr-2"></i> +254 7XX XXX
+            XXX
+          </p>
+          <p class="text-gray-400 mb-2">
+            <i class="fas fa-envelope text-orange-500 mr-2"></i>
+            info@adventuretrails.co.ke
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+        <p class="text-gray-500 text-sm">
+          &copy; 2025 Adventure Trails. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for internal links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href')
+          if (targetId === '#') return // Skip logo link
+          const target = document.querySelector(targetId)
+          if (target) {
+            e.preventDefault()
+            target.scrollIntoView({ behavior: 'smooth' })
+            // Close mobile menu if open
+            if (mobileMenu.classList.contains('flex')) {
+              mobileMenu.classList.add('hidden')
+              mobileMenu.classList.remove('flex')
+            }
+          }
+        })
+      })
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button')
+      const mobileMenu = document.getElementById('mobile-menu')
+
+      mobileMenuButton.addEventListener('click', () => {
+        // Only toggle 'hidden' and add 'flex flex-col items-center' when showing
+        if (mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.remove('hidden')
+          mobileMenu.classList.add('flex', 'flex-col', 'items-center')
+        } else {
+          mobileMenu.classList.add('hidden')
+          mobileMenu.classList.remove('flex', 'flex-col', 'items-center')
+        }
+      })
+
+      // Prevent contact form reload
+      document.querySelectorAll('form').forEach((form) => {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault()
+          alert(
+            'Thank you for contacting Adventure Trails! We will get back to you soon.'
+          )
+        })
+      })
+    </script>
+  </body>
+</html>

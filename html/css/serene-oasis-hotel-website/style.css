@@ -1,0 +1,207 @@
+/* Custom CSS for Hotel Theme */
+
+/* Define custom colors */
+:root {
+  --primary-hotel-dark: #2c3e50; /* Dark blue/charcoal for headings, navbar bg */
+  --primary-hotel-gold: #ffd700; /* Gold for accents */
+  --primary-hotel-blue: #3498db; /* A default blue for primary buttons */
+}
+
+/* Apply custom colors to Bootstrap variables or directly */
+.text-gold {
+  color: var(--primary-hotel-gold) !important;
+}
+
+.hover-gold:hover {
+  color: var(--primary-hotel-gold) !important;
+}
+
+.text-primary-dark {
+  color: var(--primary-hotel-dark) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-hotel-blue);
+  border-color: var(--primary-hotel-blue);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--primary-hotel-blue), 10%); /* Pseudo-darken */
+  border-color: darken(var(--primary-hotel-blue), 10%);
+}
+
+.btn-outline-primary {
+  color: var(--primary-hotel-blue);
+  border-color: var(--primary-hotel-blue);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-hotel-blue);
+  color: white;
+}
+
+.bg-dark {
+  background-color: var(--primary-hotel-dark) !important;
+}
+
+/* Custom fonts */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Hero Carousel Customizations */
+.hero-carousel {
+  padding-top: 56px; /* Adjust for fixed navbar height */
+}
+
+.hero-img {
+  height: 70vh; /* Viewport height */
+  object-fit: cover;
+  filter: brightness(70%); /* Darken image for better text contrast */
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  left: 0;
+  right: 0;
+  padding: 0 15%; /* Adjust padding for narrower text block */
+}
+
+.carousel-caption h5 {
+  font-size: 3.5rem; /* Larger heading */
+  line-height: 1.2;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem; /* Larger paragraph */
+}
+
+/* Text shadow for better readability on images */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Section Spacing */
+section {
+  padding: 80px 0; /* Consistent padding for all sections */
+}
+
+/* Room Cards */
+.card.h-100 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.h-100:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.room-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Amenities Icons */
+.icon-box {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-box:hover {
+  background-color: rgba(
+    var(--primary-hotel-gold-rgb, 255, 215, 0),
+    0.1
+  ); /* Light hover background */
+  transform: translateY(-3px);
+}
+/* Define RGB values for primary-hotel-gold for rgba usage */
+:root {
+  --primary-hotel-gold-rgb: 255, 215, 0; /* Corresponding RGB for primary-hotel-gold */
+}
+
+/* Gallery Images */
+.gallery-img {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  filter: brightness(85%);
+}
+
+/* Gallery Modal */
+.modal-content .img-fluid {
+  max-height: 80vh;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer Links Hover */
+.footer-links a:hover {
+  color: var(--primary-hotel-gold) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .hero-img {
+    height: 60vh;
+  }
+  .carousel-caption {
+    padding: 0 5%;
+  }
+  .carousel-caption h5 {
+    font-size: 2.5rem;
+  }
+  .carousel-caption p {
+    font-size: 1.1rem;
+  }
+  .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  section {
+    padding: 60px 0;
+  }
+  .display-5 {
+    font-size: 2.5rem;
+  }
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-img {
+    height: 50vh;
+  }
+  .carousel-caption h5 {
+    font-size: 2rem;
+  }
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+  .navbar-brand {
+    font-size: 1.8rem !important;
+  }
+  .icon-box i {
+    font-size: 2.5rem !important;
+  }
+}

@@ -1,0 +1,213 @@
+/* Custom Fonts */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #343a40; /* Default text color */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom Bootstrap Variable Overrides (Optional, for brand colors) */
+/* You can uncomment and modify these if you want to change Bootstrap's default primary/secondary */
+/*
+:root {
+    --bs-primary: #8a2be2; // A chic purple
+    --bs-secondary: #6c757d;
+    --bs-dark: #212529;
+    --bs-light: #f8f9fa;
+}
+*/
+
+/* Custom Hero Section Styling */
+.hero-carousel {
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-slide {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.8em;
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+  font-size: 1.4em;
+  opacity: 0.9;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom Hover Effects for Cards */
+.transform-on-hover {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.transform-on-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important; /* Stronger shadow on hover */
+}
+
+/* Collection Card Styling */
+.collection-card {
+  height: 350px; /* Fixed height for consistency */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1; /* Always visible */
+  transition: background-color 0.3s ease;
+}
+
+.collection-card:hover .collection-overlay {
+  background-color: rgba(0, 0, 0, 0.75); /* Darker on hover */
+}
+
+/* Smooth scroll offset for fixed navbar */
+html {
+  scroll-padding-top: 70px; /* Adjust this value to match your fixed navbar height + some padding */
+}
+
+/* Minor text color adjustments for footer links on hover */
+.hover-primary:hover {
+  color: var(--bs-primary) !important;
+}
+
+/* Simple animations (Bootstrap 5 does not include Animate.css by default) */
+/* These are manually defined for the hero section */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate__fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animate__zoomIn {
+  animation-name: zoomIn;
+}
+
+.animate__delay-0-5s {
+  animation-delay: 0.5s;
+}
+
+.animate__delay-1s {
+  animation-delay: 1s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  /* Medium devices and smaller */
+  .hero-content h1 {
+    font-size: 3em;
+  }
+  .hero-content p {
+    font-size: 1.2em;
+  }
+  .collection-card {
+    height: 300px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Small devices and smaller */
+  .hero-carousel,
+  .hero-slide {
+    height: 85vh; /* Shorter on mobile */
+  }
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+  .hero-content p {
+    font-size: 1em;
+  }
+  .collection-card {
+    height: 250px;
+  }
+  .navbar-brand {
+    font-size: 1.8rem !important;
+  }
+}
