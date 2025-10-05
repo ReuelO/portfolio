@@ -1,136 +1,492 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio Showcase</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
+    <title>Your Name - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: { extend: { colors: { primary: '#3b82f6' } } },
       }
-      h1 {
-        text-align: center;
-      }
-      .category {
-        margin-bottom: 40px;
-      }
-      ul {
-        list-style-type: none;
-      }
-      li {
-        margin: 10px 0;
-      }
-    </style>
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <h1>My Portfolio Showcase</h1>
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
+  >
+    <!-- Mode Toggle -->
+    <button
+      id="theme-toggle"
+      class="fixed top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white z-50"
+    >
+      <i class="fas fa-sun"></i>
+    </button>
 
-    <div class="category">
-      <h2>Websites</h2>
-      <ol>
-        <li>
-          <a href="websites/css/">Plain CSS</a> - Styled with plain CSS.
-          <ul>
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm z-40"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <a href="#home" class="text-xl font-bold">YourName</a>
+          <ul class="hidden md:flex space-x-6">
             <li>
-              <a href="websites/css/adventure-trails-website/"
-                >Adventure Trails</a
+              <a href="#home" class="hover:text-primary transition">Home</a>
+            </li>
+            <li>
+              <a href="#projects" class="hover:text-primary transition"
+                >Projects</a
               >
-              - Description here.
             </li>
             <li>
-              <a href="websites/css/ascend-fitness-website/">Ascend Fitness</a>
-              - Description here.
+              <a href="#skills" class="hover:text-primary transition">Skills</a>
             </li>
-            <!-- Add all CSS sites -->
+            <li>
+              <a href="#contact" class="hover:text-primary transition"
+                >Contact</a
+              >
+            </li>
           </ul>
-        </li>
-        <li>
-          <a href="websites/tailwind/">Tailwind CSS</a> - Styled with Tailwind
-          CSS.
-          <ul>
-            <li>
-              <a href="websites/tailwind/adventure-trails-website/"
-                >Adventure Trails</a
-              >
-              - Description here.
-            </li>
-            <li>
-              <a href="websites/tailwind/ascend-fitness-website/"
-                >Ascend Fitness</a
-              >
-              - Description here.
-            </li>
-            <!-- Add all CSS sites -->
-          </ul>
-        </li>
-      </ol>
-    </div>
+          <button class="md:hidden">Menu</button>
+          <!-- Add mobile menu JS if needed -->
+        </div>
+      </div>
+    </nav>
 
-    <div class="category">
-      <h2>Web Apps</h2>
-      <ol>
-        <li>
-          <a href="web-apps/react/">React.js Projects</a> - Description here.
-          <ul>
-            <li>
-              <a href="web-apps/react/project1/">Project 1</a> - Description
-              here.
-            </li>
-            <li>
-              <a href="web-apps/react/project2/">Project 2</a> - Description
-              here.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="web-apps/next/">Next.js Projects</a> - Description here.
-          <ul>
-            <li>
-              <a href="web-apps/next/project1/">Project 1</a> - Description
-              here.
-            </li>
-            <li>
-              <a href="web-apps/next/project2/">Project 2</a> - Description
-              here.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="web-apps/express/">Express.js Projects</a> - Description
-          here.
-          <ul>
-            <li>
-              <a href="web-apps/express/project1/">Project 1</a> - Description
-              here.
-            </li>
-            <li>
-              <a href="web-apps/express/project2/">Project 2</a> - Description
-              here.
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 pt-20"
+    >
+      <div class="text-center max-w-4xl px-4">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4 animate-fade-in">
+          Hi, I'm <span class="text-primary">Your Name</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 opacity-90">
+          Full-Stack Developer crafting aesthetic digital experiences.
+        </p>
+        <a
+          href="#projects"
+          class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition"
+          >View Work</a
+        >
+      </div>
+    </section>
 
-    <div class="category">
-      <h2>Mobile Apps</h2>
-      <ol>
-        <li>
-          <a href="mobile-apps/react-native/">React Native Projects</a> -
-          Description here.
-          <ul>
-            <li>
-              <a href="mobile-apps/react-native/project1/">Project 1</a> -
-              Description here.
-            </li>
-            <li>
-              <a href="mobile-apps/react-native/project2/">Project 2</a> -
-              Description here.
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-4">Featured Projects</h2>
+        <p class="text-center text-gray-600 dark:text-gray-300 mb-12">
+          Filter by technology stack
+        </p>
+
+        <!-- Dynamic Filter Buttons -->
+        <div
+          id="filter-buttons"
+          class="flex flex-wrap justify-center space-x-2 mb-8"
+        >
+          <!-- Generated dynamically from projects.json -->
+        </div>
+
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="projects-grid"
+        >
+          <!-- Dynamic cards will be populated here by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16">Skills & Tools</h2>
+        <div id="skills-grid" class="grid md:grid-cols-4 gap-8 text-center">
+          <!-- Generated dynamically from available categories in projects.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white dark:bg-gray-900">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
+        <p class="text-xl mb-8 opacity-90">
+          Open to collaborations—let's build something great.
+        </p>
+        <div
+          class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8"
+        >
+          <a
+            href="mailto:you@example.com"
+            class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition"
+            >Email Me</a
+          >
+          <a
+            href="https://github.com/yourusername"
+            class="flex items-center justify-center space-x-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+          >
+            <i class="fab fa-github"></i><span>GitHub</span>
+          </a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            class="flex items-center justify-center space-x-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+          >
+            <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 text-center">
+      <p>&copy; 2025 Your Name. Built with ❤️ and Tailwind.</p>
+    </footer>
+
+    <script>
+      // System Theme Detection & Toggle
+      function initTheme() {
+        const prefersDark = window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).matches
+        if (prefersDark) document.documentElement.classList.add('dark')
+
+        const toggle = document.getElementById('theme-toggle')
+        toggle.addEventListener('click', () => {
+          document.documentElement.classList.toggle('dark')
+          const icon = toggle.querySelector('i')
+          icon.classList.toggle('fa-sun')
+          icon.classList.toggle('fa-moon')
+        })
+
+        // Listen for system theme changes
+        window
+          .matchMedia('(prefers-color-scheme: dark)')
+          .addEventListener('change', (e) => {
+            if (
+              document.documentElement.classList.contains('dark') !== e.matches
+            ) {
+              document.documentElement.classList.toggle('dark')
+              const icon = toggle.querySelector('i')
+              icon.classList.toggle('fa-sun', e.matches)
+              icon.classList.toggle('fa-moon', !e.matches)
+            }
+          })
+      }
+
+      // Fade-in Animation
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting)
+            entry.target.classList.add('opacity-100', 'translate-y-0')
+        })
+      })
+      document.querySelectorAll('section').forEach((el) => {
+        el.classList.add(
+          'opacity-0',
+          'translate-y-8',
+          'transition-all',
+          'duration-700'
+        )
+        observer.observe(el)
+      })
+
+      // Minimal CATEGORIES mapping with fallbacks for dynamic/unknown categories
+      const CATEGORIES = {
+        css: { basePath: '/css/', display: 'CSS', icon: 'fas fa-code' },
+        tailwind: {
+          basePath: '/tailwind/',
+          display: 'Tailwind',
+          icon: 'fab fa-css3-alt',
+        },
+        react: { basePath: '/react/', display: 'React', icon: 'fab fa-react' },
+        nextjs: {
+          basePath: '/nextjs/',
+          display: 'Next.js',
+          icon: 'fab fa-js-square',
+        },
+        vitejs: {
+          basePath: '/vitejs/',
+          display: 'Vite.js',
+          icon: 'fas fa-bolt',
+        },
+        'react-native': {
+          basePath: '/react-native/',
+          display: 'React Native',
+          icon: 'fas fa-mobile-alt',
+        },
+        node: { basePath: '/node/', display: 'Node.js', icon: 'fas fa-server' },
+        // New/unknown categories will use fallbacks below
+      }
+
+      // Fallback for unknown categories
+      function getCategoryInfo(categoryKey) {
+        if (CATEGORIES[categoryKey]) return CATEGORIES[categoryKey]
+        return {
+          basePath: `/${categoryKey}/`, // Dynamic relative path
+          display: categoryKey
+            .replace(/-/g, ' ')
+            .replace(/\b\w/g, (l) => l.toUpperCase()), // e.g., "electron" → "Electron"
+          icon: 'fas fa-folder', // Default icon for unknown
+        }
+      }
+
+      // Function to check if a project exists (skips fetch on file:// for local testing)
+      async function projectExists(basePath, projectName, categoryKey) {
+        if (window.location.protocol === 'file:') {
+          console.log(
+            `[Local Dev] Skipping fetch for ${projectName} (file:// mode)`
+          )
+          return true
+        }
+
+        const isDeployable = [
+          'css',
+          'tailwind',
+          'react',
+          'nextjs',
+          'vitejs',
+        ].includes(categoryKey)
+        const url = `${basePath}${projectName}${
+          isDeployable ? '/index.html' : '/README.md'
+        }`
+        try {
+          const response = await fetch(url, { method: 'HEAD' })
+          return response.ok
+        } catch (error) {
+          console.warn(`Fetch failed for ${url}:`, error.message)
+          return true // Fallback: assume exists
+        }
+      }
+
+      // Function to generate a single project card HTML
+      function generateProjectCard(project, categoryKey) {
+        const category = getCategoryInfo(categoryKey)
+        const cleanName = project.name.replace(/([A-Z])/g, ' $1').trim()
+        const linkText = cleanName.charAt(0).toUpperCase() + cleanName.slice(1)
+        const isDeployable = [
+          'css',
+          'tailwind',
+          'react',
+          'nextjs',
+          'vitejs',
+        ].includes(categoryKey)
+        const demoHref = isDeployable
+          ? `${category.basePath}${project.folder}/`
+          : `${category.basePath}${project.folder}/README.md`
+        const techTag = category.display
+
+        return `
+          <div class="project-card group bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-category="${categoryKey}">
+            <img src="https://via.placeholder.com/400x250?text=${encodeURIComponent(
+              linkText
+            )}" alt="${linkText}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">${linkText}</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">${
+                project.description
+              }</p>
+              <div class="flex space-x-2 mb-4">
+                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded">${techTag}</span>
+              </div>
+              <div class="flex space-x-4">
+                <a href="${demoHref}" class="text-primary hover:underline">Live Demo</a>
+                <a href="https://github.com/yourusername/portfolio/${categoryKey}/${
+          project.folder
+        }" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        `
+      }
+
+      // Function to generate filter buttons from available categories
+      function generateFilterButtons(availableCategories) {
+        const container = document.getElementById('filter-buttons')
+        if (!container) return
+
+        let html = `
+          <button class="filter-btn active px-4 py-2 bg-primary text-white rounded-full text-sm font-medium transition-all" data-category="all">All</button>
+        `
+        availableCategories.forEach((categoryKey) => {
+          const category = getCategoryInfo(categoryKey)
+          html += `
+            <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all" data-category="${categoryKey}">
+              ${category.display}
+            </button>
+          `
+        })
+        container.innerHTML = html
+      }
+
+      // Function to generate skills grid from available categories
+      function generateSkills(availableCategories) {
+        const container = document.getElementById('skills-grid')
+        if (!container) return
+
+        let html = ''
+        availableCategories.forEach((categoryKey) => {
+          const category = getCategoryInfo(categoryKey)
+          html += `
+            <div>
+              <i class="${category.icon} text-4xl text-primary mb-2 block"></i>
+              <h3>${category.display}</h3>
+            </div>
+          `
+        })
+        container.innerHTML =
+          availableCategories.length > 0
+            ? html
+            : '<div class="col-span-full text-center text-gray-500">Skills will appear based on your projects.</div>'
+      }
+
+      // Main async function: Fetch JSON, generate dynamic elements, load projects
+      async function loadProjects() {
+        const grid = document.getElementById('projects-grid')
+        if (!grid) {
+          console.error('Projects grid not found!')
+          return
+        }
+
+        grid.innerHTML =
+          '<div class="col-span-full text-center py-8"><i class="fas fa-spinner fa-spin text-2xl text-primary mb-4 block"></i><p class="text-gray-600 dark:text-gray-300">Loading projects...</p></div>'
+
+        try {
+          const response = await fetch('/projects.json')
+          if (!response.ok) throw new Error('projects.json not found')
+          const PROJECTS_DATA = await response.json()
+
+          // Extract available categories (those with projects)
+          const availableCategories = Object.keys(PROJECTS_DATA).filter(
+            (key) => PROJECTS_DATA[key].projects.length > 0
+          )
+
+          // Generate dynamic filter buttons
+          generateFilterButtons(availableCategories)
+
+          // Generate dynamic skills
+          generateSkills(availableCategories)
+
+          let allValidProjects = []
+
+          for (const [categoryKey, categoryData] of Object.entries(
+            PROJECTS_DATA
+          )) {
+            if (!categoryData.projects.length > 0) continue
+
+            const category = getCategoryInfo(categoryKey)
+            const validProjects = []
+            for (const project of categoryData.projects) {
+              const exists = await projectExists(
+                category.basePath,
+                project.folder,
+                categoryKey
+              )
+              if (exists) {
+                validProjects.push({ ...project, categoryKey })
+              }
+            }
+
+            allValidProjects = allValidProjects.concat(validProjects)
+          }
+
+          // Sort by name (no limit—show all for filtering)
+          allValidProjects.sort((a, b) => a.name.localeCompare(b.name))
+
+          // Generate and append all cards
+          grid.innerHTML = ''
+          allValidProjects.forEach((project) => {
+            grid.insertAdjacentHTML(
+              'beforeend',
+              generateProjectCard(project, project.categoryKey)
+            )
+          })
+
+          if (allValidProjects.length === 0) {
+            grid.innerHTML =
+              '<div class="col-span-full text-center py-8"><p class="text-gray-600 dark:text-gray-300">No projects yet—check back soon!</p></div>'
+          } else {
+            // Re-attach filter listeners after generating buttons
+            attachFilterListeners()
+            // Initialize filter (show all)
+            applyFilter('all')
+          }
+
+          console.log(
+            `Loaded ${allValidProjects.length} projects from projects.json with ${availableCategories.length} categories`
+          )
+        } catch (error) {
+          grid.innerHTML = `<div class="col-span-full text-center py-8 text-red-500">Error loading projects: ${error.message}. Ensure projects.json exists.</div>`
+          console.error(error)
+        }
+      }
+
+      // Filter function: Show/hide cards based on selected category
+      function applyFilter(selectedCategory) {
+        const cards = document.querySelectorAll('.project-card')
+        const buttons = document.querySelectorAll('.filter-btn')
+
+        // Update button states
+        buttons.forEach((btn) => {
+          const btnCategory = btn.dataset.category
+          if (btnCategory === selectedCategory) {
+            btn.classList.add('bg-primary', 'text-white')
+            btn.classList.remove(
+              'bg-gray-200',
+              'dark:bg-gray-700',
+              'text-gray-800',
+              'dark:text-white'
+            )
+          } else {
+            btn.classList.remove('bg-primary', 'text-white')
+            btn.classList.add(
+              'bg-gray-200',
+              'dark:bg-gray-700',
+              'text-gray-800',
+              'dark:text-white'
+            )
+          }
+        })
+
+        // Filter cards
+        cards.forEach((card) => {
+          const cardCategory = card.dataset.category
+          if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+            card.style.display = 'block'
+            card.classList.add('animate-fade-in')
+          } else {
+            card.style.display = 'none'
+          }
+        })
+      }
+
+      // Attach event listeners to dynamically generated filter buttons
+      function attachFilterListeners() {
+        const filterButtons = document.querySelectorAll('.filter-btn')
+        filterButtons.forEach((button) => {
+          button.addEventListener('click', () => {
+            const category = button.dataset.category
+            applyFilter(category)
+          })
+        })
+      }
+
+      // Init on DOM ready
+      document.addEventListener('DOMContentLoaded', () => {
+        initTheme() // Set system theme first
+        loadProjects()
+      })
+
+      // Optional: Regenerate button (if added to HTML)
+      function regenerateProjects() {
+        loadProjects()
+      }
+    </script>
   </body>
 </html>
