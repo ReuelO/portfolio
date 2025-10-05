@@ -452,11 +452,11 @@
         react: { basePath: '/web-apps/react/', display: 'React' },
         nextjs: { basePath: '/web-apps/nextjs/', display: 'Next.js' },
         vitejs: { basePath: '/web-apps/vitejs/', display: 'Vite.js' },
+        node: { basePath: '/web-apps/node/', display: 'Node.js' },
         'react-native': {
           basePath: '/mobile-apps/react-native/',
           display: 'React Native',
         },
-        node: { basePath: '/web-apps/node/', display: 'Node.js' },
       }
 
       // Function to check if a project exists
@@ -492,7 +492,7 @@
           'vitejs',
         ].includes(categoryKey)
         const demoHref = isDeployable
-          ? `${category.basePath}${project.folder}/index.html`
+          ? `${category.basePath}${project.folder}/`
           : `${category.basePath}${project.folder}/README.md`
         const techTag = category.display || categoryKey.toUpperCase() // Use display name
 
