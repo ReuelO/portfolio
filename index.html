@@ -443,21 +443,20 @@
       // Validates existence, generates cards, and appends to #projects-grid
       // Runs on load; supports filtering by category
 
-      const baseUrl = 'C:/Users/Admin/Documents/Reuel/Code/portfolio' // Adjust as needed
       const CATEGORIES = {
-        css: { basePath: baseUrl + '/websites/css/', display: 'CSS' },
+        css: { basePath: '/websites/css/', display: 'CSS' },
         tailwind: {
-          basePath: baseUrl + '/websites/tailwind/',
+          basePath: '/websites/tailwind/',
           display: 'Tailwind',
         },
-        react: { basePath: baseUrl + '/web-apps/react/', display: 'React' },
-        nextjs: { basePath: baseUrl + '/web-apps/nextjs/', display: 'Next.js' },
-        vitejs: { basePath: baseUrl + '/web-apps/vitejs/', display: 'Vite.js' },
+        react: { basePath: '/web-apps/react/', display: 'React' },
+        nextjs: { basePath: '/web-apps/nextjs/', display: 'Next.js' },
+        vitejs: { basePath: '/web-apps/vitejs/', display: 'Vite.js' },
         'react-native': {
-          basePath: baseUrl + '/mobile-apps/react-native/',
+          basePath: '/mobile-apps/react-native/',
           display: 'React Native',
         },
-        node: { basePath: baseUrl + '/web-apps/node/', display: 'Node.js' },
+        node: { basePath: '/web-apps/node/', display: 'Node.js' },
       }
 
       // Function to check if a project exists
