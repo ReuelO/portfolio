@@ -86,12 +86,58 @@
           Filter by technology stack
         </p>
 
-        <!-- Dynamic Filter Buttons -->
+        <!-- Filter Buttons -->
         <div
-          id="filter-buttons"
-          class="flex flex-wrap justify-center space-x-2 mb-8"
+          class="filter-buttons flex flex-wrap justify-center space-x-2 mb-8"
         >
-          <!-- Generated dynamically from projects.json -->
+          <button
+            class="filter-btn active px-4 py-2 bg-primary text-white rounded-full text-sm font-medium transition-all"
+            data-category="all"
+          >
+            All
+          </button>
+          <button
+            class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all"
+            data-category="css"
+          >
+            CSS
+          </button>
+          <button
+            class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all"
+            data-category="tailwind"
+          >
+            Tailwind
+          </button>
+          <button
+            class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all"
+            data-category="react"
+          >
+            React
+          </button>
+          <button
+            class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all"
+            data-category="nextjs"
+          >
+            Next.js
+          </button>
+          <button
+            class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all"
+            data-category="vitejs"
+          >
+            Vite.js
+          </button>
+          <button
+            class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all"
+            data-category="react-native"
+          >
+            React Native
+          </button>
+          <button
+            class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all"
+            data-category="node"
+          >
+            Node.js
+          </button>
         </div>
 
         <div
@@ -107,8 +153,24 @@
     <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-800">
       <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-4xl font-bold text-center mb-16">Skills & Tools</h2>
-        <div id="skills-grid" class="grid md:grid-cols-4 gap-8 text-center">
-          <!-- Generated dynamically from available categories in projects.json -->
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+          <div>
+            <i class="fas fa-code text-4xl text-primary mb-2 block"></i>
+            <h3>HTML/CSS/JS</h3>
+          </div>
+          <div>
+            <i class="fab fa-react text-4xl text-primary mb-2 block"></i>
+            <h3>React</h3>
+          </div>
+          <div>
+            <i class="fas fa-server text-4xl text-primary mb-2 block"></i>
+            <h3>Node.js</h3>
+          </div>
+          <div>
+            <i class="fas fa-mobile-alt text-4xl text-primary mb-2 block"></i>
+            <h3>React Native</h3>
+          </div>
+          <!-- Add more: Tailwind, Next.js, etc. -->
         </div>
       </div>
     </section>
@@ -150,37 +212,16 @@
     </footer>
 
     <script>
-      // System Theme Detection & Toggle
-      function initTheme() {
-        const prefersDark = window.matchMedia(
-          '(prefers-color-scheme: dark)'
-        ).matches
-        if (prefersDark) document.documentElement.classList.add('dark')
+      // Dark Mode Toggle
+      const toggle = document.getElementById('theme-toggle')
+      toggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark')
+        const icon = toggle.querySelector('i')
+        icon.classList.toggle('fa-sun')
+        icon.classList.toggle('fa-moon')
+      })
 
-        const toggle = document.getElementById('theme-toggle')
-        toggle.addEventListener('click', () => {
-          document.documentElement.classList.toggle('dark')
-          const icon = toggle.querySelector('i')
-          icon.classList.toggle('fa-sun')
-          icon.classList.toggle('fa-moon')
-        })
-
-        // Listen for system theme changes
-        window
-          .matchMedia('(prefers-color-scheme: dark)')
-          .addEventListener('change', (e) => {
-            if (
-              document.documentElement.classList.contains('dark') !== e.matches
-            ) {
-              document.documentElement.classList.toggle('dark')
-              const icon = toggle.querySelector('i')
-              icon.classList.toggle('fa-sun', e.matches)
-              icon.classList.toggle('fa-moon', !e.matches)
-            }
-          })
-      }
-
-      // Fade-in Animation
+      // Fade-in Animation (CSS class)
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting)
@@ -197,55 +238,230 @@
         observer.observe(el)
       })
 
-      // Minimal CATEGORIES mapping with fallbacks for dynamic/unknown categories
-      const CATEGORIES = {
-        css: { basePath: '/css/', display: 'CSS', icon: 'fas fa-code' },
-        tailwind: {
-          basePath: '/tailwind/',
-          display: 'Tailwind',
-          icon: 'fab fa-css3-alt',
+      const PROJECTS_DATA = {
+        css: {
+          projects: [
+            {
+              name: 'apex-builders',
+              folder: 'apex-builders-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'architekton-designs',
+              folder: 'architekton-designs-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'ascend-fitness',
+              folder: 'ascend-fitness-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'azure-coast-resort',
+              folder: 'azure-coast-resort-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'daily-grind-cafe',
+              folder: 'daily-grind-cafe-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'digital-spark',
+              folder: 'digital-spark-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'drivehub-motors',
+              folder: 'drivehub-motors-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'driveright-driving-school',
+              folder: 'driveright-driving-school-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'elegance-boutique',
+              folder: 'elegance-boutique-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'elegance-by-isabella',
+              folder: 'elegance-by-isabella-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'flavor-fusion',
+              folder: 'flavor-fusion-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'greenharvest-processors',
+              folder: 'greenharvest-processors-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'iron-core-gym',
+              folder: 'iron-core-gym-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'luxe-living',
+              folder: 'luxe-living-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'megabuild-supplies',
+              folder: 'megabuild-supplies-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'precision-auto',
+              folder: 'precision-auto-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'serene-oasis-hotel',
+              folder: 'serene-oasis-hotel-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'skillup-academy',
+              folder: 'skillup-academy-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'tech-solutions',
+              folder: 'tech-solutions-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'unity-growers-cooperative',
+              folder: 'unity-growers-cooperative-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'wilderness-haven-lodge',
+              folder: 'wilderness-haven-lodge-website',
+              description: 'Project description here.',
+            },
+          ],
         },
-        react: { basePath: '/react/', display: 'React', icon: 'fab fa-react' },
+        tailwind: {
+          projects: [
+            {
+              name: 'adventure-trails',
+              folder: 'adventure-trails-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'artisans-nook',
+              folder: 'artisans-nook-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'elevate-events',
+              folder: 'elevate-events-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'elite-properties',
+              folder: 'elite-properties-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'evergreen-academy',
+              folder: 'evergreen-academy-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'global-journeys',
+              folder: 'global-journeys-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'lex-chambers',
+              folder: 'lex-chambers-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'medicare-pharmacy',
+              folder: 'medicare-pharmacy-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'nexus-advisors',
+              folder: 'nexus-advisors-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'soko-bora',
+              folder: 'soko-bora-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'st-judes-hospital',
+              folder: 'st-judes-hospital-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'sweet-delights-bakery',
+              folder: 'sweet-delights-bakery-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'unity-university',
+              folder: 'unity-university-website',
+              description: 'Project description here.',
+            },
+            {
+              name: 'wellness-clinic',
+              folder: 'wellness-clinic-website',
+              description: 'Project description here.',
+            },
+          ],
+        },
+        react: {
+          projects: [],
+        },
         nextjs: {
-          basePath: '/nextjs/',
-          display: 'Next.js',
-          icon: 'fab fa-js-square',
+          projects: [],
         },
         vitejs: {
-          basePath: '/vitejs/',
-          display: 'Vite.js',
-          icon: 'fas fa-bolt',
+          projects: [],
         },
         'react-native': {
-          basePath: '/react-native/',
-          display: 'React Native',
-          icon: 'fas fa-mobile-alt',
+          projects: [],
         },
-        node: { basePath: '/node/', display: 'Node.js', icon: 'fas fa-server' },
-        // New/unknown categories will use fallbacks below
+        node: {
+          projects: [],
+        },
       }
 
-      // Fallback for unknown categories
-      function getCategoryInfo(categoryKey) {
-        if (CATEGORIES[categoryKey]) return CATEGORIES[categoryKey]
-        return {
-          basePath: `/${categoryKey}/`, // Dynamic relative path
-          display: categoryKey
-            .replace(/-/g, ' ')
-            .replace(/\b\w/g, (l) => l.toUpperCase()), // e.g., "electron" → "Electron"
-          icon: 'fas fa-folder', // Default icon for unknown
-        }
+      // Dynamic Projects: Populates the projects grid from embedded PROJECTS_DATA
+      // Validates existence, generates cards, and appends to #projects-grid
+      // Runs on load; supports filtering by category
+
+      const baseUrl = 'C:/Users/Admin/Documents/Reuel/Code/portfolio' // Adjust as needed
+      const CATEGORIES = {
+        css: { basePath: baseUrl + '/websites/css/', display: 'CSS' },
+        tailwind: {
+          basePath: baseUrl + '/websites/tailwind/',
+          display: 'Tailwind',
+        },
+        react: { basePath: baseUrl + '/web-apps/react/', display: 'React' },
+        nextjs: { basePath: baseUrl + '/web-apps/nextjs/', display: 'Next.js' },
+        vitejs: { basePath: baseUrl + '/web-apps/vitejs/', display: 'Vite.js' },
+        'react-native': {
+          basePath: baseUrl + '/mobile-apps/react-native/',
+          display: 'React Native',
+        },
+        node: { basePath: baseUrl + '/web-apps/node/', display: 'Node.js' },
       }
 
-      // Function to check if a project exists (skips fetch on file:// for local testing)
+      // Function to check if a project exists
       async function projectExists(basePath, projectName, categoryKey) {
-        if (window.location.protocol === 'file:') {
-          console.log(
-            `[Local Dev] Skipping fetch for ${projectName} (file:// mode)`
-          )
-          return true
-        }
-
         const isDeployable = [
           'css',
           'tailwind',
@@ -260,14 +476,13 @@
           const response = await fetch(url, { method: 'HEAD' })
           return response.ok
         } catch (error) {
-          console.warn(`Fetch failed for ${url}:`, error.message)
           return true // Fallback: assume exists
         }
       }
 
       // Function to generate a single project card HTML
       function generateProjectCard(project, categoryKey) {
-        const category = getCategoryInfo(categoryKey)
+        const category = CATEGORIES[categoryKey]
         const cleanName = project.name.replace(/([A-Z])/g, ' $1').trim()
         const linkText = cleanName.charAt(0).toUpperCase() + cleanName.slice(1)
         const isDeployable = [
@@ -278,75 +493,35 @@
           'vitejs',
         ].includes(categoryKey)
         const demoHref = isDeployable
-          ? `${category.basePath}${project.folder}/`
+          ? `${category.basePath}${project.folder}/index.html`
           : `${category.basePath}${project.folder}/README.md`
-        const techTag = category.display
+        const techTag = category.display || categoryKey.toUpperCase() // Use display name
 
         return `
-          <div class="project-card group bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-category="${categoryKey}">
-            <img src="https://via.placeholder.com/400x250?text=${encodeURIComponent(
-              linkText
-            )}" alt="${linkText}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform">
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2">${linkText}</h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">${
-                project.description
-              }</p>
-              <div class="flex space-x-2 mb-4">
-                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded">${techTag}</span>
-              </div>
-              <div class="flex space-x-4">
-                <a href="${demoHref}" class="text-primary hover:underline">Live Demo</a>
-                <a href="https://github.com/yourusername/portfolio/${categoryKey}/${
+                      <div class="project-card group bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-category="${categoryKey}">
+                          <img src="https://via.placeholder.com/400x250?text=${encodeURIComponent(
+                            linkText
+                          )}" alt="${linkText}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform">
+                          <div class="p-6">
+                              <h3 class="text-xl font-semibold mb-2">${linkText}</h3>
+                              <p class="text-gray-600 dark:text-gray-300 mb-4">${
+                                project.description
+                              }</p>
+                              <div class="flex space-x-2 mb-4">
+                                  <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded">${techTag}</span>
+                              </div>
+                              <div class="flex space-x-4">
+                                  <a href="${demoHref}" class="text-primary hover:underline">Live Demo</a>
+                                  <a href="https://github.com/yourusername/portfolio/${categoryKey}/${
           project.folder
         }" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-          </div>
-        `
+                              </div>
+                          </div>
+                      </div>
+                  `
       }
 
-      // Function to generate filter buttons from available categories
-      function generateFilterButtons(availableCategories) {
-        const container = document.getElementById('filter-buttons')
-        if (!container) return
-
-        let html = `
-          <button class="filter-btn active px-4 py-2 bg-primary text-white rounded-full text-sm font-medium transition-all" data-category="all">All</button>
-        `
-        availableCategories.forEach((categoryKey) => {
-          const category = getCategoryInfo(categoryKey)
-          html += `
-            <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all" data-category="${categoryKey}">
-              ${category.display}
-            </button>
-          `
-        })
-        container.innerHTML = html
-      }
-
-      // Function to generate skills grid from available categories
-      function generateSkills(availableCategories) {
-        const container = document.getElementById('skills-grid')
-        if (!container) return
-
-        let html = ''
-        availableCategories.forEach((categoryKey) => {
-          const category = getCategoryInfo(categoryKey)
-          html += `
-            <div>
-              <i class="${category.icon} text-4xl text-primary mb-2 block"></i>
-              <h3>${category.display}</h3>
-            </div>
-          `
-        })
-        container.innerHTML =
-          availableCategories.length > 0
-            ? html
-            : '<div class="col-span-full text-center text-gray-500">Skills will appear based on your projects.</div>'
-      }
-
-      // Main async function: Fetch JSON, generate dynamic elements, load projects
+      // Main async function: Load all projects into the grid
       async function loadProjects() {
         const grid = document.getElementById('projects-grid')
         if (!grid) {
@@ -357,74 +532,52 @@
         grid.innerHTML =
           '<div class="col-span-full text-center py-8"><i class="fas fa-spinner fa-spin text-2xl text-primary mb-4 block"></i><p class="text-gray-600 dark:text-gray-300">Loading projects...</p></div>'
 
-        try {
-          const response = await fetch('/projects.json')
-          if (!response.ok) throw new Error('projects.json not found')
-          const PROJECTS_DATA = await response.json()
+        let allValidProjects = []
 
-          // Extract available categories (those with projects)
-          const availableCategories = Object.keys(PROJECTS_DATA).filter(
-            (key) => PROJECTS_DATA[key].projects.length > 0
-          )
+        for (const [categoryKey, categoryData] of Object.entries(
+          PROJECTS_DATA
+        )) {
+          if (!CATEGORIES[categoryKey] || categoryData.projects.length === 0)
+            continue
 
-          // Generate dynamic filter buttons
-          generateFilterButtons(availableCategories)
-
-          // Generate dynamic skills
-          generateSkills(availableCategories)
-
-          let allValidProjects = []
-
-          for (const [categoryKey, categoryData] of Object.entries(
-            PROJECTS_DATA
-          )) {
-            if (!categoryData.projects.length > 0) continue
-
-            const category = getCategoryInfo(categoryKey)
-            const validProjects = []
-            for (const project of categoryData.projects) {
-              const exists = await projectExists(
-                category.basePath,
-                project.folder,
-                categoryKey
-              )
-              if (exists) {
-                validProjects.push({ ...project, categoryKey })
-              }
-            }
-
-            allValidProjects = allValidProjects.concat(validProjects)
-          }
-
-          // Sort by name (no limit—show all for filtering)
-          allValidProjects.sort((a, b) => a.name.localeCompare(b.name))
-
-          // Generate and append all cards
-          grid.innerHTML = ''
-          allValidProjects.forEach((project) => {
-            grid.insertAdjacentHTML(
-              'beforeend',
-              generateProjectCard(project, project.categoryKey)
+          const validProjects = []
+          for (const project of categoryData.projects) {
+            const exists = await projectExists(
+              CATEGORIES[categoryKey].basePath,
+              project.folder,
+              categoryKey
             )
-          })
-
-          if (allValidProjects.length === 0) {
-            grid.innerHTML =
-              '<div class="col-span-full text-center py-8"><p class="text-gray-600 dark:text-gray-300">No projects yet—check back soon!</p></div>'
-          } else {
-            // Re-attach filter listeners after generating buttons
-            attachFilterListeners()
-            // Initialize filter (show all)
-            applyFilter('all')
+            if (exists) {
+              validProjects.push({ ...project, categoryKey })
+            }
           }
 
-          console.log(
-            `Loaded ${allValidProjects.length} projects from projects.json with ${availableCategories.length} categories`
-          )
-        } catch (error) {
-          grid.innerHTML = `<div class="col-span-full text-center py-8 text-red-500">Error loading projects: ${error.message}. Ensure projects.json exists.</div>`
-          console.error(error)
+          allValidProjects = allValidProjects.concat(validProjects)
         }
+
+        // Sort by name (no limit—show all for filtering)
+        allValidProjects.sort((a, b) => a.name.localeCompare(b.name))
+
+        // Generate and append all cards
+        grid.innerHTML = ''
+        allValidProjects.forEach((project) => {
+          grid.insertAdjacentHTML(
+            'beforeend',
+            generateProjectCard(project, project.categoryKey)
+          )
+        })
+
+        if (allValidProjects.length === 0) {
+          grid.innerHTML =
+            '<div class="col-span-full text-center py-8"><p class="text-gray-600 dark:text-gray-300">No projects yet—check back soon!</p></div>'
+        } else {
+          // Initialize filter (show all)
+          applyFilter('all')
+        }
+
+        console.log(
+          `Loaded ${allValidProjects.length} projects with filtering enabled`
+        )
       }
 
       // Filter function: Show/hide cards based on selected category
@@ -459,15 +612,17 @@
           const cardCategory = card.dataset.category
           if (selectedCategory === 'all' || cardCategory === selectedCategory) {
             card.style.display = 'block'
-            card.classList.add('animate-fade-in')
+            card.classList.add('animate-fade-in') // Subtle animation on show
           } else {
             card.style.display = 'none'
           }
         })
       }
 
-      // Attach event listeners to dynamically generated filter buttons
-      function attachFilterListeners() {
+      // Event listeners for filter buttons
+      document.addEventListener('DOMContentLoaded', () => {
+        loadProjects() // Load projects first
+
         const filterButtons = document.querySelectorAll('.filter-btn')
         filterButtons.forEach((button) => {
           button.addEventListener('click', () => {
@@ -475,12 +630,6 @@
             applyFilter(category)
           })
         })
-      }
-
-      // Init on DOM ready
-      document.addEventListener('DOMContentLoaded', () => {
-        initTheme() // Set system theme first
-        loadProjects()
       })
 
       // Optional: Regenerate button (if added to HTML)
