@@ -1,52 +1,52 @@
 [
   {
     "key": "mobile-apps",
-    "label": "mobile-apps",
+    "label": "Mobile Apps",
     "path": "mobile-apps/",
     "subCategories": [
       {
         "key": "react-native",
-        "label": "react-native",
-        "path": "mobile-apps\\react-native/"
+        "label": "React Native",
+        "path": "mobile-apps/react-native/"
       }
     ]
   },
   {
     "key": "web-apps",
-    "label": "web-apps",
+    "label": "Web Apps",
     "path": "web-apps/",
     "subCategories": [
       {
         "key": "django",
-        "label": "django",
-        "path": "web-apps\\django/"
+        "label": "Django",
+        "path": "web-apps/django/"
       },
       {
         "key": "express",
-        "label": "express",
-        "path": "web-apps\\express/"
+        "label": "Express",
+        "path": "web-apps/express/"
       },
       {
         "key": "react",
-        "label": "react",
-        "path": "web-apps\\react/"
+        "label": "React",
+        "path": "web-apps/react/"
       }
     ]
   },
   {
     "key": "websites",
-    "label": "websites",
+    "label": "Websites",
     "path": "websites/",
     "subCategories": [
       {
         "key": "css",
-        "label": "css",
-        "path": "websites\\css/"
+        "label": "Css",
+        "path": "websites/css/"
       },
       {
         "key": "tailwind",
-        "label": "tailwind",
-        "path": "websites\\tailwind/"
+        "label": "Tailwind",
+        "path": "websites/tailwind/"
       }
     ]
   }

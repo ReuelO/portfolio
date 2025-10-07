@@ -3,18 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ByteKnight - Portfolio</title>
+    <title>ReuelO - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         darkMode: 'class',
-        theme: { extend: { colors: { primary: '#3b82f6' } } },
+        theme: {
+          extend: {
+            colors: { primary: '#3b82f6' },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            },
+          },
+        },
       }
     </script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+      }
+      ::selection {
+        background: #3b82f6;
+        color: #fff;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(8px);
+      }
+      .dark .glass {
+        background: rgba(30, 41, 59, 0.7);
+      }
+      .project-card:hover img {
+        filter: brightness(0.95) saturate(1.2);
+      }
+      .project-card .tag {
+        font-size: 0.75rem;
+      }
+      .category-btn[aria-expanded='true'] {
+        box-shadow: 0 0 0 2px #3b82f6;
+      }
+    </style>
   </head>
   <body
     class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
@@ -22,85 +58,230 @@
     <!-- Theme Toggle -->
     <button
       id="theme-toggle"
-      class="fixed top-4 right-4 p-3 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white z-50 shadow"
+      class="fixed top-4 right-4 py-3 px-4 h-12 rounded-full bg-gray-700 dark:bg-blue-400 text-white dark:text-yellow-300 z-50 shadow-lg border border-gray-300 dark:border-gray-600 transition"
+      aria-label="Toggle dark mode"
     >
       <i class="fas fa-sun"></i>
     </button>
 
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 w-full z-40 glass shadow-md border-b border-gray-100 dark:border-gray-800"
+    >
+      <nav
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3"
+      >
+        <a
+          href="#home"
+          class="text-2xl font-extrabold text-primary tracking-tight"
+          >ReuelO</a
+        >
+        <ul
+          class="flex space-x-6 font-semibold text-gray-700 dark:text-gray-200"
+        >
+          <li>
+            <a href="#projects" class="hover:text-primary transition"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-primary transition">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <!-- Hero Section -->
     <section
       id="home"
-      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 pt-20"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 pt-32"
     >
       <div class="text-center max-w-3xl px-4">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6">
-          Hi, I'm <span class="text-primary">ByteKnight</span>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+          Hi, I'm <span class="text-primary">ReuelO</span>
         </h1>
-        <p class="text-xl md:text-2xl mb-10 opacity-90">
-          I'm a full-stack developer passionate about building <br />
-          modern, efficient, and aesthetic digital experiences.
+        <p class="text-2xl md:text-3xl mb-10 opacity-90 font-medium">
+          Full-stack developer passionate about building modern, efficient, and
+          aesthetic digital experiences.
         </p>
         <a
           href="#projects"
-          class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition"
+          class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg"
           >View My Work</a
         >
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white dark:bg-gray-900">
+    <section id="projects" class="py-24 bg-white dark:bg-gray-900">
       <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+        <h2 class="text-4xl font-extrabold text-center mb-12 tracking-tight">
+          Projects
+        </h2>
 
-        <!-- Filter Dropdowns as Pills -->
+        <!-- Filters & Show All: sticky, shadow, rounded, modern look -->
         <div
-          id="categories"
-          class="flex flex-wrap justify-center gap-4 mb-12"
+          class="sticky top-20 z-30 glass rounded-xl shadow-md flex flex-wrap justify-between items-center px-6 py-4 mb-10 gap-4 border border-gray-100 dark:border-gray-800"
+        >
+          <div id="categories" class="flex flex-wrap gap-3"></div>
+          <button
+            id="show-all"
+            class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition shadow"
+          >
+            Show All Projects
+          </button>
+        </div>
+
+        <!-- Feedback message for no projects -->
+        <div
+          id="projects-feedback"
+          class="text-center text-lg text-gray-500 dark:text-gray-400 mb-8 hidden"
         ></div>
 
-        <!-- Projects Grid -->
+        <!-- Projects Grid: card hover, subtle background, responsive masonry -->
         <div
-          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           id="projects-grid"
+          class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         ></div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white dark:bg-gray-900">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
-        <p class="text-xl mb-8 opacity-90">
-          Open to collaborations—let's build something great.
+    <section
+      id="contact"
+      class="py-24 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800"
+    >
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-4xl font-extrabold mb-8 tracking-tight text-center">
+          Get In Touch
+        </h2>
+        <p class="text-xl mb-10 opacity-90 font-medium text-center">
+          Interested in working together, have a question, or just want to say
+          hi? <br class="hidden md:inline" />Feel free to reach out!
         </p>
         <div
-          class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8"
+          class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center"
         >
-          <a
-            href="mailto:byteknight@gmail.com"
-            class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition"
-            >Email Me</a
+          <!-- Contact Form -->
+          <form
+            action="mailto:reuenga@gmail.com"
+            method="POST"
+            enctype="text/plain"
+            class="flex-1 w-full max-w-md space-y-5"
+            autocomplete="off"
           >
-          <a
-            href="https://github.com/ReuelO"
-            target="_blank"
-            class="flex items-center justify-center space-x-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-            ><i class="fab fa-github"></i><span>GitHub</span></a
+            <div>
+              <label for="name" class="block text-sm font-semibold mb-1"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 focus:ring-2 focus:ring-primary outline-none transition"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-1"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 focus:ring-2 focus:ring-primary outline-none transition"
+              />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-semibold mb-1"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 focus:ring-2 focus:ring-primary outline-none transition"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-primary text-white py-2 rounded-full font-semibold hover:bg-blue-700 transition shadow"
+            >
+              Send Message
+            </button>
+          </form>
+          <!-- Contact Info -->
+          <div
+            class="flex-1 w-full max-w-sm space-y-6 text-center md:text-left"
           >
-          <a
-            href="https://linkedin.com/in/ReuelO"
-            target="_blank"
-            class="flex items-center justify-center space-x-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-            ><i class="fab fa-linkedin"></i><span>LinkedIn</span></a
-          >
+            <div>
+              <div
+                class="flex items-center justify-center md:justify-start gap-3 mb-2"
+              >
+                <i class="fas fa-envelope text-primary"></i>
+                <span class="font-semibold">Email</span>
+              </div>
+              <a
+                href="mailto:reuenga@gmail.com"
+                class="text-blue-600 dark:text-blue-400 hover:underline break-all"
+                >reuenga@gmail.com</a
+              >
+            </div>
+            <div>
+              <div
+                class="flex items-center justify-center md:justify-start gap-3 mb-2"
+              >
+                <i class="fab fa-github text-primary"></i>
+                <span class="font-semibold">GitHub</span>
+              </div>
+              <a
+                href="https://github.com/ReuelO/"
+                target="_blank"
+                class="text-blue-600 dark:text-blue-400 hover:underline break-all"
+                >github.com/ReuelO</a
+              >
+            </div>
+            <div>
+              <div
+                class="flex items-center justify-center md:justify-start gap-3 mb-2"
+              >
+                <i class="fab fa-linkedin text-primary"></i>
+                <span class="font-semibold">LinkedIn</span>
+              </div>
+              <a
+                href="https://www.linkedin.com/in/reuel-omwenga-7740051aa/"
+                target="_blank"
+                class="text-blue-600 dark:text-blue-400 hover:underline break-all"
+                >linkedin.com/in/reuel-omwenga-7740051aa</a
+              >
+            </div>
+            <div>
+              <div
+                class="flex items-center justify-center md:justify-start gap-3 mb-2"
+              >
+                <i class="fas fa-map-marker-alt text-primary"></i>
+                <span class="font-semibold">Location</span>
+              </div>
+              <span class="text-gray-700 dark:text-gray-300"
+                >Nairobi, Kenya</span
+              >
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 text-center">
-      <p>&copy; 2025 ByteKnight. Built with ❤️ and Tailwind.</p>
+    <footer
+      class="bg-gray-900 text-white py-8 text-center border-t border-gray-800"
+    >
+      <p>
+        &copy; 2025 ReuelO. Built with
+        <span class="text-primary">❤️</span> and Tailwind CSS.
+      </p>
     </footer>
 
     <script>
@@ -125,7 +306,7 @@
         renderProjects(projects)
       }
 
-      // Render categories as pill dropdowns
+      // Render categories as modern pill filters with dropdowns
       function renderCategories(categories, projects) {
         const container = document.getElementById('categories')
         container.innerHTML = ''
@@ -134,95 +315,193 @@
           const wrapper = document.createElement('div')
           wrapper.className = 'relative'
           wrapper.innerHTML = `
-            <div class="inline-block">
-              <button class="category-btn bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-full font-medium flex items-center space-x-2" data-category="${
-                cat.key
-              }">
-                <span>${cat.label}</span>
-                <i class="fas fa-chevron-down text-sm"></i>
-              </button>
-              <div class="dropdown hidden absolute mt-2 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-30">
-                <button class="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 filter-btn" data-category="${
-                  cat.key
-                }" data-sub="all">All</button>
-                ${cat.subCategories
-                  .map(
-                    (sub) => `
-                  <button class="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 filter-btn" data-category="${cat.key}" data-sub="${sub.key}">${sub.label}</button>
-                `
-                  )
-                  .join('')}
-              </div>
-            </div>
+        <button type="button" class="category-btn bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white px-4 py-2 rounded-full font-semibold flex items-center space-x-2 focus:outline-none shadow hover:bg-primary/10 dark:hover:bg-primary/20 transition" data-category="${
+          cat.key
+        }" aria-haspopup="true" aria-expanded="false">
+          <span>${cat.label}</span>
+          <i class="fas fa-chevron-down text-sm"></i>
+        </button>
+        <div class="dropdown hidden absolute left-0 mt-2 w-44 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-30">
+          <button class="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 filter-btn" data-category="${
+            cat.key
+          }" data-sub="all">All</button>
+          ${cat.subCategories
+            .map(
+              (sub) => `
+            <button class="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 filter-btn" data-category="${cat.key}" data-sub="${sub.key}">${sub.label}</button>
           `
+            )
+            .join('')}
+        </div>
+      `
           container.appendChild(wrapper)
+        })
 
-          const btn = wrapper.querySelector('.category-btn')
-          const dropdown = wrapper.querySelector('.dropdown')
-          btn.addEventListener('click', () => {
+        // Dropdown open/close logic
+        let openDropdown = null
+        container.querySelectorAll('.category-btn').forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation()
+            // Close any open dropdowns
+            if (openDropdown && openDropdown !== btn.nextElementSibling) {
+              openDropdown.classList.add('hidden')
+              openDropdown.previousElementSibling.setAttribute(
+                'aria-expanded',
+                'false'
+              )
+            }
+            const dropdown = btn.nextElementSibling
             dropdown.classList.toggle('hidden')
+            btn.setAttribute(
+              'aria-expanded',
+              dropdown.classList.contains('hidden') ? 'false' : 'true'
+            )
+            openDropdown = dropdown.classList.contains('hidden')
+              ? null
+              : dropdown
           })
+          // Keyboard accessibility
+          btn.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && openDropdown) {
+              openDropdown.classList.add('hidden')
+              btn.setAttribute('aria-expanded', 'false')
+              openDropdown = null
+            }
+          })
+        })
+
+        // Close dropdown on outside click
+        document.addEventListener('click', (e) => {
+          if (openDropdown && !openDropdown.contains(e.target)) {
+            openDropdown.classList.add('hidden')
+            openDropdown.previousElementSibling.setAttribute(
+              'aria-expanded',
+              'false'
+            )
+            openDropdown = null
+          }
         })
 
         // Attach filter behavior
-        document.querySelectorAll('.filter-btn').forEach((btn) => {
-          btn.addEventListener('click', () => {
+        container.querySelectorAll('.filter-btn').forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation()
             applyFilter(btn.dataset.category, btn.dataset.sub, projects)
+            // Highlight active filter
+            container
+              .querySelectorAll('.category-btn')
+              .forEach((b) =>
+                b.classList.remove(
+                  'ring-2',
+                  'ring-primary',
+                  'bg-blue-100',
+                  'dark:bg-blue-900'
+                )
+              )
+            btn
+              .closest('.relative')
+              .querySelector('.category-btn')
+              .classList.add(
+                'ring-2',
+                'ring-primary',
+                'bg-blue-100',
+                'dark:bg-blue-900'
+              )
+            // Close dropdown
             btn.closest('.dropdown').classList.add('hidden')
+            btn
+              .closest('.relative')
+              .querySelector('.category-btn')
+              .setAttribute('aria-expanded', 'false')
+            openDropdown = null
           })
+        })
+
+        // Show All Button
+        document.getElementById('show-all').addEventListener('click', () => {
+          renderProjects(projects)
+          // Remove active filter highlight
+          container
+            .querySelectorAll('.category-btn')
+            .forEach((b) =>
+              b.classList.remove(
+                'ring-2',
+                'ring-primary',
+                'bg-blue-100',
+                'dark:bg-blue-900'
+              )
+            )
         })
       }
 
-      // Render projects grid
+      // Render projects grid, with feedback if none
       function renderProjects(projects) {
         const grid = document.getElementById('projects-grid')
+        const feedback = document.getElementById('projects-feedback')
         grid.innerHTML = ''
+        feedback.classList.add('hidden')
+
+        if (!projects || projects.length === 0) {
+          feedback.textContent = 'No projects found for the selected filter.'
+          feedback.classList.remove('hidden')
+          return
+        }
 
         projects.forEach((proj) => {
           grid.insertAdjacentHTML(
             'beforeend',
             `
-            <div class="project-card bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg overflow-hidden transition" data-category="${
-              proj.category
-            }" data-sub="${proj.subCategory}">
-              <img src="https://via.placeholder.com/400x250?text=${encodeURIComponent(
-                proj.name
-              )}" alt="${proj.name}" class="w-full h-48 object-cover">
-              <div class="p-6">
-                <h3 class="text-xl font-semibold mb-2">${proj.name}</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">${
-                  proj.description
-                }</p>
-                <div class="flex space-x-4">
-                  <a href="${
-                    proj.demoLink
-                  }" target="_blank" class="text-primary hover:underline">Live Demo</a>
-                  <a href="${
-                    proj.repoLink
-                  }" target="_blank" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white"><i class="fab fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          `
+      <div class="project-card group bg-gradient-to-br from-white via-blue-50 to-blue-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transition-all border border-gray-100 dark:border-gray-800 flex flex-col">
+        <div class="relative">
+          <img src="${
+            proj.imageLink ||
+            `https://via.placeholder.com/400x250?text=${encodeURIComponent(
+              proj.name
+            )}`
+          }" alt="${
+              proj.name
+            }" class="w-full h-48 object-cover transition group-hover:scale-105 duration-300">
+          <div class="absolute top-2 right-2 flex gap-2">
+            ${
+              proj.demoLink
+                ? `<a href="${proj.demoLink}" target="_blank" title="Live Demo" class="bg-primary/80 text-white px-3 py-1 rounded-full text-xs font-semibold shadow hover:bg-primary transition"><i class="fas fa-external-link-alt"></i></a>`
+                : ''
+            }
+            ${
+              proj.repoLink
+                ? `<a href="${proj.repoLink}" target="_blank" title="Source Code" class="bg-gray-700/80 text-white px-3 py-1 rounded-full text-xs font-semibold shadow hover:bg-gray-900 transition"><i class="fab fa-github"></i></a>`
+                : ''
+            }
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-xl font-bold mb-2 text-primary">${proj.name}</h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-4 flex-1">${
+            proj.description
+          }</p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            ${(proj.tags || [])
+              .map(
+                (tag) =>
+                  `<span class="tag bg-primary/10 text-primary px-2 py-1 rounded-full">${tag}</span>`
+              )
+              .join('')}
+          </div>
+        </div>
+      </div>
+    `
           )
         })
       }
 
-      // Apply filter
+      // Apply filter and show feedback if no matches
       function applyFilter(category, sub, projects) {
-        const grid = document.getElementById('projects-grid')
-        const cards = grid.querySelectorAll('.project-card')
-
-        cards.forEach((card) => {
-          if (sub === 'all') {
-            card.style.display =
-              card.dataset.category === category ? 'block' : 'none'
-          } else {
-            const match =
-              card.dataset.category === category && card.dataset.sub === sub
-            card.style.display = match ? 'block' : 'none'
-          }
-        })
+        const filtered = projects.filter((proj) =>
+          sub === 'all'
+            ? proj.category === category
+            : proj.category === category && proj.subCategory === sub
+        )
+        renderProjects(filtered)
       }
 
       document.addEventListener('DOMContentLoaded', loadData)

@@ -3,280 +3,455 @@
     "name": "apex-builders-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/apex-builders-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/apex-builders-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/apex-builders-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/apex-builders-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=apex-builders-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "architekton-designs-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/architekton-designs-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/architekton-designs-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/architekton-designs-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/architekton-designs-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=architekton-designs-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "ascend-fitness-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/ascend-fitness-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/ascend-fitness-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/ascend-fitness-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/ascend-fitness-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=ascend-fitness-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "azure-coast-resort-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/azure-coast-resort-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/azure-coast-resort-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/azure-coast-resort-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/azure-coast-resort-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=azure-coast-resort-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "daily-grind-cafe-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/daily-grind-cafe-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/daily-grind-cafe-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/daily-grind-cafe-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/daily-grind-cafe-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=daily-grind-cafe-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "digital-spark-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/digital-spark-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/digital-spark-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/digital-spark-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/digital-spark-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=digital-spark-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "drivehub-motors-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/drivehub-motors-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/drivehub-motors-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/drivehub-motors-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/drivehub-motors-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=drivehub-motors-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "driveright-driving-school-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/driveright-driving-school-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/driveright-driving-school-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/driveright-driving-school-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/driveright-driving-school-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=driveright-driving-school-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "elegance-boutique-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/elegance-boutique-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/elegance-boutique-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/elegance-boutique-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/elegance-boutique-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=elegance-boutique-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "elegance-by-isabella-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/elegance-by-isabella-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/elegance-by-isabella-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/elegance-by-isabella-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/elegance-by-isabella-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=elegance-by-isabella-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "flavor-fusion-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/flavor-fusion-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/flavor-fusion-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/flavor-fusion-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/flavor-fusion-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=flavor-fusion-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "greenharvest-processors-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/greenharvest-processors-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/greenharvest-processors-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/greenharvest-processors-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/greenharvest-processors-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=greenharvest-processors-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "iron-core-gym-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/iron-core-gym-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/iron-core-gym-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/iron-core-gym-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/iron-core-gym-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=iron-core-gym-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "luxe-living-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/luxe-living-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/luxe-living-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/luxe-living-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/luxe-living-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=luxe-living-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "megabuild-supplies-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/megabuild-supplies-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/megabuild-supplies-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/megabuild-supplies-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/megabuild-supplies-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=megabuild-supplies-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "precision-auto-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/precision-auto-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/precision-auto-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/precision-auto-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/precision-auto-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=precision-auto-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "serene-oasis-hotel-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/serene-oasis-hotel-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/serene-oasis-hotel-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/serene-oasis-hotel-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/serene-oasis-hotel-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=serene-oasis-hotel-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "skillup-academy-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/skillup-academy-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/skillup-academy-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/skillup-academy-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/skillup-academy-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=skillup-academy-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "tech-solutions-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/tech-solutions-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/tech-solutions-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/tech-solutions-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/tech-solutions-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=tech-solutions-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "unity-growers-cooperative-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/unity-growers-cooperative-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/unity-growers-cooperative-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/unity-growers-cooperative-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/unity-growers-cooperative-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=unity-growers-cooperative-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "wilderness-haven-lodge-website",
     "category": "websites",
     "subCategory": "css",
-    "description": "A sample project in websites / css",
-    "demoLink": "websites\\css/wilderness-haven-lodge-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/css/wilderness-haven-lodge-website"
+    "description": "A sample project in Websites / Css",
+    "demoLink": "websites/css/wilderness-haven-lodge-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/css/wilderness-haven-lodge-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=wilderness-haven-lodge-website",
+    "tags": [
+      "Websites",
+      "Css"
+    ]
   },
   {
     "name": "adventure-trails-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/adventure-trails-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/adventure-trails-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/adventure-trails-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/adventure-trails-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=adventure-trails-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "artisans-nook-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/artisans-nook-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/artisans-nook-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/artisans-nook-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/artisans-nook-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=artisans-nook-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "elevate-events-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/elevate-events-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/elevate-events-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/elevate-events-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/elevate-events-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=elevate-events-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "elite-properties-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/elite-properties-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/elite-properties-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/elite-properties-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/elite-properties-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=elite-properties-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "evergreen-academy-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/evergreen-academy-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/evergreen-academy-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/evergreen-academy-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/evergreen-academy-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=evergreen-academy-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "global-journeys-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/global-journeys-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/global-journeys-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/global-journeys-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/global-journeys-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=global-journeys-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "lex-chambers-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/lex-chambers-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/lex-chambers-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/lex-chambers-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/lex-chambers-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=lex-chambers-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "medicare-pharmacy-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/medicare-pharmacy-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/medicare-pharmacy-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/medicare-pharmacy-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/medicare-pharmacy-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=medicare-pharmacy-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "nexus-advisors-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/nexus-advisors-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/nexus-advisors-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/nexus-advisors-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/nexus-advisors-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=nexus-advisors-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "soko-bora-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/soko-bora-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/soko-bora-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/soko-bora-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/soko-bora-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=soko-bora-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "st-judes-hospital-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/st-judes-hospital-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/st-judes-hospital-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/st-judes-hospital-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/st-judes-hospital-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=st-judes-hospital-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "sweet-delights-bakery-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/sweet-delights-bakery-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/sweet-delights-bakery-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/sweet-delights-bakery-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/sweet-delights-bakery-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=sweet-delights-bakery-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "unity-university-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/unity-university-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/unity-university-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/unity-university-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/unity-university-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=unity-university-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   },
   {
     "name": "wellness-clinic-website",
     "category": "websites",
     "subCategory": "tailwind",
-    "description": "A sample project in websites / tailwind",
-    "demoLink": "websites\\tailwind/wellness-clinic-website/",
-    "repoLink": "https://github.com/ReuelO/portfolio/websites/tailwind/wellness-clinic-website"
+    "description": "A sample project in Websites / Tailwind",
+    "demoLink": "websites/tailwind/wellness-clinic-website/",
+    "repoLink": "https://github.com/ReuelO/portfolio/tree/main/websites/tailwind/wellness-clinic-website",
+    "imageLink": "https://via.placeholder.com/400x250?text=wellness-clinic-website",
+    "tags": [
+      "Websites",
+      "Tailwind"
+    ]
   }
 ]
